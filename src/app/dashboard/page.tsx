@@ -137,14 +137,21 @@ export default function DashboardPage() {
                   variant="outline"
                   className="border-blue-500/30 bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 text-sm px-3.5 py-1"
                 >
-                  Node Operasional: Kota Semarang
+                  Wilayah: Kota Semarang
                 </Badge>
+                <div className="flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-50 dark:bg-emerald-950/40 px-3 py-1 text-sm text-emerald-700 dark:text-emerald-300">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                  </span>
+                  <span>Mitigasi TPA Jatibarang Aktif</span>
+                </div>
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-tight">
-                Konsol Pengelolaan{" "}
+                Platform Sirkularitas &{" "}
                 <ShinyText
-                  text="Sirkularitas & Risiko Eko-Kesehatan"
+                  text="Pencegahan Risiko Eko-Kesehatan"
                   speed={4}
                   className="from-emerald-600 via-teal-500 to-emerald-600 dark:from-emerald-400 dark:via-teal-200 dark:to-emerald-400"
                 />

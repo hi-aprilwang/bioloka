@@ -62,16 +62,9 @@ export default function LandingPage() {
             </a>
           </nav>
 
-          <div className="flex items-center gap-3.5">
-            <Badge
-              variant="outline"
-              className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-3 py-1 font-medium hidden sm:inline-flex"
-            >
-              ANFORCOM 2026
-            </Badge>
-
+          <div className="flex items-center gap-3">
             <Link href="/dashboard">
-              <Button className="h-10 bg-emerald-600 hover:bg-emerald-500 text-white text-sm px-4.5 font-medium gap-2 shadow-sm transition-all">
+              <Button className="h-9.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm px-4 font-medium gap-2 shadow-xs transition-all">
                 <span>Buka Dashboard</span>
                 <ArrowRight className="h-4 w-4" />
               </Button>
@@ -116,7 +109,7 @@ export default function LandingPage() {
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
             <Link href="/dashboard">
               <Button size="default" className="h-12 bg-emerald-600 hover:bg-emerald-500 text-white text-base px-7 font-semibold gap-2 shadow-lg shadow-emerald-900/20">
-                <span>Masuk ke Konsol Platform</span>
+                <span>Buka Platform CircuLoop</span>
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
@@ -348,7 +341,7 @@ export default function LandingPage() {
       <section className="relative mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-24">
         <div className="rounded-3xl border border-emerald-500/30 dark:border-emerald-500/40 bg-gradient-to-r from-emerald-50 via-teal-50 to-white dark:from-emerald-950/60 dark:via-zinc-900 dark:to-zinc-950 p-8 sm:p-14 text-center space-y-6 shadow-xl">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
-            Siap Menguji Coba Konsol CircuLoop Semarang?
+            Siap Menguji Coba Platform CircuLoop Semarang?
           </h2>
           <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto leading-relaxed">
             Akses dashboard fungsional untuk menginput batch limbah, mencoba matching ke unit biokonversi,
@@ -377,7 +370,7 @@ export default function LandingPage() {
 
           <div className="flex items-center gap-6">
             <Link href="/dashboard" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
-              Konsol Dashboard
+              Aplikasi Dashboard
             </Link>
             <a href="#masalah" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Urgensi Semarang
