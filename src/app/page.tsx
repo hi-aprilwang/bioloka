@@ -80,8 +80,8 @@ export default function Home() {
     <main className="relative min-h-screen bg-zinc-950 text-zinc-100 selection:bg-emerald-500/20">
       {/* React Bits Subtle Grid Pattern Background */}
       <GridPattern
-        width={36}
-        height={36}
+        width={40}
+        height={40}
         className="stroke-zinc-800/40 fill-zinc-900/10 opacity-70"
       />
 
@@ -91,44 +91,44 @@ export default function Home() {
         onQuickDemo={handleQuickDemo}
       />
 
-      {/* Main Container */}
-      <div className="relative mx-auto max-w-7xl px-4 py-6 sm:px-6 space-y-6">
+      {/* Main Container with Generous Breathing Room */}
+      <div className="relative mx-auto max-w-7xl px-6 py-10 sm:px-10 sm:py-16 space-y-12 sm:space-y-16">
         {/* Simulation Feedback Alert */}
         {simulationAlert && (
-          <div className="rounded-lg border border-emerald-500/40 bg-emerald-950/60 p-3.5 text-sm text-emerald-200 flex items-center justify-between shadow-lg animate-in fade-in slide-in-from-top-2">
-            <div className="flex items-center gap-2">
+          <div className="rounded-xl border border-emerald-500/40 bg-emerald-950/70 p-4 text-sm text-emerald-200 flex items-center justify-between shadow-xl animate-in fade-in slide-in-from-top-3">
+            <div className="flex items-center gap-3">
               <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0" />
               <span>{simulationAlert}</span>
             </div>
             <button
               onClick={() => setSimulationAlert(null)}
-              className="text-emerald-400 hover:text-emerald-200 font-bold ml-2 text-sm"
+              className="text-emerald-400 hover:text-emerald-200 font-bold ml-3 text-sm px-2 py-1"
             >
               ✕
             </button>
           </div>
         )}
 
-        {/* Hero Banner Section */}
-        <div className="rounded-2xl border border-zinc-800 bg-gradient-to-b from-zinc-900/90 to-zinc-950/80 p-6 sm:p-8 backdrop-blur-sm relative overflow-hidden">
-          <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div className="space-y-3 max-w-2xl">
-              <div className="flex flex-wrap items-center gap-2">
+        {/* Hero Banner Section with Generous Padding */}
+        <div className="rounded-3xl border border-zinc-800/90 bg-gradient-to-b from-zinc-900/90 via-zinc-900/50 to-zinc-950/80 p-8 sm:p-12 lg:p-14 backdrop-blur-md relative overflow-hidden shadow-sm">
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+            <div className="space-y-4 max-w-3xl">
+              <div className="flex flex-wrap items-center gap-2.5">
                 <Badge
                   variant="outline"
-                  className="border-emerald-500/40 bg-emerald-500/10 text-emerald-300 text-sm px-3 py-1"
+                  className="border-emerald-500/40 bg-emerald-500/10 text-emerald-300 text-sm px-3.5 py-1"
                 >
                   Subtema: Smart Waste & Eco-Health
                 </Badge>
                 <Badge
                   variant="outline"
-                  className="border-blue-500/30 bg-blue-500/10 text-blue-300 text-sm px-3 py-1"
+                  className="border-blue-500/30 bg-blue-500/10 text-blue-300 text-sm px-3.5 py-1"
                 >
                   Pilot Area: Kota Semarang
                 </Badge>
               </div>
 
-              <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
                 Simbiosis Sirkular Organik &{" "}
                 <ShinyText
                   text="Pencegahan Bencana Eko-Kesehatan"
@@ -137,19 +137,19 @@ export default function Home() {
                 />
               </h1>
 
-              <p className="text-sm text-zinc-400 leading-relaxed">
+              <p className="text-base text-zinc-400 leading-relaxed pt-1">
                 Menghubungkan limbah organik komersial (hotel, restoran, pasar Johar) dengan
                 pusat biokonversi Maggot BSF & biogas lokal. Mencegah timbunan gas metana
                 di TPA Jatibarang dan rembesan air lindi beracun ke air tanah warga pesisir.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+            <div className="flex flex-col sm:flex-row lg:flex-col items-stretch gap-3.5 shrink-0">
               <BatchCreateDialog onAddBatch={handleAddBatch} />
               <Button
                 variant="outline"
                 onClick={() => setActiveTab("calculator")}
-                className="border-zinc-700 bg-zinc-900/90 text-zinc-200 hover:bg-zinc-800 text-sm h-10 px-4"
+                className="border-zinc-700 bg-zinc-900/90 text-zinc-200 hover:bg-zinc-800 text-sm h-11 px-5"
               >
                 <Activity className="mr-2 h-4 w-4 text-emerald-400" />
                 Uji Model Matematika
@@ -163,20 +163,20 @@ export default function Home() {
 
         {/* Tab 1: Dashboard Overview */}
         {activeTab === "overview" && (
-          <div className="space-y-6">
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 space-y-4">
-              <div className="flex items-center justify-between">
+          <div className="space-y-10 sm:space-y-14">
+            <div className="rounded-3xl border border-zinc-800/90 bg-zinc-900/40 p-8 sm:p-10 space-y-8 shadow-sm">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zinc-800/80">
                 <div>
-                  <h2 className="text-base font-bold text-white tracking-tight">
+                  <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight">
                     Bursa Sirkular Limbah Organik Semarang (Live Feed)
                   </h2>
-                  <p className="text-sm text-zinc-400">
+                  <p className="text-sm text-zinc-400 mt-1">
                     Aliran limbah terverifikasi yang siap diserap fasilitas biokonversi lokal
                   </p>
                 </div>
                 <Badge
                   variant="outline"
-                  className="border-emerald-500/30 bg-emerald-500/10 text-emerald-300 text-sm font-mono px-3 py-1"
+                  className="border-emerald-500/30 bg-emerald-500/10 text-emerald-300 text-sm font-mono px-3.5 py-1.5 self-start sm:self-auto"
                 >
                   {batches.filter((b) => b.status === "available").length} Batch Tersedia
                 </Badge>
@@ -191,15 +191,15 @@ export default function Home() {
 
         {/* Tab 2: Producer Portal (Hotel/Pasar) */}
         {activeTab === "producers" && (
-          <div className="space-y-6">
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-6 space-y-5">
-              <div className="flex items-center justify-between">
+          <div className="space-y-10 sm:space-y-14">
+            <div className="rounded-3xl border border-zinc-800/90 bg-zinc-900/60 p-8 sm:p-10 space-y-8 shadow-sm">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zinc-800/80">
                 <div>
-                  <h2 className="text-lg font-bold text-white flex items-center gap-2">
-                    <Building2 className="h-5 w-5 text-emerald-400" />
+                  <h2 className="text-xl font-bold text-white flex items-center gap-3">
+                    <Building2 className="h-6 w-6 text-emerald-400" />
                     Portal Mitra Penghasil Limbah (Hotel / Resto / Pasar)
                   </h2>
-                  <p className="text-sm text-zinc-400">
+                  <p className="text-sm text-zinc-400 mt-1">
                     Kelola pengalihan limbah dapur dan unduh Sertifikat Pengalihan Karbon (ESG Badge)
                   </p>
                 </div>
@@ -207,21 +207,21 @@ export default function Home() {
               </div>
 
               {/* ESG Badge Demo Card */}
-              <div className="rounded-xl border border-emerald-500/30 bg-emerald-950/20 p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="flex items-center gap-3.5">
-                  <div className="rounded-xl bg-emerald-500/10 p-3 border border-emerald-500/30 text-emerald-400">
-                    <ShieldCheck className="h-8 w-8" />
+              <div className="rounded-2xl border border-emerald-500/30 bg-emerald-950/20 p-6 sm:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                <div className="flex items-center gap-4">
+                  <div className="rounded-2xl bg-emerald-500/10 p-3.5 border border-emerald-500/30 text-emerald-400 shrink-0">
+                    <ShieldCheck className="h-9 w-9" />
                   </div>
                   <div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2.5 flex-wrap">
                       <span className="text-base font-bold text-white">
                         Sertifikat Kepatuhan Sirkular Kota Semarang
                       </span>
-                      <Badge className="bg-emerald-500 text-zinc-950 text-sm font-bold px-2.5 py-0.5">
+                      <Badge className="bg-emerald-500 text-zinc-950 text-sm font-bold px-3 py-0.5">
                         VERIFIED ESG
                       </Badge>
                     </div>
-                    <p className="text-sm text-zinc-400 mt-1">
+                    <p className="text-sm text-zinc-400 mt-1.5 leading-relaxed">
                       Telah mengalihkan {aggregateImpact.divertedWeightKg} kg limbah organik dari TPA Jatibarang.
                     </p>
                   </div>
@@ -230,7 +230,7 @@ export default function Home() {
                   size="default"
                   variant="outline"
                   onClick={() => alert("Sertifikat digital ISO 14001 / ESG siap diunduh dalam format PDF.")}
-                  className="border-emerald-500/40 text-emerald-300 hover:bg-emerald-900/40 text-sm shrink-0"
+                  className="border-emerald-500/40 text-emerald-300 hover:bg-emerald-900/40 text-sm h-10 px-5 shrink-0 self-start lg:self-auto"
                 >
                   Unduh Sertifikat PDF
                 </Button>
@@ -243,24 +243,22 @@ export default function Home() {
 
         {/* Tab 3: Valorizer Facility Portal */}
         {activeTab === "valorizers" && (
-          <div className="space-y-6">
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-6 space-y-5">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h2 className="text-lg font-bold text-white flex items-center gap-2">
-                    <Bug className="h-5 w-5 text-emerald-400" />
-                    Portal Fasilitas Biokonversi Maggot BSF & Biogas
-                  </h2>
-                  <p className="text-sm text-zinc-400">
-                    Cari batch limbah organik segar terdekat di Semarang untuk pakan larva dan reaktor biogas
-                  </p>
-                </div>
+          <div className="space-y-10 sm:space-y-14">
+            <div className="rounded-3xl border border-zinc-800/90 bg-zinc-900/60 p-8 sm:p-10 space-y-8 shadow-sm">
+              <div className="pb-4 border-b border-zinc-800/80">
+                <h2 className="text-xl font-bold text-white flex items-center gap-3">
+                  <Bug className="h-6 w-6 text-emerald-400" />
+                  Portal Fasilitas Biokonversi Maggot BSF & Biogas
+                </h2>
+                <p className="text-sm text-zinc-400 mt-1">
+                  Cari batch limbah organik segar terdekat di Semarang untuk pakan larva dan reaktor biogas
+                </p>
               </div>
 
               <ValorizerHubs />
 
-              <div className="pt-5 border-t border-zinc-800">
-                <h3 className="text-base font-semibold text-zinc-200 mb-3">
+              <div className="pt-8 border-t border-zinc-800/80">
+                <h3 className="text-base font-semibold text-zinc-200 mb-4">
                   Daftar Batch yang Siap Diklaim untuk Wilayah Operasional Anda:
                 </h3>
                 <BatchList batches={batches} onClaimBatch={handleClaimBatch} />
@@ -273,12 +271,12 @@ export default function Home() {
         {activeTab === "calculator" && <EcoHealthCalculator />}
       </div>
 
-      {/* Footer */}
-      <footer className="mt-12 border-t border-zinc-800 bg-zinc-950 py-6 text-center text-sm text-zinc-500">
+      {/* Footer with Generous Breathing Room */}
+      <footer className="mt-24 sm:mt-32 border-t border-zinc-800/80 bg-zinc-950 py-12 sm:py-16 text-center text-sm text-zinc-500 space-y-2">
         <p>
           CircuLoop Semarang — Dikembangkan untuk Diponegoro Software Development Competition (DSDC) ANFORCOM 2026.
         </p>
-        <p className="mt-1 text-sm text-zinc-600">
+        <p className="text-sm text-zinc-600">
           HMIF Universitas Diponegoro • Tema: Circular Economy for Eco-Health Cities
         </p>
       </footer>
