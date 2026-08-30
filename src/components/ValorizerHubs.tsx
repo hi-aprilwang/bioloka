@@ -26,15 +26,15 @@ export function ValorizerHubs() {
           <h2 className="text-base font-bold text-white tracking-tight">
             Sentra Biokonversi & Valorizer Terverifikasi (Kota Semarang)
           </h2>
-          <p className="text-xs text-zinc-400">
+          <p className="text-sm text-zinc-400">
             Fasilitas desentral yang siap menyerap dan mengolah limbah organik komersial
           </p>
         </div>
         <Badge
           variant="outline"
-          className="border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs flex items-center gap-1"
+          className="border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm flex items-center gap-1"
         >
-          <ShieldCheck className="h-3.5 w-3.5" />
+          <ShieldCheck className="h-4 w-4" />
           Tersertifikasi DLH
         </Badge>
       </div>
@@ -48,7 +48,7 @@ export function ValorizerHubs() {
           return (
             <div
               key={facility.id}
-              className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-4 flex flex-col justify-between"
+              className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-start justify-between">
@@ -57,48 +57,48 @@ export function ValorizerHubs() {
                       {getIcon(facility.type)}
                     </div>
                     <div>
-                      <h3 className="text-sm font-semibold text-white">
+                      <h3 className="text-base font-semibold text-white">
                         {facility.name}
                       </h3>
-                      <span className="text-xs text-zinc-400 font-medium">
+                      <span className="text-sm text-zinc-400 font-medium">
                         {facility.type}
                       </span>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-1 text-xs text-amber-400 font-semibold bg-zinc-800 px-2 py-0.5 rounded">
-                    <Star className="h-3 w-3 fill-amber-400" />
+                  <div className="flex items-center gap-1 text-sm text-amber-400 font-semibold bg-zinc-800 px-2 py-0.5 rounded">
+                    <Star className="h-3.5 w-3.5 fill-amber-400" />
                     <span>{facility.rating}</span>
                   </div>
                 </div>
 
-                <div className="mt-3 flex items-center gap-1.5 text-xs text-zinc-400">
-                  <MapPin className="h-3.5 w-3.5 text-zinc-500" />
+                <div className="mt-3 flex items-center gap-1.5 text-sm text-zinc-400">
+                  <MapPin className="h-4 w-4 text-zinc-500" />
                   <span>
                     {facility.locationName}, {facility.district}
                   </span>
                 </div>
 
                 {/* Capacity Progress Meter */}
-                <div className="mt-4 space-y-1.5">
-                  <div className="flex justify-between text-xs">
+                <div className="mt-4 space-y-2">
+                  <div className="flex justify-between text-sm">
                     <span className="text-zinc-400">Kapasitas Serap Hari Ini</span>
                     <span className="font-semibold text-zinc-200">
                       {facility.currentIntakeKg} / {facility.dailyCapacityKg} kg
                     </span>
                   </div>
-                  <Progress value={usagePercent} className="h-1.5 bg-zinc-800" />
-                  <div className="flex justify-between text-[11px] text-zinc-500">
+                  <Progress value={usagePercent} className="h-2 bg-zinc-800" />
+                  <div className="flex justify-between text-sm text-zinc-500">
                     <span>Terisi {usagePercent}%</span>
                     <span>Sisa kuota: {facility.dailyCapacityKg - facility.currentIntakeKg} kg</span>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-zinc-800 text-[11px] text-zinc-400 flex items-center justify-between">
+              <div className="mt-4 pt-3.5 border-t border-zinc-800 text-sm text-zinc-400 flex items-center justify-between">
                 <span>Radius Jemput: s.d {facility.operatingRadiusKm} km</span>
                 <span className="text-emerald-400 font-medium flex items-center gap-1">
-                  <CheckCircle className="h-3 w-3" /> Siap Terima Batch
+                  <CheckCircle className="h-3.5 w-3.5" /> Siap Terima Batch
                 </span>
               </div>
             </div>
