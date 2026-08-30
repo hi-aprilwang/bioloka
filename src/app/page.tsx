@@ -8,6 +8,7 @@ import { SpotlightCard } from "@/components/react-bits/SpotlightCard"
 import { ThemeToggle } from "@/components/ThemeToggle"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { MathFormula } from "@/components/MathFormula"
 import {
   Leaf,
   ArrowRight,
@@ -138,7 +139,9 @@ export default function LandingPage() {
             </div>
             <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800/70 bg-white dark:bg-zinc-900/40 p-5 shadow-sm">
               <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400 block">Faktor Metana IPCC</span>
-              <span className="text-2xl font-bold text-zinc-900 dark:text-white">0.040 kg CH₄</span>
+              <span className="text-2xl font-bold text-zinc-900 dark:text-white">
+                0.040 kg <MathFormula math="\mathrm{CH_4}" />
+              </span>
               <span className="text-sm text-zinc-500 block mt-1">Tereduksi per kg limbah</span>
             </div>
             <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800/70 bg-white dark:bg-zinc-900/40 p-5 shadow-sm">
@@ -223,7 +226,7 @@ export default function LandingPage() {
             </div>
             <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Krisis Kebakaran TPA Jatibarang</h3>
             <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              Timbunan sampah organik basah yang membusuk anaerobik di TPA Jatibarang menghasilkan gas metana ($CH_4$)
+              Timbunan sampah organik basah yang membusuk anaerobik di TPA Jatibarang menghasilkan gas metana (<MathFormula math="\mathrm{CH_4}" />)
               konsentrasi tinggi yang memicu kebakaran besar pada September–Oktober 2023 dan 2024, mengancam kesehatan
               pernapasan ribuan warga Mijen dan sekitarnya.
             </p>
@@ -275,14 +278,22 @@ export default function LandingPage() {
                 <Flame className="h-5 w-5" />
                 Formula Emisi Metana & Karbon
               </h3>
-              <div className="rounded-xl bg-white dark:bg-zinc-900 p-4 font-mono text-sm text-emerald-700 dark:text-emerald-300 border border-zinc-200 dark:border-zinc-800">
-                CH₄ (kg) = W × DOC × DOCf × F × (16/12) × MCF
+              <div className="rounded-xl bg-white dark:bg-zinc-900 p-4 border border-zinc-200 dark:border-zinc-800 overflow-x-auto text-emerald-800 dark:text-emerald-300">
+                <MathFormula
+                  math="\Delta E_{\mathrm{CH_4}} = W \cdot \mathrm{DOC} \cdot \mathrm{DOC}_f \cdot F \cdot \frac{16}{12} \cdot \mathrm{MCF}"
+                  block
+                />
               </div>
               <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Dengan parameter iklim tropis Indonesia ($DOC = 0.15$, $DOC_f = 0.50$, $F = 0.50$, $MCF = 0.8$),
-                diperoleh faktor konversi mutlak sebesar <strong className="text-zinc-900 dark:text-zinc-200">0.040 kg CH₄ / kg limbah organik</strong>.
-                Setara dengan <strong className="text-zinc-900 dark:text-zinc-200">1.192 kg CO₂e / ton</strong> berdasarkan IPCC AR6 ($GWP_{100} = 29.8$).
+                Dengan parameter iklim tropis Indonesia (<MathFormula math="\mathrm{DOC} = 0.15" />, <MathFormula math="\mathrm{DOC}_f = 0.50" />, <MathFormula math="F = 0.50" />, <MathFormula math="\mathrm{MCF} = 0.80" />),
+                diperoleh faktor konversi mutlak sebesar:
               </p>
+              <div className="rounded-xl bg-white dark:bg-zinc-900 p-3 border border-zinc-200 dark:border-zinc-800 overflow-x-auto text-amber-700 dark:text-amber-300">
+                <MathFormula
+                  math="\Delta E_{\mathrm{CO_2e}} = \Delta E_{\mathrm{CH_4}} \cdot \mathrm{GWP}_{\mathrm{CH_4}} = 0.040 \times 29.8 = 1.192 \text{ kg }\mathrm{CO_2e}/\text{kg}"
+                  block
+                />
+              </div>
             </div>
 
             <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 p-6 space-y-4">
@@ -290,13 +301,16 @@ export default function LandingPage() {
                 <Droplets className="h-5 w-5" />
                 Formula Pencegahan Air Lindi
               </h3>
-              <div className="rounded-xl bg-white dark:bg-zinc-900 p-4 font-mono text-sm text-blue-700 dark:text-blue-300 border border-zinc-200 dark:border-zinc-800">
-                V_lindi (L) = W × Kadar_Air (0.65) × Kompaksi (0.60)
+              <div className="rounded-xl bg-white dark:bg-zinc-900 p-4 border border-zinc-200 dark:border-zinc-800 overflow-x-auto text-blue-800 dark:text-blue-300">
+                <MathFormula
+                  math="V_{\mathrm{lindi}} = W \cdot \eta_{\mathrm{moisture}}(0.65) \cdot \gamma_{\mathrm{compaction}}(0.60) = 0.390 \cdot W \text{ Liter}"
+                  block
+                />
               </div>
               <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
                 Setiap 1 ton sampah organik yang dialihkan dari TPA Jatibarang mencegah terproduksinya{" "}
                 <strong className="text-zinc-900 dark:text-zinc-200">390 Liter air lindi pekat</strong>, melindungi air tanah dangkal
-                Kota Semarang dari beban 5.85 kg BOD dan 13.65 kg COD bahan pencemar.
+                Kota Semarang dari beban <MathFormula math="5.85\text{ kg BOD}" /> dan <MathFormula math="13.65\text{ kg COD}" /> bahan pencemar.
               </p>
             </div>
           </div>

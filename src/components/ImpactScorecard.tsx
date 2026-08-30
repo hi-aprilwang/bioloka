@@ -4,6 +4,7 @@ import React from "react"
 import { SpotlightCard } from "@/components/react-bits/SpotlightCard"
 import { CountUp } from "@/components/react-bits/CountUp"
 import { EnvironmentalImpact } from "@/lib/types"
+import { MathFormula } from "@/components/MathFormula"
 import { Leaf, Flame, Droplets, Coins, TrendingUp } from "lucide-react"
 
 interface ImpactScorecardProps {
@@ -45,7 +46,7 @@ export function ImpactScorecard({ impact }: ImpactScorecardProps) {
       >
         <div className="flex items-center justify-between">
           <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-            Metana ($CH_4$) Dihindari
+            Metana (<MathFormula math="\mathrm{CH_4}" />) Dihindari
           </span>
           <div className="rounded-lg bg-amber-50 dark:bg-amber-500/10 p-2 text-amber-600 dark:text-amber-400 border border-amber-500/20">
             <Flame className="h-4 w-4" />
@@ -55,12 +56,14 @@ export function ImpactScorecard({ impact }: ImpactScorecardProps) {
           <span className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">
             <CountUp to={impact.methaneAvoidedKg} decimals={1} duration={1.2} />
           </span>
-          <span className="text-sm font-semibold text-amber-600 dark:text-amber-400">kg CH₄</span>
+          <span className="text-sm font-semibold text-amber-600 dark:text-amber-400">
+            kg <MathFormula math="\mathrm{CH_4}" />
+          </span>
         </div>
         <div className="mt-3 text-sm text-zinc-500 dark:text-zinc-400">
           Setara{" "}
           <span className="text-zinc-800 dark:text-zinc-200 font-medium">
-            <CountUp to={impact.co2eAvoidedKg} decimals={0} /> kg CO₂e
+            <CountUp to={impact.co2eAvoidedKg} decimals={0} /> kg <MathFormula math="\mathrm{CO_2e}" />
           </span>
         </div>
       </SpotlightCard>

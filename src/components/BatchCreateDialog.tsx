@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { WasteBatch, WasteCategory } from "@/lib/types"
 import { calculateEnvironmentalImpact } from "@/lib/circuloop-data"
+import { MathFormula } from "@/components/MathFormula"
 import { Plus, Sparkles, Scale } from "lucide-react"
 
 interface BatchCreateDialogProps {
@@ -170,7 +171,9 @@ export function BatchCreateDialog({ onAddBatch }: BatchCreateDialogProps) {
             </div>
             <div className="grid grid-cols-3 gap-2.5 text-center text-sm">
               <div className="bg-white dark:bg-zinc-900/80 p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 shadow-xs">
-                <span className="block text-zinc-500 dark:text-zinc-400 text-sm">Avoided CH₄</span>
+                <span className="block text-zinc-500 dark:text-zinc-400 text-sm">
+                  Avoided <MathFormula math="\mathrm{CH_4}" />
+                </span>
                 <span className="font-bold text-amber-600 dark:text-amber-400 text-sm">{previewImpact.methaneAvoidedKg.toFixed(1)} kg</span>
               </div>
               <div className="bg-white dark:bg-zinc-900/80 p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 shadow-xs">

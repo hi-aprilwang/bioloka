@@ -4,6 +4,7 @@ import React, { useState } from "react"
 import { SpotlightCard } from "@/components/react-bits/SpotlightCard"
 import { CountUp } from "@/components/react-bits/CountUp"
 import { calculateEnvironmentalImpact } from "@/lib/circuloop-data"
+import { MathFormula } from "@/components/MathFormula"
 import {
   Calculator,
   Flame,
@@ -127,11 +128,13 @@ export function EcoHealthCalculator() {
                 <Flame className="h-5 w-5" />
               </div>
             </div>
-            <div className="mt-4">
+            <div className="mt-4 flex items-baseline gap-2">
               <span className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white">
                 <CountUp to={impact.methaneAvoidedKg} decimals={1} duration={0.8} />
               </span>
-              <span className="ml-2.5 text-sm font-bold text-amber-600 dark:text-amber-400">kg CH₄</span>
+              <span className="text-sm font-bold text-amber-600 dark:text-amber-400">
+                kg <MathFormula math="\mathrm{CH_4}" />
+              </span>
             </div>
             <div className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
               Setara dengan{" "}
@@ -139,7 +142,7 @@ export function EcoHealthCalculator() {
                 {impact.co2eAvoidedKg.toLocaleString(undefined, {
                   maximumFractionDigits: 0,
                 })}{" "}
-                kg CO₂e
+                kg <MathFormula math="\mathrm{CO_2e}" />
               </span>
             </div>
           </div>
@@ -243,15 +246,19 @@ export function EcoHealthCalculator() {
           </div>
           <div className="space-y-2 text-sm">
             <h3 className="font-semibold text-zinc-900 dark:text-zinc-200">
-              Transparansi Metodologi Matematika (Bebas Overclaim)
+              Transparansi Metodologi Matematika (Standar IPCC Tier 1)
             </h3>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              Perhitungan di atas menggunakan model resmi IPCC Tier 1 untuk sampah organik kota:{" "}
-              <code className="text-emerald-800 dark:text-emerald-300 bg-white dark:bg-zinc-900 px-2 py-0.5 rounded font-mono text-sm border border-zinc-200 dark:border-zinc-800">
-                CH₄ = W × DOC(0.15) × DOCf(0.50) × F(0.50) × (16/12) × MCF(0.8) = 0.040 kg/kg
-              </code>
-              . Kadar air perkolasi lindi diasumsikan 65% dengan faktor kompaksi 0.60. Data ini
-              dapat diuji validitasnya secara terbuka.
+              Kalkulasi penurunan emisi metana dihitung secara terbuka menggunakan persamaan matematis IPCC Waste Model:
+            </p>
+            <div className="my-3 p-3.5 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 overflow-x-auto text-emerald-800 dark:text-emerald-300">
+              <MathFormula
+                math="\Delta E_{\mathrm{CH_4}} = W \cdot \mathrm{DOC} \cdot \mathrm{DOC}_f \cdot F \cdot \frac{16}{12} \cdot \mathrm{MCF} = W \cdot (0.15 \cdot 0.50 \cdot 0.50 \cdot \frac{16}{12} \cdot 0.80) = 0.040 \cdot W \text{ kg }\mathrm{CH_4}"
+                block
+              />
+            </div>
+            <p className="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed">
+              Debit air lindi tropis dihitung dengan model perkolasi: <MathFormula math="V_{\mathrm{lindi}} = W \cdot \eta_{\mathrm{moisture}}(0.65) \cdot \gamma_{\mathrm{compaction}}(0.60) = 0.390 \cdot W\text{ L}" />.
             </p>
           </div>
         </div>
