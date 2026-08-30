@@ -79,12 +79,12 @@ export default function DashboardPage() {
   }
 
   return (
-    <main className="relative min-h-screen bg-zinc-950 text-zinc-100 selection:bg-emerald-500/20">
+    <main className="relative min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 selection:bg-emerald-500/20 font-sans transition-colors duration-200">
       {/* React Bits Subtle Grid Pattern Background */}
       <GridPattern
         width={40}
         height={40}
-        className="stroke-zinc-800/40 fill-zinc-900/10 opacity-70"
+        className="stroke-zinc-300/60 dark:stroke-zinc-800/40 fill-zinc-200/20 dark:fill-zinc-900/10 opacity-70"
       />
 
       <Header
@@ -97,7 +97,7 @@ export default function DashboardPage() {
       <div className="mx-auto max-w-7xl px-6 pt-6 sm:px-10">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm font-medium text-zinc-400 hover:text-emerald-400 transition-colors"
+          className="inline-flex items-center gap-2 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
         >
           <ArrowLeft className="h-4 w-4" />
           <span>Kembali ke Beranda Utama</span>
@@ -108,14 +108,14 @@ export default function DashboardPage() {
       <div className="relative mx-auto max-w-7xl px-6 py-6 sm:px-10 sm:py-10 space-y-12 sm:space-y-16">
         {/* Simulation Feedback Alert */}
         {simulationAlert && (
-          <div className="rounded-xl border border-emerald-500/40 bg-emerald-950/70 p-4 text-sm text-emerald-200 flex items-center justify-between shadow-xl animate-in fade-in slide-in-from-top-3">
+          <div className="rounded-2xl border border-emerald-500/40 bg-emerald-50 dark:bg-emerald-950/70 p-4.5 text-sm text-emerald-900 dark:text-emerald-200 flex items-center justify-between shadow-xl animate-in fade-in slide-in-from-top-3">
             <div className="flex items-center gap-3">
-              <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0" />
+              <CheckCircle2 className="h-5 w-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
               <span>{simulationAlert}</span>
             </div>
             <button
               onClick={() => setSimulationAlert(null)}
-              className="text-emerald-400 hover:text-emerald-200 font-bold ml-3 text-sm px-2 py-1"
+              className="text-emerald-600 dark:text-emerald-400 hover:opacity-80 font-bold ml-3 text-sm px-2 py-1"
             >
               ✕
             </button>
@@ -123,34 +123,34 @@ export default function DashboardPage() {
         )}
 
         {/* Platform Control Banner */}
-        <div className="rounded-3xl border border-zinc-800/90 bg-gradient-to-b from-zinc-900/90 via-zinc-900/50 to-zinc-950/80 p-8 sm:p-12 lg:p-14 backdrop-blur-md relative overflow-hidden shadow-sm">
+        <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-gradient-to-b from-white via-zinc-50 to-zinc-100 dark:from-zinc-900/90 dark:via-zinc-900/50 dark:to-zinc-950/80 p-8 sm:p-12 lg:p-14 backdrop-blur-md relative overflow-hidden shadow-sm">
           <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
             <div className="space-y-4 max-w-3xl">
               <div className="flex flex-wrap items-center gap-2.5">
                 <Badge
                   variant="outline"
-                  className="border-emerald-500/40 bg-emerald-500/10 text-emerald-300 text-sm px-3.5 py-1"
+                  className="border-emerald-500/40 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-3.5 py-1"
                 >
                   Subtema: Smart Waste & Eco-Health
                 </Badge>
                 <Badge
                   variant="outline"
-                  className="border-blue-500/30 bg-blue-500/10 text-blue-300 text-sm px-3.5 py-1"
+                  className="border-blue-500/30 bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 text-sm px-3.5 py-1"
                 >
                   Node Operasional: Kota Semarang
                 </Badge>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-tight">
                 Konsol Pengelolaan{" "}
                 <ShinyText
                   text="Sirkularitas & Risiko Eko-Kesehatan"
                   speed={4}
-                  className="from-emerald-400 via-teal-200 to-emerald-400"
+                  className="from-emerald-600 via-teal-500 to-emerald-600 dark:from-emerald-400 dark:via-teal-200 dark:to-emerald-400"
                 />
               </h1>
 
-              <p className="text-base text-zinc-400 leading-relaxed pt-1">
+              <p className="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed pt-1">
                 Menghubungkan limbah organik komersial (hotel, restoran, pasar Johar) dengan
                 pusat biokonversi Maggot BSF & biogas lokal. Mencegah timbunan gas metana
                 di TPA Jatibarang dan rembesan air lindi beracun ke air tanah warga pesisir.
@@ -162,9 +162,9 @@ export default function DashboardPage() {
               <Button
                 variant="outline"
                 onClick={() => setActiveTab("calculator")}
-                className="border-zinc-700 bg-zinc-900/90 text-zinc-200 hover:bg-zinc-800 text-sm h-11 px-5"
+                className="border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/90 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-sm h-11 px-5 shadow-sm"
               >
-                <Activity className="mr-2 h-4 w-4 text-emerald-400" />
+                <Activity className="mr-2 h-4 w-4 text-emerald-600 dark:text-emerald-400" />
                 Uji Model Matematika
               </Button>
             </div>
@@ -177,19 +177,19 @@ export default function DashboardPage() {
         {/* Tab 1: Dashboard Overview */}
         {activeTab === "overview" && (
           <div className="space-y-10 sm:space-y-14">
-            <div className="rounded-3xl border border-zinc-800/90 bg-zinc-900/40 p-8 sm:p-10 space-y-8 shadow-sm">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zinc-800/80">
+            <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/40 p-8 sm:p-10 space-y-8 shadow-sm">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zinc-200 dark:border-zinc-800/80">
                 <div>
-                  <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight">
+                  <h2 className="text-lg sm:text-xl font-bold text-zinc-900 dark:text-white tracking-tight">
                     Bursa Sirkular Limbah Organik Semarang (Live Feed)
                   </h2>
-                  <p className="text-sm text-zinc-400 mt-1">
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
                     Aliran limbah terverifikasi yang siap diserap fasilitas biokonversi lokal
                   </p>
                 </div>
                 <Badge
                   variant="outline"
-                  className="border-emerald-500/30 bg-emerald-500/10 text-emerald-300 text-sm font-mono px-3.5 py-1.5 self-start sm:self-auto"
+                  className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm font-mono px-3.5 py-1.5 self-start sm:self-auto"
                 >
                   {batches.filter((b) => b.status === "available").length} Batch Tersedia
                 </Badge>
@@ -205,14 +205,14 @@ export default function DashboardPage() {
         {/* Tab 2: Producer Portal (Hotel/Pasar) */}
         {activeTab === "producers" && (
           <div className="space-y-10 sm:space-y-14">
-            <div className="rounded-3xl border border-zinc-800/90 bg-zinc-900/60 p-8 sm:p-10 space-y-8 shadow-sm">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zinc-800/80">
+            <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/60 p-8 sm:p-10 space-y-8 shadow-sm">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zinc-200 dark:border-zinc-800/80">
                 <div>
-                  <h2 className="text-xl font-bold text-white flex items-center gap-3">
-                    <Building2 className="h-6 w-6 text-emerald-400" />
+                  <h2 className="text-xl font-bold text-zinc-900 dark:text-white flex items-center gap-3">
+                    <Building2 className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                     Portal Mitra Penghasil Limbah (Hotel / Resto / Pasar)
                   </h2>
-                  <p className="text-sm text-zinc-400 mt-1">
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
                     Kelola pengalihan limbah dapur dan unduh Sertifikat Pengalihan Karbon (ESG Badge)
                   </p>
                 </div>
@@ -220,21 +220,21 @@ export default function DashboardPage() {
               </div>
 
               {/* ESG Badge Demo Card */}
-              <div className="rounded-2xl border border-emerald-500/30 bg-emerald-950/20 p-6 sm:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+              <div className="rounded-2xl border border-emerald-500/30 bg-emerald-50/50 dark:bg-emerald-950/20 p-6 sm:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                 <div className="flex items-center gap-4">
-                  <div className="rounded-2xl bg-emerald-500/10 p-3.5 border border-emerald-500/30 text-emerald-400 shrink-0">
+                  <div className="rounded-2xl bg-emerald-500/10 p-3.5 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 shrink-0">
                     <ShieldCheck className="h-9 w-9" />
                   </div>
                   <div>
                     <div className="flex items-center gap-2.5 flex-wrap">
-                      <span className="text-base font-bold text-white">
+                      <span className="text-base font-bold text-zinc-900 dark:text-white">
                         Sertifikat Kepatuhan Sirkular Kota Semarang
                       </span>
-                      <Badge className="bg-emerald-500 text-zinc-950 text-sm font-bold px-3 py-0.5">
+                      <Badge className="bg-emerald-600 text-white dark:bg-emerald-500 dark:text-zinc-950 text-sm font-bold px-3 py-0.5">
                         VERIFIED ESG
                       </Badge>
                     </div>
-                    <p className="text-sm text-zinc-400 mt-1.5 leading-relaxed">
+                    <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
                       Telah mengalihkan {aggregateImpact.divertedWeightKg} kg limbah organik dari TPA Jatibarang.
                     </p>
                   </div>
@@ -243,7 +243,7 @@ export default function DashboardPage() {
                   size="default"
                   variant="outline"
                   onClick={() => alert("Sertifikat digital ISO 14001 / ESG siap diunduh dalam format PDF.")}
-                  className="border-emerald-500/40 text-emerald-300 hover:bg-emerald-900/40 text-sm h-10 px-5 shrink-0 self-start lg:self-auto"
+                  className="border-emerald-500/40 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-900/40 text-sm h-10 px-5 shrink-0 self-start lg:self-auto"
                 >
                   Unduh Sertifikat PDF
                 </Button>
@@ -257,21 +257,21 @@ export default function DashboardPage() {
         {/* Tab 3: Valorizer Facility Portal */}
         {activeTab === "valorizers" && (
           <div className="space-y-10 sm:space-y-14">
-            <div className="rounded-3xl border border-zinc-800/90 bg-zinc-900/60 p-8 sm:p-10 space-y-8 shadow-sm">
-              <div className="pb-4 border-b border-zinc-800/80">
-                <h2 className="text-xl font-bold text-white flex items-center gap-3">
-                  <Bug className="h-6 w-6 text-emerald-400" />
+            <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/60 p-8 sm:p-10 space-y-8 shadow-sm">
+              <div className="pb-4 border-b border-zinc-200 dark:border-zinc-800/80">
+                <h2 className="text-xl font-bold text-zinc-900 dark:text-white flex items-center gap-3">
+                  <Bug className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                   Portal Fasilitas Biokonversi Maggot BSF & Biogas
                 </h2>
-                <p className="text-sm text-zinc-400 mt-1">
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
                   Cari batch limbah organik segar terdekat di Semarang untuk pakan larva dan reaktor biogas
                 </p>
               </div>
 
               <ValorizerHubs />
 
-              <div className="pt-8 border-t border-zinc-800/80">
-                <h3 className="text-base font-semibold text-zinc-200 mb-4">
+              <div className="pt-8 border-t border-zinc-200 dark:border-zinc-800/80">
+                <h3 className="text-base font-semibold text-zinc-800 dark:text-zinc-200 mb-4">
                   Daftar Batch yang Siap Diklaim untuk Wilayah Operasional Anda:
                 </h3>
                 <BatchList batches={batches} onClaimBatch={handleClaimBatch} />
@@ -285,11 +285,11 @@ export default function DashboardPage() {
       </div>
 
       {/* Footer with Generous Breathing Room */}
-      <footer className="mt-24 sm:mt-32 border-t border-zinc-800/80 bg-zinc-950 py-12 sm:py-16 text-center text-sm text-zinc-500 space-y-2">
+      <footer className="mt-24 sm:mt-32 border-t border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950 py-12 sm:py-16 text-center text-sm text-zinc-500 space-y-2">
         <p>
           CircuLoop Semarang — Dikembangkan untuk Diponegoro Software Development Competition (DSDC) ANFORCOM 2026.
         </p>
-        <p className="text-sm text-zinc-600">
+        <p className="text-sm text-zinc-500">
           HMIF Universitas Diponegoro • Tema: Circular Economy for Eco-Health Cities
         </p>
       </footer>

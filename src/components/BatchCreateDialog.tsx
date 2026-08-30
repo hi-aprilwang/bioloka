@@ -57,17 +57,17 @@ export function BatchCreateDialog({ onAddBatch }: BatchCreateDialogProps) {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger className="inline-flex items-center justify-center gap-1.5 rounded-md bg-emerald-600 px-3.5 py-2 text-sm font-medium text-white shadow-sm hover:bg-emerald-500 transition-colors cursor-pointer">
+      <DialogTrigger className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-emerald-500 transition-colors cursor-pointer">
         <Plus className="h-4 w-4" />
         Daftarkan Batch Limbah Baru
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[540px] bg-zinc-900 border-zinc-800 text-zinc-100">
+      <DialogContent className="sm:max-w-[540px] bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-xl">
         <DialogHeader>
-          <DialogTitle className="text-lg font-bold text-white flex items-center gap-2">
-            <Scale className="h-5 w-5 text-emerald-400" />
+          <DialogTitle className="text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
+            <Scale className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
             Posting Batch Sampah Organik
           </DialogTitle>
-          <DialogDescription className="text-zinc-400 text-sm">
+          <DialogDescription className="text-zinc-500 dark:text-zinc-400 text-sm">
             Hubungkan surplus limbah organik usaha Anda dengan biokonversi maggot BSF & biogas Semarang.
           </DialogDescription>
         </DialogHeader>
@@ -75,20 +75,20 @@ export function BatchCreateDialog({ onAddBatch }: BatchCreateDialogProps) {
         <form onSubmit={handleSubmit} className="space-y-4 pt-2">
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-1.5">
-              <Label className="text-sm text-zinc-300">Nama Produsen / Usaha</Label>
+              <Label className="text-sm text-zinc-700 dark:text-zinc-300">Nama Produsen / Usaha</Label>
               <Input
                 value={producerName}
                 onChange={(e) => setProducerName(e.target.value)}
                 required
-                className="bg-zinc-950 border-zinc-800 text-sm h-10 text-zinc-200"
+                className="bg-white dark:bg-zinc-950 border-zinc-300 dark:border-zinc-800 text-sm h-10 text-zinc-900 dark:text-zinc-200"
               />
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm text-zinc-300">Tipe Organisasi</Label>
+              <Label className="text-sm text-zinc-700 dark:text-zinc-300">Tipe Organisasi</Label>
               <select
                 value={orgType}
                 onChange={(e) => setOrgType(e.target.value as WasteBatch["organizationType"])}
-                className="w-full h-10 rounded-md border border-zinc-800 bg-zinc-950 px-3 text-sm text-zinc-200 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                className="w-full h-10 rounded-lg border border-zinc-300 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-3 text-sm text-zinc-900 dark:text-zinc-200 focus:outline-none focus:ring-1 focus:ring-emerald-500"
               >
                 <option value="Restoran">Restoran / Rumah Makan</option>
                 <option value="Hotel">Hotel & Hospitality</option>
@@ -100,20 +100,20 @@ export function BatchCreateDialog({ onAddBatch }: BatchCreateDialogProps) {
 
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-1.5">
-              <Label className="text-sm text-zinc-300">Lokasi / Alamat</Label>
+              <Label className="text-sm text-zinc-700 dark:text-zinc-300">Lokasi / Alamat</Label>
               <Input
                 value={locationName}
                 onChange={(e) => setLocationName(e.target.value)}
                 required
-                className="bg-zinc-950 border-zinc-800 text-sm h-10 text-zinc-200"
+                className="bg-white dark:bg-zinc-950 border-zinc-300 dark:border-zinc-800 text-sm h-10 text-zinc-900 dark:text-zinc-200"
               />
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm text-zinc-300">Kecamatan (Semarang)</Label>
+              <Label className="text-sm text-zinc-700 dark:text-zinc-300">Kecamatan (Semarang)</Label>
               <select
                 value={district}
                 onChange={(e) => setDistrict(e.target.value)}
-                className="w-full h-10 rounded-md border border-zinc-800 bg-zinc-950 px-3 text-sm text-zinc-200 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                className="w-full h-10 rounded-lg border border-zinc-300 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-3 text-sm text-zinc-900 dark:text-zinc-200 focus:outline-none focus:ring-1 focus:ring-emerald-500"
               >
                 <option value="Semarang Tengah">Semarang Tengah (Johar)</option>
                 <option value="Semarang Barat">Semarang Barat (Puri/Bandara)</option>
@@ -127,11 +127,11 @@ export function BatchCreateDialog({ onAddBatch }: BatchCreateDialogProps) {
 
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-1.5">
-              <Label className="text-sm text-zinc-300">Jenis Limbah</Label>
+              <Label className="text-sm text-zinc-700 dark:text-zinc-300">Jenis Limbah</Label>
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value as WasteCategory)}
-                className="w-full h-10 rounded-md border border-zinc-800 bg-zinc-950 px-3 text-sm text-zinc-200 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                className="w-full h-10 rounded-lg border border-zinc-300 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-3 text-sm text-zinc-900 dark:text-zinc-200 focus:outline-none focus:ring-1 focus:ring-emerald-500"
               >
                 <option value="cooked_food">Sisa Makanan Matang (Buffet/Dapur)</option>
                 <option value="raw_produce">Sayur & Buah Mentah (Sortiran Pasar)</option>
@@ -140,7 +140,7 @@ export function BatchCreateDialog({ onAddBatch }: BatchCreateDialogProps) {
               </select>
             </div>
             <div className="space-y-1.5">
-              <Label className="text-sm text-zinc-300">Estimasi Bobot (kg)</Label>
+              <Label className="text-sm text-zinc-700 dark:text-zinc-300">Estimasi Bobot (kg)</Label>
               <Input
                 type="number"
                 min="10"
@@ -148,38 +148,38 @@ export function BatchCreateDialog({ onAddBatch }: BatchCreateDialogProps) {
                 value={weightKg}
                 onChange={(e) => setWeightKg(Number(e.target.value))}
                 required
-                className="bg-zinc-950 border-zinc-800 text-sm h-10 text-zinc-200 font-semibold text-emerald-400"
+                className="bg-white dark:bg-zinc-950 border-zinc-300 dark:border-zinc-800 text-sm h-10 text-emerald-700 dark:text-emerald-400 font-semibold"
               />
             </div>
           </div>
 
           <div className="space-y-1.5">
-            <Label className="text-sm text-zinc-300">Catatan Kondisi Bahan</Label>
+            <Label className="text-sm text-zinc-700 dark:text-zinc-300">Catatan Kondisi Bahan</Label>
             <Input
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
-              className="bg-zinc-950 border-zinc-800 text-sm h-10 text-zinc-200"
+              className="bg-white dark:bg-zinc-950 border-zinc-300 dark:border-zinc-800 text-sm h-10 text-zinc-900 dark:text-zinc-200"
             />
           </div>
 
           {/* Real-time Environmental Calculation Preview */}
-          <div className="rounded-lg border border-emerald-500/20 bg-emerald-950/20 p-3.5">
-            <div className="flex items-center gap-1.5 text-sm font-semibold text-emerald-400 mb-2">
+          <div className="rounded-xl border border-emerald-500/20 bg-emerald-50/50 dark:bg-emerald-950/20 p-3.5">
+            <div className="flex items-center gap-1.5 text-sm font-semibold text-emerald-700 dark:text-emerald-400 mb-2">
               <Sparkles className="h-4 w-4" />
               Proyeksi Dampak Batch ({weightKg} kg):
             </div>
             <div className="grid grid-cols-3 gap-2.5 text-center text-sm">
-              <div className="bg-zinc-900/80 p-2 rounded border border-zinc-800">
-                <span className="block text-zinc-400 text-sm">Avoided CH₄</span>
-                <span className="font-bold text-amber-400 text-sm">{previewImpact.methaneAvoidedKg.toFixed(1)} kg</span>
+              <div className="bg-white dark:bg-zinc-900/80 p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 shadow-xs">
+                <span className="block text-zinc-500 dark:text-zinc-400 text-sm">Avoided CH₄</span>
+                <span className="font-bold text-amber-600 dark:text-amber-400 text-sm">{previewImpact.methaneAvoidedKg.toFixed(1)} kg</span>
               </div>
-              <div className="bg-zinc-900/80 p-2 rounded border border-zinc-800">
-                <span className="block text-zinc-400 text-sm">Cegah Lindi</span>
-                <span className="font-bold text-blue-400 text-sm">{previewImpact.leachatePreventedLiters.toFixed(1)} L</span>
+              <div className="bg-white dark:bg-zinc-900/80 p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 shadow-xs">
+                <span className="block text-zinc-500 dark:text-zinc-400 text-sm">Cegah Lindi</span>
+                <span className="font-bold text-blue-600 dark:text-blue-400 text-sm">{previewImpact.leachatePreventedLiters.toFixed(1)} L</span>
               </div>
-              <div className="bg-zinc-900/80 p-2 rounded border border-zinc-800">
-                <span className="block text-zinc-400 text-sm">Maggot BSF</span>
-                <span className="font-bold text-emerald-400 text-sm">{previewImpact.maggotProducedKg.toFixed(0)} kg</span>
+              <div className="bg-white dark:bg-zinc-900/80 p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 shadow-xs">
+                <span className="block text-zinc-500 dark:text-zinc-400 text-sm">Maggot BSF</span>
+                <span className="font-bold text-emerald-600 dark:text-emerald-400 text-sm">{previewImpact.maggotProducedKg.toFixed(0)} kg</span>
               </div>
             </div>
           </div>
@@ -189,7 +189,7 @@ export function BatchCreateDialog({ onAddBatch }: BatchCreateDialogProps) {
               type="button"
               variant="outline"
               onClick={() => setOpen(false)}
-              className="border-zinc-800 text-zinc-400 hover:bg-zinc-800 text-sm h-9"
+              className="border-zinc-300 dark:border-zinc-800 text-zinc-700 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-sm h-9"
             >
               Batal
             </Button>
