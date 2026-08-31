@@ -54,9 +54,6 @@ export default function LandingPage() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-300">
-            <a href="#masalah" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
-              Urgensi Semarang
-            </a>
             <a href="#cara-kerja" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Cara Kerja
             </a>
@@ -65,6 +62,9 @@ export default function LandingPage() {
             </a>
             <a href="#solusi" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Arsitektur Solusi
+            </a>
+            <a href="#masalah" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              Urgensi Semarang
             </a>
             <a href="#model-ipcc" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Model IPCC
@@ -726,11 +726,17 @@ export default function LandingPage() {
             <a href="#bioproduk" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Katalog Bioproduk
             </a>
+            <a href="#solusi" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              Arsitektur Solusi
+            </a>
             <a href="#masalah" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Urgensi Semarang
             </a>
             <a href="#model-ipcc" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Model IPCC
+            </a>
+            <a href="#mitra" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              Jaringan Mitra
             </a>
           </div>
         </div>
