@@ -624,12 +624,12 @@ export default function LandingPage() {
               </a>
               , serta metode sampling komposisi sampah{" "}
               <a
-                href="https://akses-sni.bsn.go.id/"
+                href="https://pesta.bsn.go.id/produk/detail/39642025-sni3964:2025"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-emerald-600 dark:text-emerald-400 underline underline-offset-2 hover:text-emerald-700 dark:hover:text-emerald-300 inline-flex items-center gap-1"
               >
-                SNI 19-3964-1994 / SNI 3964 BSN
+                SNI 3964:2025 (Standar BSN)
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
               .
