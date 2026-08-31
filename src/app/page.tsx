@@ -180,29 +180,54 @@ export default function LandingPage() {
             </Link>
           </div>
 
-          {/* Live Semarang Statistics Strip */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full pt-10 border-t border-zinc-200 dark:border-zinc-800/80 text-left">
-            <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800/70 bg-white dark:bg-zinc-900/40 p-5 shadow-sm">
-              <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400 block">Fraksi Sampah Kota</span>
-              <span className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">62% Organik</span>
-              <span className="text-sm text-zinc-500 block mt-1">Data DLH Semarang 2024</span>
+          {/* Live Semarang Statistics Proof Strip - Minimalist Flat Data Format (No CTA appearance) */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full max-w-4xl pt-8 border-t border-zinc-200/80 dark:border-zinc-800/80 text-left">
+            <div className="space-y-1">
+              <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400 block">
+                Fraksi Sampah Kota
+              </span>
+              <span className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 block tracking-tight">
+                62% Organik
+              </span>
+              <span className="text-sm text-zinc-400 dark:text-zinc-500 block">
+                Data DLH Semarang 2024
+              </span>
             </div>
-            <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800/70 bg-white dark:bg-zinc-900/40 p-5 shadow-sm">
-              <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400 block">TPA Jatibarang</span>
-              <span className="text-2xl font-bold text-amber-600 dark:text-amber-400">1.200 Ton/Hari</span>
-              <span className="text-sm text-zinc-500 block mt-1">Kapasitas kritis overload</span>
+
+            <div className="space-y-1 lg:border-l lg:border-zinc-200/70 dark:lg:border-zinc-800/70 lg:pl-6">
+              <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400 block">
+                Beban TPA Jatibarang
+              </span>
+              <span className="text-2xl font-extrabold text-amber-600 dark:text-amber-400 block tracking-tight">
+                1.200 Ton/Hari
+              </span>
+              <span className="text-sm text-zinc-400 dark:text-zinc-500 block">
+                Kondisi timbulan kritis
+              </span>
             </div>
-            <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800/70 bg-white dark:bg-zinc-900/40 p-5 shadow-sm">
-              <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400 block">Faktor Metana IPCC</span>
-              <span className="text-2xl font-bold text-zinc-900 dark:text-white">
+
+            <div className="space-y-1 lg:border-l lg:border-zinc-200/70 dark:lg:border-zinc-800/70 lg:pl-6">
+              <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400 block">
+                Faktor Metana IPCC
+              </span>
+              <span className="text-2xl font-extrabold text-zinc-800 dark:text-zinc-200 block tracking-tight">
                 0.040 kg <MathFormula math="\mathrm{CH_4}" />
               </span>
-              <span className="text-sm text-zinc-500 block mt-1">Tereduksi per kg limbah</span>
+              <span className="text-sm text-zinc-400 dark:text-zinc-500 block">
+                Tereduksi per kg limbah
+              </span>
             </div>
-            <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800/70 bg-white dark:bg-zinc-900/40 p-5 shadow-sm">
-              <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400 block">Cegah Air Lindi</span>
-              <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">390 Liter</span>
-              <span className="text-sm text-zinc-500 block mt-1">Per ton limbah dialihkan</span>
+
+            <div className="space-y-1 lg:border-l lg:border-zinc-200/70 dark:lg:border-zinc-800/70 lg:pl-6">
+              <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400 block">
+                Cegah Air Lindi Busuk
+              </span>
+              <span className="text-2xl font-extrabold text-blue-600 dark:text-blue-400 block tracking-tight">
+                390 Liter
+              </span>
+              <span className="text-sm text-zinc-400 dark:text-zinc-500 block">
+                Per ton sisa makanan
+              </span>
             </div>
           </div>
         </div>
