@@ -261,9 +261,13 @@ export function EcoHealthCalculator() {
               </a>
               :
             </p>
-            <div className="my-3 p-3.5 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 overflow-x-auto text-emerald-800 dark:text-emerald-300">
+            <div className="my-3 p-3.5 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 text-emerald-800 dark:text-emerald-300">
               <MathFormula
-                math="\Delta E_{\mathrm{CH_4}} = W \cdot \mathrm{DOC}(0.15) \cdot \mathrm{DOC}_f(0.50) \cdot F(0.50) \cdot \frac{16}{12} \cdot \mathrm{MCF}(0.80) = 0.040 \cdot W \text{ kg }\mathrm{CH_4}"
+                math="\begin{aligned}
+\Delta E_{\mathrm{CH_4}} &= W \cdot \mathrm{DOC} \cdot \mathrm{DOC}_f \cdot F \cdot \frac{16}{12} \cdot \mathrm{MCF} \\
+&= W \cdot (0.15 \times 0.50 \times 0.50 \times 1.333 \times 0.80) \\
+&= \mathbf{0.040 \cdot W \text{ kg }\mathrm{CH_4}}
+\end{aligned}"
                 block
               />
             </div>

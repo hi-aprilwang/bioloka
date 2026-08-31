@@ -684,9 +684,14 @@ export default function LandingPage() {
                 </ul>
               </div>
 
-              <div className="rounded-xl bg-white dark:bg-zinc-900 p-3.5 border border-zinc-200 dark:border-zinc-800 overflow-x-auto text-amber-700 dark:text-amber-300">
+              {/* Step-by-Step Multi-Line KaTeX Equation (Zero Horizontal Scroll) */}
+              <div className="rounded-xl bg-white dark:bg-zinc-900 p-4 border border-zinc-200 dark:border-zinc-800 text-amber-700 dark:text-amber-300">
                 <MathFormula
-                  math="\Delta E_{\mathrm{CO_2e}} = \Delta E_{\mathrm{CH_4}} \cdot \mathrm{GWP}_{\mathrm{CH_4}} = 0.040 \times 29.8 = 1.192 \text{ kg }\mathrm{CO_2e}/\text{kg}"
+                  math="\begin{aligned}
+\Delta E_{\mathrm{CO_2e}} &= \Delta E_{\mathrm{CH_4}} \times \mathrm{GWP}_{\mathrm{CH_4}} \\
+&= 0.040 \times 29.8 \\
+&= \mathbf{1.192 \text{ kg }\mathrm{CO_2e}/\text{kg}}
+\end{aligned}"
                   block
                 />
               </div>
@@ -710,9 +715,13 @@ export default function LandingPage() {
                 <Droplets className="h-5 w-5" />
                 Formula Pencegahan Air Lindi (Leachate)
               </h3>
-              <div className="rounded-xl bg-white dark:bg-zinc-900 p-4 border border-zinc-200 dark:border-zinc-800 overflow-x-auto text-blue-800 dark:text-blue-300">
+              <div className="rounded-xl bg-white dark:bg-zinc-900 p-4 border border-zinc-200 dark:border-zinc-800 text-blue-800 dark:text-blue-300">
                 <MathFormula
-                  math="V_{\mathrm{lindi}} = W \cdot \eta_{\mathrm{moisture}}(0.65) \cdot \gamma_{\mathrm{compaction}}(0.60) = 0.390 \cdot W \text{ Liter}"
+                  math="\begin{aligned}
+V_{\mathrm{lindi}} &= W \times \eta_{\mathrm{moisture}} \times \gamma_{\mathrm{compaction}} \\
+&= W \times 0.65 \times 0.60 \\
+&= \mathbf{0.390 \cdot W \text{ Liter}}
+\end{aligned}"
                   block
                 />
               </div>
