@@ -595,7 +595,7 @@ export default function LandingPage() {
         <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-gradient-to-b from-white to-zinc-100 dark:from-zinc-900/80 dark:to-zinc-950 p-8 sm:p-12 space-y-8 shadow-sm">
           <div className="space-y-3 max-w-3xl">
             <Badge variant="outline" className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-3 py-1 font-medium">
-              Landasan Ilmiah (Kunci 20% Nilai Juri)
+              Landasan Ilmiah Terverifikasi
             </Badge>
             <h2 className="text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
               Metodologi Hitung Dampak Standar IPCC Tier 1
