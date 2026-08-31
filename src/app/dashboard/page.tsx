@@ -150,26 +150,26 @@ export default function DashboardPage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-tight">
-                Platform Sirkularitas &{" "}
+                Penyelamatan Makanan &{" "}
                 <ShinyText
-                  text="Pencegahan Risiko Eko-Kesehatan"
+                  text="Perlindungan Lingkungan Semarang"
                   speed={4}
                   className="from-emerald-600 via-teal-500 to-emerald-600 dark:from-emerald-400 dark:via-teal-200 dark:to-emerald-400"
                 />
               </h1>
 
               <p className="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed pt-1">
-                Menghubungkan limbah organik komersial (hotel, restoran, pasar Johar) dengan
-                pusat biokonversi Maggot BSF & biogas lokal. Mencegah timbunan gas metana
-                di TPA Jatibarang dan rembesan air lindi beracun ke air tanah warga pesisir.
+                Salurkan sisa bahan makanan dari warung, kafe, pasar Johar, dan rumah makan Anda langsung
+                ke peternak maggot BSF & biogas lokal. Bersama cegah asap kebakaran TPA Jatibarang dan
+                selamatkan air tanah pesisir Semarang dari rembesan air lindi busuk.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row lg:flex-col items-stretch gap-3.5 shrink-0">
               <BatchCreateDialog onAddBatch={handleAddBatch} />
-              <HowItWorksDialog className="inline-flex items-center justify-center rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/90 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-sm h-11 px-5 shadow-sm cursor-pointer transition-colors">
-                <ShieldCheck className="mr-2 h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                Panduan Alur Simbiosis
+              <HowItWorksDialog className="inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/90 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-sm h-11 px-5 shadow-sm cursor-pointer transition-colors">
+                <ShieldCheck className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                Cara Kerja Gerakan
               </HowItWorksDialog>
               <Button
                 variant="outline"
@@ -177,7 +177,7 @@ export default function DashboardPage() {
                 className="border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/90 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-sm h-11 px-5 shadow-sm"
               >
                 <Activity className="mr-2 h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                Uji Model Matematika
+                Hitung Manfaat Lingkungan
               </Button>
             </div>
           </div>
@@ -193,17 +193,17 @@ export default function DashboardPage() {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zinc-200 dark:border-zinc-800/80">
                 <div>
                   <h2 className="text-lg sm:text-xl font-bold text-zinc-900 dark:text-white tracking-tight">
-                    Bursa Sirkular Limbah Organik Semarang (Live Feed)
+                    Kiriman Sisa Makanan yang Siap Dijemput (Semarang Hari Ini)
                   </h2>
                   <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
-                    Aliran limbah terverifikasi yang siap diserap fasilitas biokonversi lokal
+                    Daftar sisa dapur bersih yang dapat langsung diambil oleh peternak maggot & instalasi biogas
                   </p>
                 </div>
                 <Badge
                   variant="outline"
                   className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm font-mono px-3.5 py-1.5 self-start sm:self-auto"
                 >
-                  {batches.filter((b) => b.status === "available").length} Batch Tersedia
+                  {batches.filter((b) => b.status === "available").length} Siap Dijemput
                 </Badge>
               </div>
 
@@ -214,7 +214,7 @@ export default function DashboardPage() {
           </div>
         )}
 
-        {/* Tab 2: Producer Portal (Hotel/Pasar) */}
+        {/* Tab 2: Producer Portal (Hotel/Pasar/Warung) */}
         {activeTab === "producers" && (
           <div className="space-y-10 sm:space-y-14">
             <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/60 p-8 sm:p-10 space-y-8 shadow-sm">
@@ -222,10 +222,10 @@ export default function DashboardPage() {
                 <div>
                   <h2 className="text-xl font-bold text-zinc-900 dark:text-white flex items-center gap-3">
                     <Building2 className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
-                    Portal Mitra Penghasil Limbah (Hotel / Resto / Pasar)
+                    Penyetor Sisa Makanan (Warung, Kafe, Katering & Pasar)
                   </h2>
                   <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
-                    Kelola pengalihan limbah dapur dan unduh Sertifikat Pengalihan Karbon (ESG Badge)
+                    Salurkan sisa dapur bersih dan unduh Lencana Usaha Hijau Kota Semarang
                   </p>
                 </div>
                 <BatchCreateDialog onAddBatch={handleAddBatch} />
@@ -240,24 +240,24 @@ export default function DashboardPage() {
                   <div>
                     <div className="flex items-center gap-2.5 flex-wrap">
                       <span className="text-base font-bold text-zinc-900 dark:text-white">
-                        Sertifikat Kepatuhan Sirkular Kota Semarang
+                        Lencana Usaha Ramah Lingkungan Kota Semarang
                       </span>
                       <Badge className="bg-emerald-600 text-white dark:bg-emerald-500 dark:text-zinc-950 text-sm font-bold px-3 py-0.5">
-                        VERIFIED ESG
+                        WARUNG HIJAU
                       </Badge>
                     </div>
                     <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
-                      Telah mengalihkan {aggregateImpact.divertedWeightKg} kg limbah organik dari TPA Jatibarang.
+                      Telah menyelamatkan {aggregateImpact.divertedWeightKg} kg makanan dari pembusukan di TPA Jatibarang.
                     </p>
                   </div>
                 </div>
                 <Button
                   size="default"
                   variant="outline"
-                  onClick={() => alert("Sertifikat digital ISO 14001 / ESG siap diunduh dalam format PDF.")}
+                  onClick={() => alert("Lencana digital 'Warung Hijau Semarang' siap diunduh dan dipajang di tempat usaha Anda.")}
                   className="border-emerald-500/40 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-900/40 text-sm h-10 px-5 shrink-0 self-start lg:self-auto"
                 >
-                  Unduh Sertifikat PDF
+                  Unduh Lencana Usaha
                 </Button>
               </div>
 
@@ -273,10 +273,10 @@ export default function DashboardPage() {
               <div className="pb-4 border-b border-zinc-200 dark:border-zinc-800/80">
                 <h2 className="text-xl font-bold text-zinc-900 dark:text-white flex items-center gap-3">
                   <Bug className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
-                  Portal Fasilitas Biokonversi Maggot BSF & Biogas
+                  Peternak Maggot BSF & Pengolah Biogas Semarang
                 </h2>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
-                  Cari batch limbah organik segar terdekat di Semarang untuk pakan larva dan reaktor biogas
+                  Temukan pasokan sisa makanan segar terdekat untuk pakan maggot berprotein tinggi dan biogas
                 </p>
               </div>
 
@@ -284,7 +284,7 @@ export default function DashboardPage() {
 
               <div className="pt-8 border-t border-zinc-200 dark:border-zinc-800/80">
                 <h3 className="text-base font-semibold text-zinc-800 dark:text-zinc-200 mb-4">
-                  Daftar Batch yang Siap Diklaim untuk Wilayah Operasional Anda:
+                  Daftar Kiriman yang Siap Dijemput Hari Ini:
                 </h3>
                 <BatchList batches={batches} onClaimBatch={handleClaimBatch} />
               </div>

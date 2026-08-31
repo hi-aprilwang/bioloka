@@ -34,67 +34,67 @@ export function HowItWorksDialog({ className, children }: HowItWorksDialogProps)
   const steps = [
     {
       step: 1,
-      title: "1. Pencatatan Batch Organik (Produsen)",
-      actor: "Hotel, Restoran & Pasar Tradisional",
+      title: "1. Kumpulkan & Catat Sisa Dapur Anda",
+      actor: "Warung, Kafe, Katering & Dapur Rumah",
       icon: Building2,
       color: "text-emerald-600 dark:text-emerald-400",
       bgColor: "bg-emerald-500/10 border-emerald-500/20",
       description:
-        "Produsen limbah komersial mencatatkan volume dan kategori limbah makanan basah melalui formulir terverifikasi sebelum proses pembusukan berbau dimulai.",
+        "Pisahkan sisa sayur, buah, nasi, atau ampas kopi dari plastik dan tisu sebelum membusuk, lalu catat perkiraan beratnya di aplikasi.",
       bulletPoints: [
-        "Pencatatan kategori limbah: Sisa Masak Dapur, Sayur/Buah Mentah, atau Ampas Kopi.",
-        "Penetapan estimasi berat (kg) dan batas waktu kesegaran (Expiry Window < 24 jam).",
-        "Geolokasi presisi (GPS) di wilayah Kota Semarang untuk penjemputan armada logistik.",
+        "Pilih kategori: Sayur & Buah Pasar, Makanan Matang Dapur, atau Ampas Kopi.",
+        "Tentukan estimasi berat (misal 20 kg atau 150 kg) dan jam siap jemput.",
+        "Alamat warung/kafe Anda otomatis terhubung dengan rute penjemputan terdekat.",
       ],
-      tip: "Cobalah klik tombol 'Catat Limbah' di dashboard untuk menambahkan batch baru dari restoran Anda.",
+      tip: "Tekan tombol '+ Salurkan Sisa Makanan Hari Ini' di dashboard untuk mencoba mencatatkan kiriman baru.",
     },
     {
       step: 2,
-      title: "2. Geo-Matching & Logistik Terjadwal",
-      actor: "Mesin Algoritma Geospasial CircuLoop",
+      title: "2. Dijemput Peternak Terdekat (< 15 km)",
+      actor: "Peternak Maggot & Biogas di Sekitar Anda",
       icon: MapPin,
       color: "text-blue-600 dark:text-blue-400",
       bgColor: "bg-blue-500/10 border-blue-500/20",
       description:
-        "Platform secara otomatis memetakan titik limbah dengan fasilitas biokonversi terdekat di Semarang untuk meminimalkan jejak karbon transportasi.",
+        "Peternak maggot dan pengelola biogas lokal di Semarang menerima kabar dan segera datang menjemput dengan motor roda-tiga atau pickup.",
       bulletPoints: [
-        "Radius optimal penjemputan dibatasi maksimal ≤ 15 km dari titik produsen.",
-        "Fasilitas pengolah dapat melihat batch berstatus 'Tersedia' dan menekan tombol 'Klaim Aliran'.",
-        "Penjadwalan armada pickup atau motor roda-tiga sebelum limbah melewati masa kedaluwarsa.",
+        "Jarak penjemputan optimal dalam kota (radius ≤ 15 km) agar cepat sampai.",
+        "Sisa makanan dijemput segar dalam kurun waktu < 24 jam sebelum menimbulkan bau.",
+        "Peternak menekan tombol 'Saya Siap Jemput' untuk menjadwalkan pengambilan.",
       ],
-      tip: "Pilih salah satu kartu batch limbah berstatus 'Tersedia' lalu klik 'Klaim Aliran' untuk melihat transisi status.",
+      tip: "Pilih salah satu kiriman berstatus 'Siap Dijemput' di daftar feed lalu klik 'Saya Siap Jemput'.",
     },
     {
       step: 3,
-      title: "3. Biokonversi Nilai Tinggi (Valorizer)",
-      actor: "BioBSF Diponegoro & Instalasi Biogas",
+      title: "3. Disulap Jadi Pakan Maggot & Pupuk Kasgot",
+      actor: "Mitra Peternak Tembalang, Gunungpati & Mijen",
       icon: Bug,
       color: "text-amber-600 dark:text-amber-400",
       bgColor: "bg-amber-500/10 border-amber-500/20",
       description:
-        "Limbah organik basah dialihkan 100% dari TPA Jatibarang menuju bioreaktor larva Black Soldier Fly (BSF) atau biodigester anaerobik terkontrol.",
+        "Larva Black Soldier Fly (BSF) melahap habis sisa makanan dalam hitungan jam, mengubahnya jadi larva pakan lele/unggas dan pupuk organik kaya nutrisi.",
       bulletPoints: [
-        "Feed Conversion Ratio (FCR) 5:1: Setiap 5 kg sampah organik menghasilkan 1 kg larva maggot basah berprotein tinggi (40-45%).",
-        "Menghasilkan 30% pupuk organik bio-kasgot siap pakai untuk pertanian perkotaan.",
-        "Pemberian pakan terkontrol tanpa bau busuk liar dan tanpa menghasilkan air lindi bebas ke tanah.",
+        "Setiap 5 kg sisa makanan menghasilkan 1 kg larva maggot segar berprotein tinggi (40-45%).",
+        "Menghasilkan 30% pupuk organik kasgot (bekas maggot) untuk menyuburkan kebun warga.",
+        "100% tuntas tanpa menyisakan sampah yang membusuk di TPA Jatibarang.",
       ],
-      tip: "Kunjungi tab 'Fasilitas Olah' di bilah navigasi untuk melihat profil mitra biokonversi di Tembalang dan Gunungpati.",
+      tip: "Buka tab 'Peternak Maggot' untuk melihat sentra peternakan di Tembalang dan Gunungpati.",
     },
     {
       step: 4,
-      title: "4. Audit Dampak Eko-Kesehatan & ESG",
-      actor: "Scientific Engine (Standar IPCC Tier 1)",
+      title: "4. Pantau Kebaikan Lingkungan & Raih Lencana",
+      actor: "Kalkulator Kebaikan (Standar Sains IPCC)",
       icon: Activity,
       color: "text-emerald-600 dark:text-teal-400",
       bgColor: "bg-teal-500/10 border-teal-500/20",
       description:
-        "Setiap kilogram sampah organik yang dialihkan langsung dikalkulasikan secara ilmiah menjadi reduksi metana dan perlindungan air tanah Semarang.",
+        "Setiap kilogram makanan yang Anda selamatkan langsung dihitung dampaknya bagi kesehatan warga Semarang dan penurunan risiko kebakaran TPA.",
       bulletPoints: [
-        "Metana (CH4): Mengurangi 0,040 kg CH4 murni per kg sampah (setara 1,192 kg CO2e).",
-        "Air Lindi (Leachate): Mencegah 390 Liter cairan lindi pekat masuk ke sumur air warga pesisir per ton sampah.",
-        "Sertifikasi Hijau: Menerbitkan ESG badge digital untuk audit keberlanjutan hotel/restoran mitra.",
+        "Cegah Gas Metana: 0,040 kg gas metana murni dicegah per kg sisa makanan.",
+        "Lindungi Air Sumur: Mencegah 390 Liter air lindi busuk merembes ke air tanah pesisir Semarang.",
+        "Lencana Warung Hijau: Bukti nyata kepedulian lingkungan yang bisa dipajang di tempat usaha Anda.",
       ],
-      tip: "Uji coba slider pada tab 'Kalkulator Dampak' untuk mensimulasikan dampak hingga 10.000 kg sampah secara reaktif.",
+      tip: "Gunakan tab 'Cek Dampak Lingkungan' untuk menggeser slider volume sampah dan melihat perhitungannya secara langsung.",
     },
   ]
 
@@ -124,15 +124,15 @@ export function HowItWorksDialog({ className, children }: HowItWorksDialogProps)
               variant="outline"
               className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-2.5 py-0.5 font-medium"
             >
-              Panduan Interaktif Juri & Mitra
+              Panduan Warga & Pelaku Usaha
             </Badge>
-            <span className="text-sm text-zinc-500 font-medium">Simbiosis B2B 4-Tahap</span>
+            <span className="text-sm text-zinc-500 font-medium">Langkah Sederhana</span>
           </div>
           <DialogTitle className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-white mt-1">
-            Bagaimana Platform CircuLoop Bekerja?
+            Bagaimana Gerakan CircuLoop Bekerja?
           </DialogTitle>
           <DialogDescription className="text-sm text-zinc-600 dark:text-zinc-400">
-            Arsitektur software circular economy yang menghubungkan penghasil limbah komersial dengan pengolah biokonversi di Kota Semarang.
+            Cara mudah menyelamatkan sisa makanan dapur untuk membantu peternak maggot dan menjaga kelestarian lingkungan Kota Semarang.
           </DialogDescription>
         </DialogHeader>
 
@@ -142,7 +142,7 @@ export function HowItWorksDialog({ className, children }: HowItWorksDialogProps)
             <button
               key={item.step}
               onClick={() => setActiveStep(idx)}
-              className={`flex flex-col items-center justify-center p-2 sm:p-2.5 rounded-xl border text-center transition-all ${
+              className={`flex flex-col items-center justify-center p-2 sm:p-2.5 rounded-xl border text-center transition-all cursor-pointer ${
                 activeStep === idx
                   ? "border-emerald-500 bg-emerald-50/70 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 font-bold shadow-xs"
                   : "border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 text-zinc-500 dark:text-zinc-400"
@@ -150,7 +150,7 @@ export function HowItWorksDialog({ className, children }: HowItWorksDialogProps)
             >
               <span className="text-sm font-semibold">Langkah {item.step}</span>
               <span className="text-sm truncate max-w-full hidden sm:inline">
-                {idx === 0 ? "Catat" : idx === 1 ? "Dispatch" : idx === 2 ? "Konversi" : "Audit"}
+                {idx === 0 ? "Kumpulkan" : idx === 1 ? "Dijemput" : idx === 2 ? "Olahan" : "Manfaat"}
               </span>
             </button>
           ))}
@@ -178,7 +178,7 @@ export function HowItWorksDialog({ className, children }: HowItWorksDialogProps)
 
           <div className="space-y-2 pt-1 border-t border-zinc-200/80 dark:border-zinc-800">
             <span className="text-sm font-semibold text-zinc-900 dark:text-zinc-200 block">
-              Mekanisme Teknis & Validasi:
+              Yang Perlu Anda Ketahui:
             </span>
             <ul className="space-y-1.5 text-sm text-zinc-600 dark:text-zinc-400">
               {current.bulletPoints.map((point, i) => (
@@ -194,7 +194,7 @@ export function HowItWorksDialog({ className, children }: HowItWorksDialogProps)
           <div className="rounded-xl border border-amber-500/20 bg-amber-50/60 dark:bg-amber-950/30 p-3 flex items-center gap-2.5 text-sm text-amber-800 dark:text-amber-300">
             <Sparkles className="h-4 w-4 shrink-0 text-amber-600 dark:text-amber-400" />
             <span>
-              <strong>Tips Uji Coba:</strong> {current.tip}
+              <strong>Petunjuk:</strong> {current.tip}
             </span>
           </div>
         </div>
@@ -226,18 +226,18 @@ export function HowItWorksDialog({ className, children }: HowItWorksDialogProps)
             <Button
               size="sm"
               onClick={() => setActiveStep((prev) => Math.min(steps.length - 1, prev + 1))}
-              className="bg-emerald-600 hover:bg-emerald-500 text-white text-sm gap-1"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white text-sm gap-1 cursor-pointer"
             >
-              <span>Selanjutnya</span>
+              <span>Langkah Berikutnya</span>
               <ArrowRight className="h-3.5 w-3.5" />
             </Button>
           ) : (
             <Button
               size="sm"
               onClick={() => setActiveStep(0)}
-              className="bg-zinc-800 hover:bg-zinc-700 text-white text-sm gap-1"
+              className="bg-zinc-800 hover:bg-zinc-700 text-white text-sm gap-1 cursor-pointer"
             >
-              <span>Ulangi Tur</span>
+              <span>Ulangi Panduan</span>
             </Button>
           )}
         </div>

@@ -60,16 +60,16 @@ export function BatchCreateDialog({ onAddBatch }: BatchCreateDialogProps) {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-emerald-500 transition-colors cursor-pointer">
         <Plus className="h-4 w-4" />
-        Daftarkan Batch Limbah Baru
+        + Salurkan Sisa Makanan Hari Ini
       </DialogTrigger>
       <DialogContent className="sm:max-w-[540px] bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-xl">
         <DialogHeader>
           <DialogTitle className="text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
             <Scale className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
-            Posting Batch Sampah Organik
+            Salurkan Sisa Makanan ke Peternak
           </DialogTitle>
           <DialogDescription className="text-zinc-500 dark:text-zinc-400 text-sm">
-            Hubungkan surplus limbah organik usaha Anda dengan biokonversi maggot BSF & biogas Semarang.
+            Jangan buang sisa dapur Anda ke TPA. Hubungkan dengan peternak maggot BSF & biodigester di Semarang.
           </DialogDescription>
         </DialogHeader>
 
@@ -91,10 +91,10 @@ export function BatchCreateDialog({ onAddBatch }: BatchCreateDialogProps) {
                 onChange={(e) => setOrgType(e.target.value as WasteBatch["organizationType"])}
                 className="w-full h-10 rounded-lg border border-zinc-300 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-3 text-sm text-zinc-900 dark:text-zinc-200 focus:outline-none focus:ring-1 focus:ring-emerald-500"
               >
-                <option value="Restoran">Restoran / Rumah Makan</option>
-                <option value="Hotel">Hotel & Hospitality</option>
-                <option value="Pasar Tradisional">Pasar Tradisional</option>
-                <option value="Rumah Sakit">Dapur Gizi RS</option>
+                <option value="Restoran">Warung Makan / Restoran</option>
+                <option value="Pasar Tradisional">Pasar Tradisional / Sentra Sayur</option>
+                <option value="Hotel">Hotel / Katering Prasmanan</option>
+                <option value="Rumah Sakit">Dapur Gizi RS / Sekolah</option>
               </select>
             </div>
           </div>
@@ -187,20 +187,20 @@ export function BatchCreateDialog({ onAddBatch }: BatchCreateDialogProps) {
             </div>
           </div>
 
-          <div className="flex justify-end gap-2.5 pt-2">
+          <div className="flex items-center justify-end gap-3 pt-2">
             <Button
               type="button"
               variant="outline"
               onClick={() => setOpen(false)}
-              className="border-zinc-300 dark:border-zinc-800 text-zinc-700 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-sm h-9"
+              className="text-sm border-zinc-300 dark:border-zinc-800"
             >
               Batal
             </Button>
             <Button
               type="submit"
-              className="bg-emerald-600 hover:bg-emerald-500 text-white text-sm h-9"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-5"
             >
-              Publikasikan Batch
+              Salurkan ke Peternak Sekarang
             </Button>
           </div>
         </form>

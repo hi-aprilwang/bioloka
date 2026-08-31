@@ -92,14 +92,14 @@ export default function LandingPage() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
             </span>
-            <span>Diponegoro Software Development Competition 2026</span>
+            <span>Gerakan Penyelamatan Makanan Kota Semarang • DSDC 2026</span>
           </div>
 
           {/* Main Title */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-[1.15]">
-            Engineering the Circular City:{" "}
+            Jangan Biarkan Sisa Makanan Jadi Bencana:{" "}
             <ShinyText
-              text="Simbiosis Organik & Mitigasi Risiko Eko-Kesehatan"
+              text="Ubah Jadi Pakan Bergizi & Energi Bersih Semarang"
               speed={4}
               className="from-emerald-600 via-teal-500 to-emerald-600 dark:from-emerald-400 dark:via-teal-200 dark:to-emerald-400"
             />
@@ -107,26 +107,26 @@ export default function LandingPage() {
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed max-w-3xl">
-            Platform perangkat lunak B2B sirkular desentral yang menghubungkan produsen limbah organik
-            skala komersial (hotel, restoran, pasar Johar) dengan fasilitas biokonversi Maggot BSF & biogas
-            di Kota Semarang. Menghentikan bom waktu gas metana di TPA Jatibarang dan rembesan air lindi beracun.
+            Hubungkan sisa dapur dari warung makan, kafe, hotel, pasar Johar, hingga katering langsung ke peternak
+            maggot BSF & biogas lokal di Semarang sebelum basi (&lt; 24 jam). Hentikan asap kebakaran TPA Jatibarang
+            dan selamatkan air sumur pesisir dari cairan limbah busuk.
           </p>
 
           {/* Dual Call To Actions */}
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
             <Link href="/dashboard">
               <Button size="default" className="h-12 bg-emerald-600 hover:bg-emerald-500 text-white text-base px-7 font-semibold gap-2 shadow-lg shadow-emerald-900/20">
-                <span>Buka Platform CircuLoop</span>
+                <span>Salurkan / Jemput Makanan Sekarang</span>
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
-            <a href="#model-ipcc">
+            <a href="#cara-kerja">
               <Button
                 variant="outline"
                 className="h-12 border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/80 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-base px-6 font-medium gap-2 shadow-sm"
               >
                 <Activity className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                <span>Pelajari Formula Matematis</span>
+                <span>Lihat Cara Kerjanya</span>
               </Button>
             </a>
           </div>
@@ -163,14 +163,14 @@ export default function LandingPage() {
       <section id="cara-kerja" className="relative mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-24 border-t border-zinc-200 dark:border-zinc-800/80">
         <div className="text-center space-y-3 max-w-3xl mx-auto mb-14">
           <Badge variant="outline" className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-3 py-1 font-medium">
-            Alur Simbiosis B2B 4-Tahap
+            Alur Partisipasi 4 Langkah
           </Badge>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
-            Bagaimana Platform CircuLoop Bekerja?
+            Bagaimana Gerakan CircuLoop Bekerja?
           </h2>
           <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            Menghubungkan rantai pasok sampah organik komersial dengan fasilitas biokonversi perkotaan
-            di Semarang dalam kurun waktu &lt; 24 jam sebelum proses dekomposisi berbau dimulai.
+            Menghubungkan sisa makanan segar dari warung, kafe, pasar, dan rumah Anda dengan peternak
+            maggot lokal di Semarang dalam waktu &lt; 24 jam sebelum menimbulkan bau busuk.
           </p>
         </div>
 
@@ -191,21 +191,21 @@ export default function LandingPage() {
                 </span>
               </div>
               <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 block mb-1">
-                Hotel, Resto & Pasar
+                Warung, Kafe, Pasar & Dapur
               </span>
               <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
-                Pencatatan Batch Limbah
+                Kumpulkan Sisa Makanan
               </h3>
               <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
-                Produsen komersial mencatatkan volume (kg), kategori sisa makanan, dan jendela waktu penjemputan
-                sebelum bau busuk timbul.
+                Cukup catatkan perkiraan berat (kg) sayur, buah, ampas kopi, atau sisa masak dapur yang masih bersih
+                sebelum dibuang ke tempat sampah.
               </p>
             </div>
 
             <div className="pt-4 mt-4 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0" />
-                <span>Terpilah 100% dari sumber</span>
+                <span>Terpisah dari plastik & tisu</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Clock className="h-4 w-4 text-emerald-500 shrink-0" />
@@ -229,25 +229,25 @@ export default function LandingPage() {
                 </span>
               </div>
               <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 block mb-1">
-                Mesin Geospasial
+                Peternak Sekitar Anda
               </span>
               <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
-                Geo-Match & Dispatch
+                Dijemput Peternak Terdekat
               </h3>
               <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
-                Algoritma radius mencocokkan batch dengan fasilitas biokonversi terdekat (radius &le; 15 km)
-                untuk memangkas emisi rute transportasi.
+                Peternak maggot atau pengelola biogas di radius terdekat (&le; 15 km) menerima notifikasi dan
+                menjemput kiriman dengan motor roda-tiga atau pickup.
               </p>
             </div>
 
             <div className="pt-4 mt-4 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
               <div className="flex items-center gap-1.5">
                 <Truck className="h-4 w-4 text-blue-500 shrink-0" />
-                <span>Rute pickup teroptimasi</span>
+                <span>Langsung ke alamat Anda</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-blue-500 shrink-0" />
-                <span>Klaim langsung 1-klik</span>
+                <span>Peternak siap jemput 1-klik</span>
               </div>
             </div>
           </SpotlightCard>
@@ -267,25 +267,25 @@ export default function LandingPage() {
                 </span>
               </div>
               <span className="text-sm font-semibold text-amber-600 dark:text-amber-400 block mb-1">
-                Fasilitas Maggot & Biogas
+                Peternak Tembalang & Mijen
               </span>
               <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
-                Biokonversi Nilai Tinggi
+                Disulap Jadi Pakan & Pupuk
               </h3>
               <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
-                Bioreaktor larva Black Soldier Fly (BSF) melahap limbah menjadi pakan protein unggas/lele (FCR 5:1)
-                dan pupuk kasgot organik.
+                Ribuan larva Maggot BSF melahap sisa makanan menjadi pakan ikan/unggas tinggi protein,
+                dan menghasilkan pupuk kasgot organik untuk tanaman warga.
               </p>
             </div>
 
             <div className="pt-4 mt-4 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-amber-500 shrink-0" />
-                <span>Zero waste ke TPA</span>
+                <span>100% habis tanpa bau busuk</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Activity className="h-4 w-4 text-amber-500 shrink-0" />
-                <span>Valuasi Rp1,9 Juta / ton</span>
+                <span>Bantu ekonomi peternak lokal</span>
               </div>
             </div>
           </SpotlightCard>
@@ -305,25 +305,25 @@ export default function LandingPage() {
                 </span>
               </div>
               <span className="text-sm font-semibold text-teal-600 dark:text-teal-400 block mb-1">
-                Kalkulator IPCC Tier 1
+                Kebaikan yang Terukur
               </span>
               <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
-                Audit Eko-Kesehatan & ESG
+                Pantau Kebaikan & Lencana Hijau
               </h3>
               <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
-                Timbangan digital otomatis menghitung reduksi metana (0,04 kg CH4/kg) dan pencegahan 390 L
-                lindi bagi sanitasi air pesisir Semarang.
+                Lihat langsung berapa liter air sumur warga yang Anda selamatkan dan kurangi risiko kebakaran
+                di TPA Jatibarang. Dapatkan lencana usaha ramah lingkungan!
               </p>
             </div>
 
             <div className="pt-4 mt-4 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-teal-500 shrink-0" />
-                <span>Standar resmi IPCC AR6</span>
+                <span>Kalkulasi sains resmi IPCC</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-teal-500 shrink-0" />
-                <span>Sertifikat Hijau ESG</span>
+                <span>Lencana Usaha Hijau Semarang</span>
               </div>
             </div>
           </SpotlightCard>
@@ -333,7 +333,7 @@ export default function LandingPage() {
         <div className="mt-10 text-center">
           <Link href="/dashboard">
             <Button variant="outline" className="border-emerald-500/40 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-sm font-medium gap-2">
-              <span>Uji Coba Langsung Alur Ini di Dashboard</span>
+              <span>Coba Kirim atau Jemput di Dashboard</span>
               <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>

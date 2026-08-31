@@ -188,7 +188,7 @@ export function BatchList({ batches, onClaimBatch }: BatchListProps) {
                     <span>-{impact.leachatePreventedLiters.toFixed(1)} L Lindi</span>
                   </div>
                   <div className="text-emerald-700 dark:text-emerald-400 font-medium">
-                    +{impact.maggotProducedKg.toFixed(0)} kg BSF
+                    +{impact.maggotProducedKg.toFixed(0)} kg Pakan
                   </div>
                 </div>
               </div>
@@ -197,22 +197,22 @@ export function BatchList({ batches, onClaimBatch }: BatchListProps) {
               <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-zinc-800/70 flex items-center justify-between">
                 <div className="flex items-center gap-2 text-sm text-zinc-500">
                   <Clock className="h-4 w-4" />
-                  <span>Ambil sebelum {batch.expiryHours} jam lagi</span>
+                  <span>Jemput dalam {batch.expiryHours} jam ke depan</span>
                 </div>
 
                 {batch.status === "available" ? (
                   <Button
                     size="default"
                     onClick={() => onClaimBatch(batch.id)}
-                    className="h-9 bg-emerald-600 hover:bg-emerald-500 text-white text-sm px-4"
+                    className="h-9 bg-emerald-600 hover:bg-emerald-500 text-white text-sm px-4 cursor-pointer"
                   >
-                    Klaim Aliran
+                    Saya Siap Jemput
                     <ArrowRight className="ml-1.5 h-4 w-4" />
                   </Button>
                 ) : (
                   <span className="text-sm text-zinc-600 dark:text-zinc-400 flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                    Mitra: {batch.claimedBy || "BioBSF Tembalang"}
+                    Dijemput: {batch.claimedBy || "BioBSF Tembalang"}
                   </span>
                 )}
               </div>
