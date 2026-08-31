@@ -1,7 +1,8 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, Suspense } from "react"
 import Link from "next/link"
+import { useSearchParams } from "next/navigation"
 import { Header } from "@/components/Header"
 import { GridPattern } from "@/components/react-bits/GridPattern"
 import { ShinyText } from "@/components/react-bits/ShinyText"
@@ -23,8 +24,18 @@ import {
   ArrowLeft,
 } from "lucide-react"
 
-export default function DashboardPage() {
-  const [activeTab, setActiveTab] = useState("overview")
+function DashboardContent() {
+  const searchParams = useSearchParams()
+  const tabParam = searchParams.get("tab")
+  const initialTab =
+    tabParam && ["overview", "producers", "valorizers", "calculator"].includes(tabParam)
+      ? tabParam
+      : "overview"
+
+  const [selectedTab, setSelectedTab] = useState<string | null>(null)
+  const activeTab = selectedTab ?? initialTab
+  const setActiveTab = (tab: string) => setSelectedTab(tab)
+
   const [batches, setBatches] = useState<WasteBatch[]>(INITIAL_BATCHES)
   const [simulationAlert, setSimulationAlert] = useState<string | null>(null)
 
@@ -288,5 +299,19 @@ export default function DashboardPage() {
         </div>
       </footer>
     </main>
+  )
+}
+
+export default function DashboardPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center text-sm text-zinc-500">
+          Memuat Dashboard CircuLoop Semarang...
+        </div>
+      }
+    >
+      <DashboardContent />
+    </Suspense>
   )
 }

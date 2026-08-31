@@ -115,23 +115,26 @@ export default function LandingPage() {
             dan selamatkan air sumur pesisir dari cairan limbah busuk.
           </p>
 
-          {/* Dual Call To Actions */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
-            <Link href="/dashboard">
-              <Button size="default" className="h-12 bg-emerald-600 hover:bg-emerald-500 text-white text-base px-7 font-semibold gap-2 shadow-lg shadow-emerald-900/20">
-                <span>Salurkan / Jemput Makanan Sekarang</span>
-                <ArrowRight className="h-4 w-4" />
+          {/* Dual Call To Actions - Persona Split */}
+          <div className="flex flex-col sm:flex-row items-center gap-3.5 pt-3 w-full max-w-xl justify-center">
+            {/* Persona 1: Penyetor Sisa Makanan */}
+            <Link href="/dashboard?tab=producers" className="w-full sm:w-auto">
+              <Button size="default" className="w-full sm:w-auto h-12 bg-emerald-600 hover:bg-emerald-500 text-white text-base px-6 font-semibold gap-2.5 shadow-lg shadow-emerald-900/20">
+                <Building2 className="h-4 w-4 shrink-0" />
+                <span>Saya Punya Sisa Makanan (Penyetor)</span>
               </Button>
             </Link>
-            <a href="#cara-kerja">
+
+            {/* Persona 2: Peternak Maggot BSF / Biogas */}
+            <Link href="/dashboard?tab=valorizers" className="w-full sm:w-auto">
               <Button
                 variant="outline"
-                className="h-12 border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/80 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-base px-6 font-medium gap-2 shadow-sm cursor-pointer"
+                className="w-full sm:w-auto h-12 border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-base px-6 font-semibold gap-2.5 shadow-sm"
               >
-                <Activity className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                <span>Lihat Cara Kerjanya</span>
+                <Bug className="h-4 w-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                <span>Saya Peternak Maggot / Biogas</span>
               </Button>
-            </a>
+            </Link>
           </div>
 
           {/* Live Semarang Statistics Strip */}
@@ -842,17 +845,22 @@ export default function LandingPage() {
       <section className="relative mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-24">
         <div className="rounded-3xl border border-emerald-500/30 dark:border-emerald-500/40 bg-gradient-to-r from-emerald-50 via-teal-50 to-white dark:from-emerald-950/60 dark:via-zinc-900 dark:to-zinc-950 p-8 sm:p-14 text-center space-y-6 shadow-xl">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
-            Siap Menguji Coba Platform CircuLoop Semarang?
+            Mulai Gerakan Sirkularitas Sisa Makanan Semarang Hari Ini
           </h2>
           <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto leading-relaxed">
-            Akses dashboard fungsional untuk menginput batch limbah, mencoba matching ke unit biokonversi,
-            dan mensimulasikan dampak eko-kesehatan secara langsung.
+            Pilih peran Anda dan coba langsung platform CircuLoop untuk menyelamatkan bahan pangan dan menjaga kebersihan Kota Semarang.
           </p>
-          <div className="pt-2">
-            <Link href="/dashboard">
-              <Button size="default" className="h-12 bg-emerald-600 hover:bg-emerald-500 text-white text-base px-8 font-semibold gap-2 shadow-lg">
-                <span>Buka Dashboard Platform Sekarang</span>
-                <ArrowRight className="h-4 w-4" />
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+            <Link href="/dashboard?tab=producers" className="w-full sm:w-auto">
+              <Button size="default" className="w-full sm:w-auto h-12 bg-emerald-600 hover:bg-emerald-500 text-white text-base px-6 font-semibold gap-2 shadow-lg">
+                <Building2 className="h-4 w-4" />
+                <span>Masuk sebagai Penyetor Sisa Makanan</span>
+              </Button>
+            </Link>
+            <Link href="/dashboard?tab=valorizers" className="w-full sm:w-auto">
+              <Button size="default" variant="outline" className="w-full sm:w-auto h-12 border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-base px-6 font-semibold gap-2 shadow-sm">
+                <Bug className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                <span>Masuk sebagai Peternak BSF / Biogas</span>
               </Button>
             </Link>
           </div>
