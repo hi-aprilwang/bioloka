@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { WasteBatch, WasteCategory } from "@/lib/types"
-import { calculateEnvironmentalImpact } from "@/lib/circuloop-data"
+import { calculateEnvironmentalImpact } from "@/lib/bioloka-data"
 import { MathFormula } from "@/components/MathFormula"
 import { Plus, Sparkles, Scale } from "lucide-react"
 

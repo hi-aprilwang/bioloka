@@ -12,7 +12,7 @@ import { BatchCreateDialog } from "@/components/BatchCreateDialog"
 import { EcoHealthCalculator } from "@/components/EcoHealthCalculator"
 import { ValorizerHubs } from "@/components/ValorizerHubs"
 import { HowItWorksDialog } from "@/components/HowItWorksDialog"
-import { INITIAL_BATCHES, calculateEnvironmentalImpact } from "@/lib/circuloop-data"
+import { INITIAL_BATCHES, calculateEnvironmentalImpact } from "@/lib/bioloka-data"
 import { WasteBatch } from "@/lib/types"
 import { Badge } from "@/components/ui/badge"
 import {

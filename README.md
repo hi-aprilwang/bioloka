@@ -1,4 +1,4 @@
-# CircuLoop Semarang
+# BioLoka Semarang
 
 > **Diponegoro Software Development Competition (DSDC) – ANFORCOM 2026**  
 > **Kategori:** Software Development (Website Platform)  
@@ -10,7 +10,7 @@
 
 ## 📌 Gambaran Umum Proyek (Executive Summary)
 
-**CircuLoop Semarang** adalah platform perangkat lunak B2B sirkular desentral yang menghubungkan produsen sampah organik skala komersial (hotel bintang, restoran, dan sentra pasar seperti Pasar Johar) dengan fasilitas biokonversi perkotaan (budidaya larva *Black Soldier Fly* / Maggot BSF dan instalasi biogas) di wilayah aglomerasi Semarang.
+**BioLoka Semarang** adalah platform perangkat lunak B2B sirkular desentral yang menghubungkan produsen sampah organik skala komersial (hotel bintang, restoran, dan sentra pasar seperti Pasar Johar) dengan fasilitas biokonversi perkotaan (budidaya larva *Black Soldier Fly* / Maggot BSF dan instalasi biogas) di wilayah aglomerasi Semarang.
 
 Platform ini mengintegrasikan **Mesin Kalkulasi Dampak Eko-Kesehatan (*Eco-Health Impact Engine*)** berbasis model standar internasional **IPCC Tier 1 Waste Model** dan hidrologi air lindi tropis, untuk mengestimasi secara riil emisi gas metana ($CH_4$) yang dihindari, rembesan air lindi beracun yang dicegah mencemari air tanah pesisir Semarang, serta nilai ekonomi biomassa berprotein tinggi.
 
@@ -67,10 +67,10 @@ $$V_{\text{lindi}} = W \times \text{Kadar Air}(0{,}65) \times \text{Koefisien Ko
 ### Langkah Instalasi
 ```bash
 # 1. Clone repositori ini
-git clone https://github.com/[username]/circuloop.git
+git clone https://github.com/hi-aprilwang/bioloka.git
 
 # 2. Masuk ke direktori
-cd circuloop
+cd bioloka
 
 # 3. Pasang dependensi
 pnpm install

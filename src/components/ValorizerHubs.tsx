@@ -4,7 +4,7 @@ import React from "react"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { ValorizerFacility } from "@/lib/types"
-import { INITIAL_VALORIZERS } from "@/lib/circuloop-data"
+import { INITIAL_VALORIZERS } from "@/lib/bioloka-data"
 import { Bug, Flame, Sprout, MapPin, CheckCircle, ShieldCheck, Star } from "lucide-react"
 
 export function ValorizerHubs() {

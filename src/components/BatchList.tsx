@@ -4,7 +4,7 @@ import React, { useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { WasteBatch, WasteCategory } from "@/lib/types"
-import { calculateEnvironmentalImpact } from "@/lib/circuloop-data"
+import { calculateEnvironmentalImpact } from "@/lib/bioloka-data"
 import {
   MapPin,
   Clock,

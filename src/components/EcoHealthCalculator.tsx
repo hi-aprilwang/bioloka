@@ -3,7 +3,7 @@
 import React, { useState } from "react"
 import { SpotlightCard } from "@/components/react-bits/SpotlightCard"
 import { CountUp } from "@/components/react-bits/CountUp"
-import { calculateEnvironmentalImpact } from "@/lib/circuloop-data"
+import { calculateEnvironmentalImpact } from "@/lib/bioloka-data"
 import { MathFormula } from "@/components/MathFormula"
 import {
   Calculator,
