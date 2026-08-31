@@ -542,14 +542,13 @@ export default function LandingPage() {
       <section id="masalah" className="relative mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-24 border-t border-zinc-200 dark:border-zinc-800/80">
         <div className="space-y-4 max-w-2xl mb-12">
           <Badge variant="outline" className="border-red-500/30 bg-red-50 dark:bg-red-500/10 text-red-700 dark:text-red-300 text-sm px-3 py-1 font-medium">
-            Konteks Masalah Riil (Anti-Klise)
+            Konteks Masalah Riil
           </Badge>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
             Mengapa Solusi Ini Dibangun Khusus untuk Kota Semarang?
           </h2>
           <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            Rulebook DSDC secara tegas melarang proyek klise tanpa konteks lokal. CircuLoop menjawab langsung
-            tiga krisis sanitasi mendesak di Kota Semarang.
+            CircuLoop menjawab langsung tiga krisis sanitasi dan lingkungan mendesak di Kota Semarang.
           </p>
         </div>
 
