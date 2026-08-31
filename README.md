@@ -29,6 +29,7 @@ Platform ini mengintegrasikan **Mesin Kalkulasi Dampak Eko-Kesehatan (*Eco-Healt
 - **Framework:** [Next.js 16](https://nextjs.org/) (App Router, Turbopack)
 - **Runtime & UI Library:** [React 19](https://react.dev/)
 - **Design System:** [Tailwind CSS v4](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/)
+- **Language:** [TypeScript 7](https://www.typescriptlang.org/)
 - **Micro-Interactions & Animations:** [React Bits](https://reactbits.dev/) (`SpotlightCard`, `ShinyText`, `CountUp`, `GridPattern`) + `motion/react`
 - **Iconography:** [Lucide Icons](https://lucide.dev/)
 - **Calculations:** Client & Server-side IPCC Tier 1 Scientific Mathematical Engine
