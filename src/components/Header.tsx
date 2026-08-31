@@ -43,7 +43,7 @@ export function Header({ activeTab, setActiveTab, onQuickDemo }: HeaderProps) {
                 : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
             }`}
           >
-            Ikhtisar
+            Ikhtisar (DLH)
           </button>
           <button
             onClick={() => setActiveTab("producers")}

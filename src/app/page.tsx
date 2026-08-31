@@ -118,33 +118,43 @@ export default function LandingPage() {
 
           {/* Interactive Persona Selector / Switcher */}
           <div className="w-full max-w-4xl pt-4 space-y-4">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <span className="text-sm font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-                Pilih Peran Anda:
+                Pilih Peran Utama Anda:
               </span>
-              <div className="flex p-1 bg-zinc-200/80 dark:bg-zinc-800/80 rounded-2xl border border-zinc-300/60 dark:border-zinc-700/60">
-                <button
-                  type="button"
-                  onClick={() => setActivePersona("warung")}
-                  className={`px-4 py-1.5 rounded-xl text-sm font-bold transition-all ${
-                    activePersona === "warung"
-                      ? "bg-emerald-600 text-white shadow-sm"
-                      : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
-                  }`}
+              <div className="flex items-center gap-2">
+                <div className="flex p-1 bg-zinc-200/80 dark:bg-zinc-800/80 rounded-2xl border border-zinc-300/60 dark:border-zinc-700/60">
+                  <button
+                    type="button"
+                    onClick={() => setActivePersona("warung")}
+                    className={`px-4 py-1.5 rounded-xl text-sm font-bold transition-all ${
+                      activePersona === "warung"
+                        ? "bg-emerald-600 text-white shadow-sm"
+                        : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
+                    }`}
+                  >
+                    Warung & Resto
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActivePersona("peternak")}
+                    className={`px-4 py-1.5 rounded-xl text-sm font-bold transition-all ${
+                      activePersona === "peternak"
+                        ? "bg-emerald-600 text-white shadow-sm"
+                        : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
+                    }`}
+                  >
+                    Peternak Maggot
+                  </button>
+                </div>
+                {/* Small discreet link for Dinas Lingkungan / Pemantau Kota */}
+                <Link
+                  href="/dashboard?tab=overview"
+                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-zinc-100 dark:hover:bg-zinc-900 border border-transparent hover:border-zinc-200 dark:hover:border-zinc-800 transition-all shrink-0"
                 >
-                  Warung & Resto
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setActivePersona("peternak")}
-                  className={`px-4 py-1.5 rounded-xl text-sm font-bold transition-all ${
-                    activePersona === "peternak"
-                      ? "bg-emerald-600 text-white shadow-sm"
-                      : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
-                  }`}
-                >
-                  Peternak Maggot
-                </button>
+                  <Activity className="h-3.5 w-3.5" />
+                  <span>Dinas Lingkungan (DLH)</span>
+                </Link>
               </div>
             </div>
 
