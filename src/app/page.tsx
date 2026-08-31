@@ -65,13 +65,10 @@ export default function LandingPage() {
               Arsitektur Solusi
             </a>
             <a href="#masalah" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
-              Urgensi Semarang
+              Urgensi & Ekosistem
             </a>
             <a href="#model-ipcc" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Model IPCC
-            </a>
-            <a href="#mitra" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
-              Jaringan Mitra
             </a>
           </nav>
 
@@ -659,20 +656,22 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 5. The Local Semarang Problem Space */}
-      <section id="masalah" className="relative mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-24 border-t border-zinc-200 dark:border-zinc-800/80">
-        <div className="space-y-4 max-w-2xl mb-12">
+      {/* 5. The Local Semarang Problem Space & Partner Network */}
+      <section id="masalah" className="relative mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-24 border-t border-zinc-200 dark:border-zinc-800/80 space-y-16">
+        {/* Header */}
+        <div className="space-y-4 max-w-3xl">
           <Badge variant="outline" className="border-red-500/30 bg-red-50 dark:bg-red-500/10 text-red-700 dark:text-red-300 text-sm px-3 py-1 font-medium">
-            Konteks Masalah Riil
+            Konteks & Jaringan Semarang
           </Badge>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
-            Mengapa Solusi Ini Dibangun Khusus untuk Kota Semarang?
+            Mengapa Dibangun Khusus untuk Semarang & Bagaimana Ekosistemnya Terhubung?
           </h2>
           <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            CircuLoop menjawab langsung tiga krisis sanitasi dan lingkungan mendesak di Kota Semarang.
+            CircuLoop menjawab langsung tiga krisis sanitasi mendesak di Kota Semarang dengan menghubungkan titik penghasil sisa makanan komersial ke simpul biokonversi lokal.
           </p>
         </div>
 
+        {/* 3 Real-World Problem Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/50 shadow-sm flex flex-col justify-between">
             <div>
@@ -759,235 +758,82 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-      </section>
 
-      {/* 5. Scientific Mathematical Model (IPCC Tier 1) */}
-      <section id="model-ipcc" className="relative mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-24 border-t border-zinc-200 dark:border-zinc-800/80">
-        <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-gradient-to-b from-white to-zinc-100 dark:from-zinc-900/80 dark:to-zinc-950 p-8 sm:p-12 space-y-8 shadow-sm">
-          <div className="space-y-3 max-w-3xl">
-            <Badge variant="outline" className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-3 py-1 font-medium">
-              Landasan Ilmiah Terverifikasi
-            </Badge>
-            <h2 className="text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
-              Metodologi Hitung Dampak Standar IPCC Tier 1
-            </h2>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              CircuLoop tidak menggunakan estimasi fiktif. Seluruh kalkulasi emisi dan hidrologi diprogram
-              berdasarkan dokumen resmi{" "}
-              <a
-                href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/vol5.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-emerald-600 dark:text-emerald-400 underline underline-offset-2 hover:text-emerald-700 dark:hover:text-emerald-300 inline-flex items-center gap-1"
-              >
-                IPCC 2006 Guidelines for National GHG Inventories (Vol 5: Waste)
-                <ExternalLink className="h-3.5 w-3.5" />
-              </a>
-              , data agregat{" "}
-              <a
-                href="https://sampahnasional.kemenlh.go.id/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-emerald-600 dark:text-emerald-400 underline underline-offset-2 hover:text-emerald-700 dark:hover:text-emerald-300 inline-flex items-center gap-1"
-              >
-                SIPSN Kementerian Lingkungan Hidup
-                <ExternalLink className="h-3.5 w-3.5" />
-              </a>
-              , serta metode sampling komposisi sampah{" "}
-              <a
-                href="https://pesta.bsn.go.id/produk/detail/39642025-sni3964:2025"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-emerald-600 dark:text-emerald-400 underline underline-offset-2 hover:text-emerald-700 dark:hover:text-emerald-300 inline-flex items-center gap-1"
-              >
-                SNI 3964:2025 (Standar BSN)
-                <ExternalLink className="h-3.5 w-3.5" />
-              </a>
-              .
-            </p>
+        {/* Integrated Partner Ecosystem Grid */}
+        <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/80 dark:bg-zinc-900/40 p-8 sm:p-10 space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span className="text-sm font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+                Jaringan Simpul & Sentra Terintegrasi
+              </span>
+              <h3 className="text-xl font-bold text-zinc-900 dark:text-white mt-1">
+                Klaster Produsen Komersial & Sentra Biokonversi Terverifikasi
+              </h3>
+            </div>
+            <Link href="/dashboard">
+              <Button variant="outline" size="sm" className="border-emerald-500/40 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-sm gap-1.5 self-start sm:self-auto">
+                <span>Lihat di Peta Interaktif</span>
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Button>
+            </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 p-6 space-y-4">
-              <h3 className="text-base font-bold text-amber-600 dark:text-amber-400 flex items-center gap-2">
-                <Flame className="h-5 w-5" />
-                Formula Emisi Metana & Karbon
-              </h3>
-              <div className="rounded-xl bg-white dark:bg-zinc-900 p-4 border border-zinc-200 dark:border-zinc-800 overflow-x-auto text-emerald-800 dark:text-emerald-300">
-                <MathFormula
-                  math="\Delta E_{\mathrm{CH_4}} = W \cdot \mathrm{DOC} \cdot \mathrm{DOC}_f \cdot F \cdot \frac{16}{12} \cdot \mathrm{MCF}"
-                  block
-                />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+            <div className="rounded-2xl border border-zinc-200/90 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-5 shadow-xs flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm font-semibold uppercase px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20">
+                    Pasar Induk
+                  </span>
+                  <Building2 className="h-4 w-4 text-zinc-400" />
+                </div>
+                <span className="text-base font-bold text-zinc-900 dark:text-white block">Pasar Johar Semarang</span>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Semarang Tengah • Timbulan Sayur/Buah Segar</p>
               </div>
-
-              {/* Glossary & Parameter Explanation */}
-              <div className="rounded-xl bg-white dark:bg-zinc-900/90 p-4 border border-zinc-200 dark:border-zinc-800 text-sm space-y-2">
-                <span className="font-semibold text-zinc-800 dark:text-zinc-200 block text-sm uppercase tracking-wider">
-                  Keterangan Parameter & Singkatan Teknis:
-                </span>
-                <ul className="space-y-1.5 text-zinc-600 dark:text-zinc-400 text-sm">
-                  <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\mathrm{DOC}" /> (0.15):</strong>{" "}
-                    <a
-                      href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/5_Volume5/V5_3_Ch3_SWDS.pdf#page=12"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-0.5"
-                    >
-                      <em>Degradable Organic Carbon</em> <ExternalLink className="h-3 w-3 inline" />
-                    </a>{" "}
-                    — fraksi karbon organik aktif pada sampah basah tropis Indonesia.
-                  </li>
-                  <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\mathrm{DOC}_f" /> (0.50):</strong>{" "}
-                    <em>Fraction of DOC Dissimilated</em> — persentase karbon organik yang terurai secara biologis di landfill.
-                  </li>
-                  <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="F" /> (0.50):</strong>{" "}
-                    <em>Fraction of Methane in Landfill Gas</em> — proporsi gas metana murni dalam biogas timbunan sampah.
-                  </li>
-                  <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\mathrm{MCF}" /> (0.80):</strong>{" "}
-                    <a
-                      href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/5_Volume5/V5_3_Ch3_SWDS.pdf#page=15"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-0.5"
-                    >
-                      <em>Methane Correction Factor</em> <ExternalLink className="h-3 w-3 inline" />
-                    </a>{" "}
-                    — koefisien TPA semiterkendali (<em>unmanaged deep landfill</em>) seperti zona aktif TPA Jatibarang.
-                  </li>
-                  <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\frac{16}{12}" /> (1.333):</strong>{" "}
-                    Rasio stoikiometri berat molekul konversi karbon (<MathFormula math="\mathrm{C}=12" />) menjadi metana (<MathFormula math="\mathrm{CH_4}=16" />).
-                  </li>
-                </ul>
-              </div>
-
-              {/* Step-by-Step Multi-Line KaTeX Equation (Zero Horizontal Scroll) */}
-              <div className="rounded-xl bg-white dark:bg-zinc-900 p-4 border border-zinc-200 dark:border-zinc-800 text-amber-700 dark:text-amber-300">
-                <MathFormula
-                  math="\begin{aligned}
-\Delta E_{\mathrm{CO_2e}} &= \Delta E_{\mathrm{CH_4}} \times \mathrm{GWP}_{\mathrm{CH_4}} \\
-&= 0.040 \times 29.8 \\
-&= \mathbf{1.192 \text{ kg }\mathrm{CO_2e}/\text{kg}}
-\end{aligned}"
-                  block
-                />
-              </div>
-
-              <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\mathrm{GWP}_{\mathrm{CH_4}}" /> (29.8):</strong>{" "}
-                <a
-                  href="https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-7/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-0.5"
-                >
-                  <em>Global Warming Potential</em> IPCC AR6 (100-year horizon) <ExternalLink className="h-3 w-3 inline" />
-                </a>
-                . Setiap 1 kg metana yang dicegah setara dengan meniadakan 29,8 kg <MathFormula math="\mathrm{CO_2}" /> di atmosfer.
-              </p>
+              <span className="text-sm font-mono text-emerald-600 dark:text-emerald-400 mt-4 block">~3.5 Ton/Hari Terpilah</span>
             </div>
 
-            <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 p-6 space-y-4">
-              <h3 className="text-base font-bold text-blue-600 dark:text-blue-400 flex items-center gap-2">
-                <Droplets className="h-5 w-5" />
-                Formula Pencegahan Air Lindi (Leachate)
-              </h3>
-              <div className="rounded-xl bg-white dark:bg-zinc-900 p-4 border border-zinc-200 dark:border-zinc-800 text-blue-800 dark:text-blue-300">
-                <MathFormula
-                  math="\begin{aligned}
-V_{\mathrm{lindi}} &= W \times \eta_{\mathrm{moisture}} \times \gamma_{\mathrm{compaction}} \\
-&= W \times 0.65 \times 0.60 \\
-&= \mathbf{0.390 \cdot W \text{ Liter}}
-\end{aligned}"
-                  block
-                />
+            <div className="rounded-2xl border border-zinc-200/90 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-5 shadow-xs flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm font-semibold uppercase px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-500/20">
+                    Hotel & Horeka
+                  </span>
+                  <Building2 className="h-4 w-4 text-zinc-400" />
+                </div>
+                <span className="text-base font-bold text-zinc-900 dark:text-white block">Hotel Ciputra Simpang Lima</span>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Semarang Selatan • Sisa Dapur Buffet Matang</p>
               </div>
-
-              {/* Leachate Glossary */}
-              <div className="rounded-xl bg-white dark:bg-zinc-900/90 p-4 border border-zinc-200 dark:border-zinc-800 text-sm space-y-2">
-                <span className="font-semibold text-zinc-800 dark:text-zinc-200 block text-sm uppercase tracking-wider">
-                  Keterangan Parameter Hidrologi & Beban Polutan:
-                </span>
-                <ul className="space-y-1.5 text-zinc-600 dark:text-zinc-400 text-sm">
-                  <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\eta_{\mathrm{moisture}}" /> (0.65):</strong>{" "}
-                    Kadar air rata-rata sampah organik pasar & sisa makanan dapur di kota tropis Indonesia (65%).
-                  </li>
-                  <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\gamma_{\mathrm{compaction}}" /> (0.60):</strong>{" "}
-                    Efisiensi pelepasan cairan akibat tekanan timbunan (<em>gravity percolation & self-compaction</em>).
-                  </li>
-                  <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\mathrm{BOD}" /> (15.000 mg/L):</strong>{" "}
-                    <a
-                      href="https://www.usgs.gov/special-topics/water-science-school/science/biological-oxygen-demand-bod-and-water"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-0.5"
-                    >
-                      <em>Biological Oxygen Demand</em> <ExternalLink className="h-3 w-3 inline" />
-                    </a>{" "}
-                    — konsumsi oksigen biologis oleh bakteri pembusuk air lindi mentah.
-                  </li>
-                  <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\mathrm{COD}" /> (35.000 mg/L):</strong>{" "}
-                    <a
-                      href="https://www.epa.gov/cwa-methods"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-0.5"
-                    >
-                      <em>Chemical Oxygen Demand</em> <ExternalLink className="h-3 w-3 inline" />
-                    </a>{" "}
-                    — total kebutuhan oksigen kimiawi pengurai polutan beracun.
-                  </li>
-                </ul>
-              </div>
-
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Setiap 1 ton sampah organik yang dialihkan dari TPA Jatibarang mencegah terproduksinya{" "}
-                <strong className="text-zinc-900 dark:text-zinc-200">390 Liter air lindi pekat</strong>, melindungi air tanah dangkal
-                Kota Semarang dari beban <MathFormula math="5.85\text{ kg BOD}" /> dan <MathFormula math="13.65\text{ kg COD}" /> bahan pencemar.
-              </p>
+              <span className="text-sm font-mono text-emerald-600 dark:text-emerald-400 mt-4 block">~450 kg/Hari Siap Jemput</span>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* 6. Partner Network in Semarang */}
-      <section id="mitra" className="relative mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-24 border-t border-zinc-200 dark:border-zinc-800/80">
-        <div className="text-center space-y-3 max-w-2xl mx-auto mb-12">
-          <Badge variant="outline" className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-3 py-1 font-medium">
-            Ekosistem Nyata
-          </Badge>
-          <h2 className="text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
-            Sentra Terhubung di Wilayah Kota Semarang
-          </h2>
-          <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            Menghubungkan klaster produsen limbah komersial dengan simpul pengolah biokonversi desentral.
-          </p>
-        </div>
+            <div className="rounded-2xl border border-zinc-200/90 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-5 shadow-xs flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm font-semibold uppercase px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">
+                    Sentra BSF
+                  </span>
+                  <Bug className="h-4 w-4 text-emerald-500" />
+                </div>
+                <span className="text-base font-bold text-zinc-900 dark:text-white block">BioBSF Diponegoro Farm</span>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Kec. Tembalang • Biokonversi Pakan Ternak</p>
+              </div>
+              <span className="text-sm font-mono text-emerald-600 dark:text-emerald-400 mt-4 block">Kapasitas: 2.0 Ton/Hari</span>
+            </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 p-5 text-center shadow-sm">
-            <span className="text-base font-bold text-zinc-900 dark:text-white block">Pasar Johar Trade Center</span>
-            <span className="text-sm text-zinc-500 dark:text-zinc-400 mt-1 block">Semarang Tengah • Sayur/Buah Mentah</span>
-          </div>
-          <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 p-5 text-center shadow-sm">
-            <span className="text-base font-bold text-zinc-900 dark:text-white block">Hotel Ciputra Simpang Lima</span>
-            <span className="text-sm text-zinc-500 dark:text-zinc-400 mt-1 block">Semarang Selatan • Sisa Dapur Buffet</span>
-          </div>
-          <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 p-5 text-center shadow-sm">
-            <span className="text-base font-bold text-zinc-900 dark:text-white block">BioBSF Diponegoro Farm</span>
-            <span className="text-sm text-zinc-500 dark:text-zinc-400 mt-1 block">Kec. Tembalang • Pakan Larva Maggot</span>
-          </div>
-          <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 p-5 text-center shadow-sm">
-            <span className="text-base font-bold text-zinc-900 dark:text-white block">Gunungpati Eco-Biogas</span>
-            <span className="text-sm text-zinc-500 dark:text-zinc-400 mt-1 block">Kec. Gunungpati • Reaktor Gas Organik</span>
+            <div className="rounded-2xl border border-zinc-200/90 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-5 shadow-xs flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm font-semibold uppercase px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-500/20">
+                    Biodigester
+                  </span>
+                  <Flame className="h-4 w-4 text-purple-500" />
+                </div>
+                <span className="text-base font-bold text-zinc-900 dark:text-white block">Gunungpati Eco-Biogas</span>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Kec. Gunungpati • Reaktor Metana Mandiri</p>
+              </div>
+              <span className="text-sm font-mono text-emerald-600 dark:text-emerald-400 mt-4 block">Kapasitas: 1.5 Ton/Hari</span>
+            </div>
           </div>
         </div>
       </section>
@@ -1037,13 +883,10 @@ V_{\mathrm{lindi}} &= W \times \eta_{\mathrm{moisture}} \times \gamma_{\mathrm{c
               Arsitektur Solusi
             </a>
             <a href="#masalah" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
-              Urgensi Semarang
+              Urgensi & Ekosistem
             </a>
             <a href="#model-ipcc" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Model IPCC
-            </a>
-            <a href="#mitra" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
-              Jaringan Mitra
             </a>
           </div>
         </div>
