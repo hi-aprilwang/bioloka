@@ -40,19 +40,19 @@ export default function LandingPage() {
     const offsetPosition = elementPosition + window.pageYOffset - headerOffset
     const startPosition = window.pageYOffset
     const distance = offsetPosition - startPosition
-    const duration = 850 // ms
+    const duration = 600 // ms (snappy, responsive)
     let start: number | null = null
 
-    // Easing: cubic-bezier / easeInOutCubic
-    const easeInOutCubic = (t: number): number => {
-      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+    // Pure Ease-Out (easeOutQuart): Starts instantly with zero lag/delay, smoothly decelerates to rest
+    const easeOutQuart = (t: number): number => {
+      return 1 - Math.pow(1 - t, 4)
     }
 
     const step = (timestamp: number) => {
       if (!start) start = timestamp
       const progress = timestamp - start
       const percentage = Math.min(progress / duration, 1)
-      const ease = easeInOutCubic(percentage)
+      const ease = easeOutQuart(percentage)
 
       window.scrollTo(0, startPosition + distance * ease)
 
