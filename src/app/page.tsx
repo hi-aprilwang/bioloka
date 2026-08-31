@@ -614,7 +614,7 @@ export default function LandingPage() {
               </a>
               , data agregat{" "}
               <a
-                href="https://sipsn.menlhk.go.id/sipsn/"
+                href="https://sampahnasional.kemenlh.go.id/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-emerald-600 dark:text-emerald-400 underline underline-offset-2 hover:text-emerald-700 dark:hover:text-emerald-300 inline-flex items-center gap-1"
