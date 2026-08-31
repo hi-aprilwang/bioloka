@@ -27,6 +27,45 @@ import {
 } from "lucide-react"
 
 export default function LandingPage() {
+  const handleSmoothScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    targetId: string
+  ) => {
+    e.preventDefault()
+    const targetElement = document.getElementById(targetId)
+    if (!targetElement) return
+
+    const headerOffset = 88 // offset for sticky header
+    const elementPosition = targetElement.getBoundingClientRect().top
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+    const startPosition = window.pageYOffset
+    const distance = offsetPosition - startPosition
+    const duration = 850 // ms
+    let start: number | null = null
+
+    // Easing: cubic-bezier / easeInOutCubic
+    const easeInOutCubic = (t: number): number => {
+      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+    }
+
+    const step = (timestamp: number) => {
+      if (!start) start = timestamp
+      const progress = timestamp - start
+      const percentage = Math.min(progress / duration, 1)
+      const ease = easeInOutCubic(percentage)
+
+      window.scrollTo(0, startPosition + distance * ease)
+
+      if (progress < duration) {
+        window.requestAnimationFrame(step)
+      } else {
+        window.history.pushState(null, "", `#${targetId}`)
+      }
+    }
+
+    window.requestAnimationFrame(step)
+  }
+
   return (
     <main className="relative min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 selection:bg-emerald-500/20 font-sans transition-colors duration-200">
       {/* Background Pattern */}
@@ -54,22 +93,46 @@ export default function LandingPage() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-300">
-            <a href="#cara-kerja" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a
+              href="#cara-kerja"
+              onClick={(e) => handleSmoothScroll(e, "cara-kerja")}
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            >
               Cara Kerja
             </a>
-            <a href="#bioproduk" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a
+              href="#bioproduk"
+              onClick={(e) => handleSmoothScroll(e, "bioproduk")}
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            >
               Bioproduk
             </a>
-            <a href="#solusi" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a
+              href="#solusi"
+              onClick={(e) => handleSmoothScroll(e, "solusi")}
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            >
               Arsitektur Solusi
             </a>
-            <a href="#masalah" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a
+              href="#masalah"
+              onClick={(e) => handleSmoothScroll(e, "masalah")}
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            >
               Urgensi Semarang
             </a>
-            <a href="#model-ipcc" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a
+              href="#model-ipcc"
+              onClick={(e) => handleSmoothScroll(e, "model-ipcc")}
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            >
               Model IPCC
             </a>
-            <a href="#mitra" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a
+              href="#mitra"
+              onClick={(e) => handleSmoothScroll(e, "mitra")}
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            >
               Jaringan Mitra
             </a>
           </nav>
@@ -125,10 +188,13 @@ export default function LandingPage() {
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
-            <a href="#cara-kerja">
+            <a
+              href="#cara-kerja"
+              onClick={(e) => handleSmoothScroll(e, "cara-kerja")}
+            >
               <Button
                 variant="outline"
-                className="h-12 border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/80 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-base px-6 font-medium gap-2 shadow-sm"
+                className="h-12 border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/80 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-base px-6 font-medium gap-2 shadow-sm cursor-pointer"
               >
                 <Activity className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
                 <span>Lihat Cara Kerjanya</span>
@@ -720,22 +786,46 @@ export default function LandingPage() {
             <Link href="/dashboard" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Aplikasi Dashboard
             </Link>
-            <a href="#cara-kerja" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a
+              href="#cara-kerja"
+              onClick={(e) => handleSmoothScroll(e, "cara-kerja")}
+              className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            >
               Cara Kerja
             </a>
-            <a href="#bioproduk" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a
+              href="#bioproduk"
+              onClick={(e) => handleSmoothScroll(e, "bioproduk")}
+              className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            >
               Katalog Bioproduk
             </a>
-            <a href="#solusi" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a
+              href="#solusi"
+              onClick={(e) => handleSmoothScroll(e, "solusi")}
+              className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            >
               Arsitektur Solusi
             </a>
-            <a href="#masalah" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a
+              href="#masalah"
+              onClick={(e) => handleSmoothScroll(e, "masalah")}
+              className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            >
               Urgensi Semarang
             </a>
-            <a href="#model-ipcc" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a
+              href="#model-ipcc"
+              onClick={(e) => handleSmoothScroll(e, "model-ipcc")}
+              className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            >
               Model IPCC
             </a>
-            <a href="#mitra" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a
+              href="#mitra"
+              onClick={(e) => handleSmoothScroll(e, "mitra")}
+              className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            >
               Jaringan Mitra
             </a>
           </div>
