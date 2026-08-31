@@ -22,6 +22,8 @@ import {
   CheckCircle2,
   Clock,
   Truck,
+  Sprout,
+  Dna,
 } from "lucide-react"
 
 export default function LandingPage() {
@@ -57,6 +59,9 @@ export default function LandingPage() {
             </a>
             <a href="#cara-kerja" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Cara Kerja
+            </a>
+            <a href="#bioproduk" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              Bioproduk
             </a>
             <a href="#solusi" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Arsitektur Solusi
@@ -340,6 +345,148 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* 3.5 Magalarva-Inspired Bioproducts & Output Showcase Section */}
+      <section id="bioproduk" className="relative mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-24 border-t border-zinc-200 dark:border-zinc-800/80">
+        <div className="text-center space-y-3 max-w-3xl mx-auto mb-14">
+          <Badge variant="outline" className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-3 py-1 font-medium">
+            <Dna className="mr-1.5 h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
+            Bioteknologi Sirkular Masa Depan
+          </Badge>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+            Bukan Sekadar Membuang Sampah:{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500 dark:from-emerald-400 dark:to-teal-300">
+              Katalog Bioproduk Bernilai Tinggi
+            </span>
+          </h2>
+          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            Melalui biokonversi larva Black Soldier Fly (<em>Hermetia illucens</em>) dan biodigester anaerobik,
+            setiap ton sisa makanan disulap menjadi komoditas pangan dan energi bernilai ekonomi tinggi.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          {/* Product 1: BSF Protein Biomass */}
+          <SpotlightCard
+            className="p-7 sm:p-8 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
+            spotlightColor="rgba(16, 185, 129, 0.15)"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400">
+                  <Bug className="h-6 w-6" />
+                </div>
+                <Badge variant="outline" className="border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-sm font-semibold">
+                  Biomassa Protein
+                </Badge>
+              </div>
+
+              <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
+                Larva BSF Segar & Kering
+              </h3>
+              <span className="text-sm font-mono text-emerald-600 dark:text-emerald-400 block mt-1">
+                40% - 45% Crude Protein • FCR 5:1
+              </span>
+
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 leading-relaxed">
+                Pakan bernutrisi tinggi pengganti tepung ikan impor untuk tambak bandeng, budidaya lele,
+                serta peternak ayam di Semarang. Kaya akan asam laurat antimikroba alami.
+              </p>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800 space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+              <div className="flex items-center justify-between">
+                <span>Nilai Pasar Semarang:</span>
+                <span className="font-semibold text-zinc-900 dark:text-white">Rp8.000 - Rp45.000/kg</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span>Subtitusi Impor:</span>
+                <span className="font-semibold text-emerald-600 dark:text-emerald-400">100% Organik Lokal</span>
+              </div>
+            </div>
+          </SpotlightCard>
+
+          {/* Product 2: Kasgot Organic Fertilizer */}
+          <SpotlightCard
+            className="p-7 sm:p-8 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
+            spotlightColor="rgba(245, 158, 11, 0.15)"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400">
+                  <Sprout className="h-6 w-6" />
+                </div>
+                <Badge variant="outline" className="border-amber-500/30 text-amber-700 dark:text-amber-300 text-sm font-semibold">
+                  Pupuk Bio-Kasgot
+                </Badge>
+              </div>
+
+              <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
+                Pupuk Kasgot (Bio-Frass)
+              </h3>
+              <span className="text-sm font-mono text-amber-600 dark:text-amber-400 block mt-1">
+                Kaya N-P-K Alami • Bebas Gulma
+              </span>
+
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 leading-relaxed">
+                Residu organik hasil pencernaan maggot yang telah terfermentasi sempurna. Sangat cocok untuk
+                pertanian perkotaan (<em>urban farming</em>), sayuran hidroponik, dan penghijauan Kota Semarang.
+              </p>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800 space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+              <div className="flex items-center justify-between">
+                <span>Rasio Produksi:</span>
+                <span className="font-semibold text-zinc-900 dark:text-white">30% dari Bobot Limbah</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span>Karakteristik:</span>
+                <span className="font-semibold text-amber-600 dark:text-amber-400">Tidak Berbau & Remah</span>
+              </div>
+            </div>
+          </SpotlightCard>
+
+          {/* Product 3: Bio-Methane Energy */}
+          <SpotlightCard
+            className="p-7 sm:p-8 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
+            spotlightColor="rgba(59, 130, 246, 0.15)"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400">
+                  <Flame className="h-6 w-6" />
+                </div>
+                <Badge variant="outline" className="border-blue-500/30 text-blue-700 dark:text-blue-300 text-sm font-semibold">
+                  Energi Terbarukan
+                </Badge>
+              </div>
+
+              <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
+                Biogas & Methane Capture
+              </h3>
+              <span className="text-sm font-mono text-blue-600 dark:text-blue-400 block mt-1">
+                Substitusi LPG • Nol Emisi Liar
+              </span>
+
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 leading-relaxed">
+                Menangkap gas metana yang seharusnya meledak di TPA Jatibarang ke dalam biodigester tertutup
+                menjadi sumber bahan bakar kompor memasak dan listrik mandiri sentra pengolah.
+              </p>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800 space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+              <div className="flex items-center justify-between">
+                <span>Potensi Energi:</span>
+                <span className="font-semibold text-zinc-900 dark:text-white">~0.25 m³ Biogas / kg limbah</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span>Dampak Eko-Kesehatan:</span>
+                <span className="font-semibold text-blue-600 dark:text-blue-400">Reduksi Asap Kebakaran TPA</span>
+              </div>
+            </div>
+          </SpotlightCard>
+        </div>
+      </section>
+
       {/* 4. Interactive Product Sneak-Peek */}
       <section id="solusi" className="relative mx-auto max-w-7xl px-6 pb-20 sm:px-10 sm:pb-28">
         <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/50 p-6 sm:p-10 shadow-xl backdrop-blur-sm">
@@ -575,6 +722,9 @@ export default function LandingPage() {
             </Link>
             <a href="#cara-kerja" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Cara Kerja
+            </a>
+            <a href="#bioproduk" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              Katalog Bioproduk
             </a>
             <a href="#masalah" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Urgensi Semarang
