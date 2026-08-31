@@ -12,6 +12,7 @@ import {
   Coins,
   Info,
   Scale,
+  ExternalLink,
 } from "lucide-react"
 
 export function EcoHealthCalculator() {
@@ -244,20 +245,43 @@ export function EcoHealthCalculator() {
           <div className="rounded-2xl bg-zinc-200/70 dark:bg-zinc-900 p-3 text-zinc-600 dark:text-zinc-400 border border-zinc-300 dark:border-zinc-800 shrink-0">
             <Info className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
           </div>
-          <div className="space-y-2 text-sm">
-            <h3 className="font-semibold text-zinc-900 dark:text-zinc-200">
+          <div className="space-y-3 text-sm">
+            <h3 className="font-semibold text-zinc-900 dark:text-zinc-200 text-base">
               Transparansi Metodologi Matematika (Standar IPCC Tier 1)
             </h3>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              Kalkulasi penurunan emisi metana dihitung secara terbuka menggunakan persamaan matematis IPCC Waste Model:
+              Kalkulasi penurunan emisi metana dihitung secara terbuka menggunakan persamaan matematis{" "}
+              <a
+                href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/vol5.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-0.5"
+              >
+                IPCC Waste Model Vol 5 <ExternalLink className="h-3 w-3 inline" />
+              </a>
+              :
             </p>
             <div className="my-3 p-3.5 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 overflow-x-auto text-emerald-800 dark:text-emerald-300">
               <MathFormula
-                math="\Delta E_{\mathrm{CH_4}} = W \cdot \mathrm{DOC} \cdot \mathrm{DOC}_f \cdot F \cdot \frac{16}{12} \cdot \mathrm{MCF} = W \cdot (0.15 \cdot 0.50 \cdot 0.50 \cdot \frac{16}{12} \cdot 0.80) = 0.040 \cdot W \text{ kg }\mathrm{CH_4}"
+                math="\Delta E_{\mathrm{CH_4}} = W \cdot \mathrm{DOC}(0.15) \cdot \mathrm{DOC}_f(0.50) \cdot F(0.50) \cdot \frac{16}{12} \cdot \mathrm{MCF}(0.80) = 0.040 \cdot W \text{ kg }\mathrm{CH_4}"
                 block
               />
             </div>
-            <p className="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-zinc-600 dark:text-zinc-400">
+              <div>
+                • <strong className="text-zinc-800 dark:text-zinc-200">DOC:</strong> <em>Degradable Organic Carbon</em> (0,15 untuk sampah tropis)
+              </div>
+              <div>
+                • <strong className="text-zinc-800 dark:text-zinc-200">MCF:</strong> <em>Methane Correction Factor</em> (0,80 unmanaged landfill)
+              </div>
+              <div>
+                • <strong className="text-zinc-800 dark:text-zinc-200">GWP:</strong> <em>Global Warming Potential</em> (29,8x <MathFormula math="\mathrm{CO_2}" /> AR6)
+              </div>
+              <div>
+                • <strong className="text-zinc-800 dark:text-zinc-200">BOD/COD:</strong> <em>Biological / Chemical Oxygen Demand</em>
+              </div>
+            </div>
+            <p className="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed pt-1">
               Debit air lindi tropis dihitung dengan model perkolasi: <MathFormula math="V_{\mathrm{lindi}} = W \cdot \eta_{\mathrm{moisture}}(0.65) \cdot \gamma_{\mathrm{compaction}}(0.60) = 0.390 \cdot W\text{ L}" />.
             </p>
           </div>

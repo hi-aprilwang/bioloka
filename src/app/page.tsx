@@ -593,7 +593,7 @@ export default function LandingPage() {
       {/* 5. Scientific Mathematical Model (IPCC Tier 1) */}
       <section id="model-ipcc" className="relative mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-24 border-t border-zinc-200 dark:border-zinc-800/80">
         <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-gradient-to-b from-white to-zinc-100 dark:from-zinc-900/80 dark:to-zinc-950 p-8 sm:p-12 space-y-8 shadow-sm">
-          <div className="space-y-3 max-w-2xl">
+          <div className="space-y-3 max-w-3xl">
             <Badge variant="outline" className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-3 py-1 font-medium">
               Landasan Ilmiah (Kunci 20% Nilai Juri)
             </Badge>
@@ -602,7 +602,27 @@ export default function LandingPage() {
             </h2>
             <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
               CircuLoop tidak menggunakan estimasi fiktif. Seluruh kalkulasi emisi dan hidrologi diprogram
-              berdasarkan formula resmi IPCC Guidelines for National GHG Inventories dan SNI Pengelolaan Limbah.
+              berdasarkan dokumen resmi{" "}
+              <a
+                href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/vol5.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-emerald-600 dark:text-emerald-400 underline underline-offset-2 hover:text-emerald-700 dark:hover:text-emerald-300 inline-flex items-center gap-1"
+              >
+                IPCC 2006 Guidelines for National GHG Inventories (Vol 5: Waste)
+                <ExternalLink className="h-3.5 w-3.5" />
+              </a>{" "}
+              serta standar{" "}
+              <a
+                href="https://pustanling.menlhk.go.id/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-emerald-600 dark:text-emerald-400 underline underline-offset-2 hover:text-emerald-700 dark:hover:text-emerald-300 inline-flex items-center gap-1"
+              >
+                SNI 19-3964-1994 (Pengelolaan Sampah Perkotaan)
+                <ExternalLink className="h-3.5 w-3.5" />
+              </a>
+              .
             </p>
           </div>
 
@@ -618,22 +638,77 @@ export default function LandingPage() {
                   block
                 />
               </div>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Dengan parameter iklim tropis Indonesia (<MathFormula math="\mathrm{DOC} = 0.15" />, <MathFormula math="\mathrm{DOC}_f = 0.50" />, <MathFormula math="F = 0.50" />, <MathFormula math="\mathrm{MCF} = 0.80" />),
-                diperoleh faktor konversi mutlak sebesar:
-              </p>
-              <div className="rounded-xl bg-white dark:bg-zinc-900 p-3 border border-zinc-200 dark:border-zinc-800 overflow-x-auto text-amber-700 dark:text-amber-300">
+
+              {/* Glossary & Parameter Explanation */}
+              <div className="rounded-xl bg-white dark:bg-zinc-900/90 p-4 border border-zinc-200 dark:border-zinc-800 text-sm space-y-2">
+                <span className="font-semibold text-zinc-800 dark:text-zinc-200 block text-sm uppercase tracking-wider">
+                  Keterangan Parameter & Singkatan Teknis:
+                </span>
+                <ul className="space-y-1.5 text-zinc-600 dark:text-zinc-400 text-sm">
+                  <li>
+                    <strong className="text-zinc-800 dark:text-zinc-200">DOC (0.15):</strong>{" "}
+                    <a
+                      href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/5_Volume5/V5_3_Ch3_SWDS.pdf#page=12"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-0.5"
+                    >
+                      <em>Degradable Organic Carbon</em> <ExternalLink className="h-3 w-3 inline" />
+                    </a>{" "}
+                    — fraksi karbon organik aktif pada sampah basah tropis Indonesia.
+                  </li>
+                  <li>
+                    <strong className="text-zinc-800 dark:text-zinc-200">DOC<sub>f</sub> (0.50):</strong>{" "}
+                    <em>Fraction of DOC Dissimilated</em> — persentase karbon organik yang terurai secara biologis di landfill.
+                  </li>
+                  <li>
+                    <strong className="text-zinc-800 dark:text-zinc-200">F (0.50):</strong>{" "}
+                    <em>Fraction of Methane in Landfill Gas</em> — proporsi gas metana murni dalam biogas timbunan sampah.
+                  </li>
+                  <li>
+                    <strong className="text-zinc-800 dark:text-zinc-200">MCF (0.80):</strong>{" "}
+                    <a
+                      href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/5_Volume5/V5_3_Ch3_SWDS.pdf#page=15"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-0.5"
+                    >
+                      <em>Methane Correction Factor</em> <ExternalLink className="h-3 w-3 inline" />
+                    </a>{" "}
+                    — koefisien TPA semiterkendali (*unmanaged deep landfill*) seperti zona aktif TPA Jatibarang.
+                  </li>
+                  <li>
+                    <strong className="text-zinc-800 dark:text-zinc-200">16/12 (1.333):</strong>{" "}
+                    Rasio stoikiometri berat molekul konversi karbon (<MathFormula math="\mathrm{C}=12" />) menjadi metana (<MathFormula math="\mathrm{CH_4}=16" />).
+                  </li>
+                </ul>
+              </div>
+
+              <div className="rounded-xl bg-white dark:bg-zinc-900 p-3.5 border border-zinc-200 dark:border-zinc-800 overflow-x-auto text-amber-700 dark:text-amber-300">
                 <MathFormula
                   math="\Delta E_{\mathrm{CO_2e}} = \Delta E_{\mathrm{CH_4}} \cdot \mathrm{GWP}_{\mathrm{CH_4}} = 0.040 \times 29.8 = 1.192 \text{ kg }\mathrm{CO_2e}/\text{kg}"
                   block
                 />
               </div>
+
+              <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                <strong className="text-zinc-800 dark:text-zinc-200">GWP (29.8):</strong>{" "}
+                <a
+                  href="https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-7/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-0.5"
+                >
+                  <em>Global Warming Potential</em> IPCC AR6 (100-year horizon) <ExternalLink className="h-3 w-3 inline" />
+                </a>
+                . Setiap 1 kg metana yang dicegah setara dengan meniadakan 29,8 kg <MathFormula math="\mathrm{CO_2}" /> di atmosfer.
+              </p>
             </div>
 
             <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 p-6 space-y-4">
               <h3 className="text-base font-bold text-blue-600 dark:text-blue-400 flex items-center gap-2">
                 <Droplets className="h-5 w-5" />
-                Formula Pencegahan Air Lindi
+                Formula Pencegahan Air Lindi (Leachate)
               </h3>
               <div className="rounded-xl bg-white dark:bg-zinc-900 p-4 border border-zinc-200 dark:border-zinc-800 overflow-x-auto text-blue-800 dark:text-blue-300">
                 <MathFormula
@@ -641,6 +716,48 @@ export default function LandingPage() {
                   block
                 />
               </div>
+
+              {/* Leachate Glossary */}
+              <div className="rounded-xl bg-white dark:bg-zinc-900/90 p-4 border border-zinc-200 dark:border-zinc-800 text-sm space-y-2">
+                <span className="font-semibold text-zinc-800 dark:text-zinc-200 block text-sm uppercase tracking-wider">
+                  Keterangan Parameter Hidrologi & Beban Polutan:
+                </span>
+                <ul className="space-y-1.5 text-zinc-600 dark:text-zinc-400 text-sm">
+                  <li>
+                    <strong className="text-zinc-800 dark:text-zinc-200">&eta;<sub>moisture</sub> (0.65):</strong>{" "}
+                    Kadar air rata-rata sampah organik pasar & sisa makanan dapur di kota tropis Indonesia (65%).
+                  </li>
+                  <li>
+                    <strong className="text-zinc-800 dark:text-zinc-200">&gamma;<sub>compaction</sub> (0.60):</strong>{" "}
+                    Efisiensi pelepasan cairan akibat tekanan timbunan (*gravity percolation & self-compaction*).
+                  </li>
+                  <li>
+                    <strong className="text-zinc-800 dark:text-zinc-200">BOD (15.000 mg/L):</strong>{" "}
+                    <a
+                      href="https://www.usgs.gov/special-topics/water-science-school/science/biological-oxygen-demand-bod-and-water"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-0.5"
+                    >
+                      <em>Biological Oxygen Demand</em> <ExternalLink className="h-3 w-3 inline" />
+                    </a>{" "}
+                    — konsumsi oksigen biologis oleh bakteri pembusuk air lindi mentah.
+                  </li>
+                  <li>
+                    <strong className="text-zinc-800 dark:text-zinc-200">COD (35.000 mg/L):</strong>{" "}
+                    <a
+                      href="https://www.epa.gov/cwa-methods"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-0.5"
+                    >
+                      <em>Chemical Oxygen Demand</em> <ExternalLink className="h-3 w-3 inline" />
+                    </a>{" "}
+                    — total kebutuhan oksigen kimiawi pengurai polutan beracun.
+                  </li>
+                </ul>
+              </div>
+
               <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
                 Setiap 1 ton sampah organik yang dialihkan dari TPA Jatibarang mencegah terproduksinya{" "}
                 <strong className="text-zinc-900 dark:text-zinc-200">390 Liter air lindi pekat</strong>, melindungi air tanah dangkal
