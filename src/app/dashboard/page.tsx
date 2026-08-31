@@ -166,6 +166,7 @@ function DashboardContent() {
             {/* Global Impact Scorecards for DLH & City Overview */}
             <ImpactScorecard impact={aggregateImpact} />
 
+            {/* Live City Batches & Verified Hubs */}
             <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/40 p-8 sm:p-10 space-y-8 shadow-sm">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zinc-200 dark:border-zinc-800/80">
                 <div>
@@ -188,6 +189,11 @@ function DashboardContent() {
             </div>
 
             <ValorizerHubs />
+
+            {/* Integrated IPCC Tier 1 Policy Simulator for DLH */}
+            <div className="pt-6 border-t border-zinc-200 dark:border-zinc-800">
+              <EcoHealthCalculator />
+            </div>
           </div>
         )}
 
@@ -321,9 +327,6 @@ function DashboardContent() {
             <ValorizerHubs />
           </div>
         )}
-
-        {/* Tab 4: Eco-Health Calculator */}
-        {activeTab === "calculator" && <EcoHealthCalculator />}
       </div>
 
       {/* Footer with Generous Breathing Room */}

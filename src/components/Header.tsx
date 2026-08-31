@@ -33,18 +33,8 @@ export function Header({ activeTab, setActiveTab, onQuickDemo }: HeaderProps) {
           </div>
         </Link>
 
-        {/* Navigation Tabs - Clean & Spacious */}
+        {/* Navigation Tabs - 3 Persona-Driven Tabs */}
         <nav className="hidden md:flex items-center gap-1 bg-zinc-100 dark:bg-zinc-900/80 p-1 rounded-xl border border-zinc-200 dark:border-zinc-800">
-          <button
-            onClick={() => setActiveTab("overview")}
-            className={`px-3.5 py-1.5 text-sm font-medium rounded-lg transition-all ${
-              activeTab === "overview"
-                ? "bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white shadow-xs"
-                : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
-            }`}
-          >
-            Ikhtisar
-          </button>
           <button
             onClick={() => setActiveTab("producers")}
             className={`px-3.5 py-1.5 text-sm font-medium rounded-lg transition-all flex items-center gap-1.5 ${
@@ -54,7 +44,7 @@ export function Header({ activeTab, setActiveTab, onQuickDemo }: HeaderProps) {
             }`}
           >
             <Building2 className="h-3.5 w-3.5" />
-            Penyetor
+            Penyetor (Warung)
           </button>
           <button
             onClick={() => setActiveTab("valorizers")}
@@ -68,15 +58,15 @@ export function Header({ activeTab, setActiveTab, onQuickDemo }: HeaderProps) {
             Peternak BSF
           </button>
           <button
-            onClick={() => setActiveTab("calculator")}
+            onClick={() => setActiveTab("overview")}
             className={`px-3.5 py-1.5 text-sm font-medium rounded-lg transition-all flex items-center gap-1.5 ${
-              activeTab === "calculator"
+              activeTab === "overview" || activeTab === "calculator"
                 ? "bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white shadow-xs"
                 : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
             }`}
           >
             <Activity className="h-3.5 w-3.5" />
-            Kalkulator
+            Pemantauan DLH
           </button>
         </nav>
 
