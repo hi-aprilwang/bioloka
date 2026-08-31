@@ -18,27 +18,17 @@ export function Header({ activeTab, setActiveTab, onQuickDemo }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-950/85 backdrop-blur-md transition-colors">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5 sm:px-10">
-        {/* Brand & Identity - Rich with Badges and Live Indicators */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 group-hover:scale-105 transition-transform">
-            <Leaf className="h-5 w-5" />
+        {/* Brand */}
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 group-hover:scale-105 transition-transform">
+            <Leaf className="h-4 w-4" />
           </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white">
-                Circu<span className="text-emerald-600 dark:text-emerald-400">Loop</span>
-              </span>
-              <span className="inline-flex items-center rounded-full border border-emerald-500/30 bg-emerald-50 dark:bg-emerald-950/50 px-2.5 py-0.5 text-sm font-semibold text-emerald-700 dark:text-emerald-300">
-                Semarang Hub
-              </span>
-            </div>
-            <p className="text-sm text-zinc-500 dark:text-zinc-400 hidden sm:block">
-              Semarang Urban Organic Circularity & Eco-Health Platform
-            </p>
-          </div>
+          <span className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white">
+            Circu<span className="text-emerald-600 dark:text-emerald-400">Loop</span>
+          </span>
         </Link>
 
-        {/* Navigation Tabs - Concise and Spacious */}
+        {/* Navigation Tabs - Clean & Spacious */}
         <nav className="hidden md:flex items-center gap-1 bg-zinc-100 dark:bg-zinc-900/80 p-1 rounded-xl border border-zinc-200 dark:border-zinc-800">
           <button
             onClick={() => setActiveTab("overview")}
@@ -48,7 +38,7 @@ export function Header({ activeTab, setActiveTab, onQuickDemo }: HeaderProps) {
                 : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
             }`}
           >
-            Pusat Aliran
+            Ikhtisar
           </button>
           <button
             onClick={() => setActiveTab("producers")}
@@ -58,8 +48,8 @@ export function Header({ activeTab, setActiveTab, onQuickDemo }: HeaderProps) {
                 : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
             }`}
           >
-            <Building2 className="h-4 w-4" />
-            Warung & Penyetor
+            <Building2 className="h-3.5 w-3.5" />
+            Penyetor
           </button>
           <button
             onClick={() => setActiveTab("valorizers")}
@@ -69,8 +59,8 @@ export function Header({ activeTab, setActiveTab, onQuickDemo }: HeaderProps) {
                 : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
             }`}
           >
-            <Bug className="h-4 w-4" />
-            Peternak Maggot
+            <Bug className="h-3.5 w-3.5" />
+            Peternak BSF
           </button>
           <button
             onClick={() => setActiveTab("calculator")}
@@ -80,21 +70,13 @@ export function Header({ activeTab, setActiveTab, onQuickDemo }: HeaderProps) {
                 : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
             }`}
           >
-            <Activity className="h-4 w-4" />
-            Cek Dampak Lingkungan
+            <Activity className="h-3.5 w-3.5" />
+            Kalkulator
           </button>
         </nav>
 
-        {/* Action Buttons & Theme Switcher */}
+        {/* Right Actions */}
         <div className="flex items-center gap-2 sm:gap-3">
-          <div className="hidden lg:flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-50 dark:bg-emerald-950/40 px-3 py-1 text-sm text-emerald-700 dark:text-emerald-300">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            <span>TPA Jatibarang Live</span>
-          </div>
-
           <HowItWorksDialog />
 
           <Button

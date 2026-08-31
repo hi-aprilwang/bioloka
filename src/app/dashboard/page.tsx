@@ -20,7 +20,6 @@ import {
   CheckCircle2,
   Building2,
   Bug,
-  Activity,
   ArrowLeft,
 } from "lucide-react"
 
@@ -124,23 +123,17 @@ export default function DashboardPage() {
         )}
 
         {/* Platform Control Banner */}
-        <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-gradient-to-b from-white via-zinc-50 to-zinc-100 dark:from-zinc-900/90 dark:via-zinc-900/50 dark:to-zinc-950/80 p-8 sm:p-12 lg:p-14 backdrop-blur-md relative overflow-hidden shadow-sm">
+        <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-gradient-to-b from-white via-zinc-50 to-zinc-100 dark:from-zinc-900/90 dark:via-zinc-900/50 dark:to-zinc-950/80 p-8 sm:p-10 lg:p-12 backdrop-blur-md relative overflow-hidden shadow-sm">
           <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-            <div className="space-y-4 max-w-3xl">
-              <div className="flex flex-wrap items-center gap-2.5">
+            <div className="space-y-3.5 max-w-3xl">
+              <div className="flex flex-wrap items-center gap-2">
                 <Badge
                   variant="outline"
-                  className="border-emerald-500/40 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-3.5 py-1"
+                  className="border-emerald-500/40 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-3 py-0.5"
                 >
-                  Subtema: Smart Waste & Eco-Health
+                  Kota Semarang
                 </Badge>
-                <Badge
-                  variant="outline"
-                  className="border-blue-500/30 bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 text-sm px-3.5 py-1"
-                >
-                  Wilayah: Kota Semarang
-                </Badge>
-                <div className="flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-50 dark:bg-emerald-950/40 px-3 py-1 text-sm text-emerald-700 dark:text-emerald-300">
+                <div className="flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-0.5 text-sm text-emerald-700 dark:text-emerald-300">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -149,36 +142,27 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-tight pb-1">
-                Penyelamatan Makanan &{" "}
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-tight pb-1">
+                Pusat Sirkularitas Sisa Makanan &{" "}
                 <ShinyText
-                  text="Perlindungan Lingkungan Semarang"
+                  text="Perlindungan Eko-Kesehatan"
                   speed={4}
                   className="from-emerald-600 via-teal-500 to-emerald-600 dark:from-emerald-400 dark:via-teal-200 dark:to-emerald-400"
                 />
               </h1>
 
-              <p className="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed pt-1">
-                Salurkan sisa bahan makanan dari warung, kafe, pasar Johar, dan rumah makan Anda langsung
-                ke peternak maggot BSF & biogas lokal. Bersama cegah asap kebakaran TPA Jatibarang dan
-                selamatkan air tanah pesisir Semarang dari rembesan air lindi busuk.
+              <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                Salurkan sisa makanan dari warung, kafe, dan pasar langsung ke peternak maggot BSF & biogas lokal.
+                Cegah emisi metana TPA Jatibarang dan lindungi air tanah pesisir Semarang.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row lg:flex-col items-stretch gap-3.5 shrink-0">
+            <div className="flex flex-col sm:flex-row lg:flex-col items-stretch gap-3 shrink-0">
               <BatchCreateDialog onAddBatch={handleAddBatch} />
-              <HowItWorksDialog className="inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/90 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-sm h-11 px-5 shadow-sm cursor-pointer transition-colors">
+              <HowItWorksDialog className="inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/90 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-sm h-10 px-4 shadow-xs cursor-pointer transition-colors">
                 <ShieldCheck className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
                 Cara Kerja Gerakan
               </HowItWorksDialog>
-              <Button
-                variant="outline"
-                onClick={() => setActiveTab("calculator")}
-                className="border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/90 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-sm h-11 px-5 shadow-sm"
-              >
-                <Activity className="mr-2 h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                Hitung Manfaat Lingkungan
-              </Button>
             </div>
           </div>
         </div>
