@@ -550,7 +550,7 @@ export default function LandingPage() {
                   <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
                     Larva BSF Segar & Kering
                   </h3>
-                  <span className="text-sm font-mono text-emerald-600 dark:text-emerald-400 block mt-1">
+                  <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 block mt-1">
                     40% - 45% Crude Protein • FCR 5:1
                   </span>
 
@@ -606,7 +606,7 @@ export default function LandingPage() {
                   <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
                     Pupuk Kasgot (Bio-Frass)
                   </h3>
-                  <span className="text-sm font-mono text-amber-600 dark:text-amber-400 block mt-1">
+                  <span className="text-sm font-semibold text-amber-600 dark:text-amber-400 block mt-1">
                     Kaya N-P-K Alami • Bebas Gulma
                   </span>
 
@@ -662,7 +662,7 @@ export default function LandingPage() {
                   <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
                     Biogas & Methane Capture
                   </h3>
-                  <span className="text-sm font-mono text-blue-600 dark:text-blue-400 block mt-1">
+                  <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 block mt-1">
                     Substitusi LPG • Nol Emisi Liar
                   </span>
 
@@ -873,7 +873,7 @@ export default function LandingPage() {
                 <span className="text-base font-bold text-zinc-900 dark:text-white block">Pasar Johar Semarang</span>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Semarang Tengah • Timbulan Sayur/Buah Segar</p>
               </div>
-              <span className="text-sm font-mono text-emerald-600 dark:text-emerald-400 mt-4 block">~3.5 Ton/Hari Terpilah</span>
+              <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mt-4 block">~3.5 Ton/Hari Terpilah</span>
             </div>
 
             <div className="rounded-2xl border border-zinc-200/90 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-5 shadow-xs flex flex-col justify-between">
@@ -887,7 +887,7 @@ export default function LandingPage() {
                 <span className="text-base font-bold text-zinc-900 dark:text-white block">Hotel Ciputra Simpang Lima</span>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Semarang Selatan • Sisa Dapur Buffet Matang</p>
               </div>
-              <span className="text-sm font-mono text-emerald-600 dark:text-emerald-400 mt-4 block">~450 kg/Hari Siap Jemput</span>
+              <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mt-4 block">~450 kg/Hari Siap Jemput</span>
             </div>
 
             <div className="rounded-2xl border border-zinc-200/90 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-5 shadow-xs flex flex-col justify-between">
@@ -901,7 +901,7 @@ export default function LandingPage() {
                 <span className="text-base font-bold text-zinc-900 dark:text-white block">BioBSF Diponegoro Farm</span>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Kec. Tembalang • Biokonversi Pakan Ternak</p>
               </div>
-              <span className="text-sm font-mono text-emerald-600 dark:text-emerald-400 mt-4 block">Kapasitas: 2.0 Ton/Hari</span>
+              <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mt-4 block">Kapasitas: 2.0 Ton/Hari</span>
             </div>
 
             <div className="rounded-2xl border border-zinc-200/90 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-5 shadow-xs flex flex-col justify-between">
@@ -915,7 +915,7 @@ export default function LandingPage() {
                 <span className="text-base font-bold text-zinc-900 dark:text-white block">Gunungpati Eco-Biogas</span>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Kec. Gunungpati • Reaktor Metana Mandiri</p>
               </div>
-              <span className="text-sm font-mono text-emerald-600 dark:text-emerald-400 mt-4 block">Kapasitas: 1.5 Ton/Hari</span>
+              <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mt-4 block">Kapasitas: 1.5 Ton/Hari</span>
             </div>
           </div>
         </div>
