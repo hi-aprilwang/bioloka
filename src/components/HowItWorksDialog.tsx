@@ -117,125 +117,128 @@ export function HowItWorksDialog({ className, children }: HowItWorksDialogProps)
         )}
       </DialogTrigger>
 
-      <DialogContent className="max-w-2xl bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 p-6 sm:p-7 shadow-2xl rounded-2xl">
-        <DialogHeader>
+      <DialogContent className="sm:max-w-3xl lg:max-w-4xl bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 md:p-10 shadow-2xl rounded-3xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader className="space-y-2">
           <div className="flex items-center gap-2">
             <Badge
               variant="outline"
-              className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-2.5 py-0.5 font-medium"
+              className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-3 py-0.5 font-semibold"
             >
               Panduan Warga & Pelaku Usaha
             </Badge>
-            <span className="text-sm text-zinc-500 font-medium">Langkah Sederhana</span>
+            <span className="text-sm text-zinc-500 dark:text-zinc-400 font-medium">Kota Semarang</span>
           </div>
-          <DialogTitle className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-white mt-1">
+          <DialogTitle className="text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
             Bagaimana Gerakan BioLoka Bekerja?
           </DialogTitle>
-          <DialogDescription className="text-sm text-zinc-600 dark:text-zinc-400">
-            Cara mudah menyelamatkan sisa makanan dapur untuk membantu peternak maggot dan menjaga kelestarian lingkungan Kota Semarang.
+          <DialogDescription className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            Cara mudah menyelamatkan sisa makanan dapur untuk membantu peternak maggot dan menjaga kebersihan Kota Semarang dalam 4 langkah terpadu.
           </DialogDescription>
         </DialogHeader>
 
-        {/* Stepper Navigation Pills */}
-        <div className="grid grid-cols-4 gap-2 mt-4">
+        {/* Stepper Navigation Tabs - Wide & Spacious */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mt-6">
           {steps.map((item, idx) => (
             <button
               key={item.step}
               onClick={() => setActiveStep(idx)}
-              className={`flex flex-col items-center justify-center p-2 sm:p-2.5 rounded-xl border text-center transition-all cursor-pointer ${
+              className={`flex flex-col items-center justify-center p-3 rounded-2xl border text-center transition-all cursor-pointer ${
                 activeStep === idx
-                  ? "border-emerald-500 bg-emerald-50/70 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 font-bold shadow-xs"
-                  : "border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 text-zinc-500 dark:text-zinc-400"
+                  ? "border-emerald-500 bg-emerald-50/80 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 font-bold shadow-sm ring-1 ring-emerald-500/30"
+                  : "border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/30 hover:border-zinc-300 dark:hover:border-zinc-700 text-zinc-600 dark:text-zinc-400"
               }`}
             >
-              <span className="text-sm font-semibold">Langkah {item.step}</span>
-              <span className="text-sm truncate max-w-full hidden sm:inline">
-                {idx === 0 ? "Kumpulkan" : idx === 1 ? "Dijemput" : idx === 2 ? "Olahan" : "Manfaat"}
+              <span className="text-sm font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Langkah 0{item.step}</span>
+              <span className="text-sm font-semibold mt-0.5 truncate max-w-full">
+                {idx === 0 ? "1. Pisahkan Sisa" : idx === 1 ? "2. Dijemput Cepat" : idx === 2 ? "3. Jadi Pakan" : "4. Pantau Dampak"}
               </span>
             </button>
           ))}
         </div>
 
-        {/* Step Card Content */}
-        <div className="mt-4 rounded-2xl border border-zinc-200 dark:border-zinc-800/80 bg-zinc-50/60 dark:bg-zinc-900/50 p-5 space-y-4">
-          <div className="flex items-start gap-3.5">
-            <div className={`p-2.5 rounded-xl border ${current.bgColor} ${current.color} shrink-0`}>
-              <IconComponent className="h-6 w-6" />
+        {/* Step Card Content - Spacious & Well-Padded */}
+        <div className="mt-6 rounded-3xl border border-zinc-200 dark:border-zinc-800/80 bg-zinc-50/70 dark:bg-zinc-900/50 p-6 sm:p-8 space-y-6">
+          <div className="flex items-start gap-4">
+            <div className={`p-3.5 rounded-2xl border ${current.bgColor} ${current.color} shrink-0`}>
+              <IconComponent className="h-7 w-7" />
             </div>
             <div>
-              <span className="text-sm font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 block">
+              <span className="text-sm font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 block">
                 {current.actor}
               </span>
-              <h3 className="text-lg font-bold text-zinc-900 dark:text-white mt-0.5">
+              <h3 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white mt-1">
                 {current.title}
               </h3>
             </div>
           </div>
 
-          <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
+          <p className="text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed">
             {current.description}
           </p>
 
-          <div className="space-y-2 pt-1 border-t border-zinc-200/80 dark:border-zinc-800">
-            <span className="text-sm font-semibold text-zinc-900 dark:text-zinc-200 block">
-              Yang Perlu Anda Ketahui:
+          <div className="space-y-3 pt-4 border-t border-zinc-200/80 dark:border-zinc-800">
+            <span className="text-sm font-bold text-zinc-900 dark:text-zinc-100 block">
+              Poin Penting yang Perlu Anda Ketahui:
             </span>
-            <ul className="space-y-1.5 text-sm text-zinc-600 dark:text-zinc-400">
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-3">
               {current.bulletPoints.map((point, i) => (
-                <li key={i} className="flex items-start gap-2">
+                <li key={i} className="flex items-start gap-2.5 p-3 rounded-xl bg-white dark:bg-zinc-950/70 border border-zinc-200/80 dark:border-zinc-800 text-sm text-zinc-600 dark:text-zinc-300">
                   <CheckCircle2 className="h-4 w-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
-                  <span>{point}</span>
+                  <span className="leading-snug">{point}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Interactive Pro Tip */}
-          <div className="rounded-xl border border-amber-500/20 bg-amber-50/60 dark:bg-amber-950/30 p-3 flex items-center gap-2.5 text-sm text-amber-800 dark:text-amber-300">
-            <Sparkles className="h-4 w-4 shrink-0 text-amber-600 dark:text-amber-400" />
+          <div className="rounded-2xl border border-amber-500/30 bg-amber-50/80 dark:bg-amber-950/40 p-4 flex items-center gap-3 text-sm text-amber-900 dark:text-amber-200">
+            <Sparkles className="h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400" />
             <span>
-              <strong>Petunjuk:</strong> {current.tip}
+              <strong>Petunjuk Cepat:</strong> {current.tip}
             </span>
           </div>
         </div>
 
         {/* Modal Bottom Controls */}
-        <div className="flex items-center justify-between pt-4 border-t border-zinc-200 dark:border-zinc-800 mt-2">
+        <div className="flex items-center justify-between pt-6 border-t border-zinc-200 dark:border-zinc-800 mt-4">
           <Button
             variant="ghost"
-            size="sm"
+            size="default"
             onClick={() => setActiveStep((prev) => Math.max(0, prev - 1))}
             disabled={activeStep === 0}
-            className="text-sm text-zinc-600 dark:text-zinc-400"
+            className="text-sm text-zinc-600 dark:text-zinc-400 font-medium cursor-pointer"
           >
-            Sebelumnya
+            ← Langkah Sebelumnya
           </Button>
 
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-2">
             {steps.map((_, i) => (
-              <span
+              <button
                 key={i}
-                className={`h-1.5 rounded-full transition-all ${
-                  activeStep === i ? "w-6 bg-emerald-500" : "w-1.5 bg-zinc-300 dark:bg-zinc-700"
+                type="button"
+                onClick={() => setActiveStep(i)}
+                className={`h-2 rounded-full transition-all cursor-pointer ${
+                  activeStep === i ? "w-8 bg-emerald-600 dark:bg-emerald-400" : "w-2 bg-zinc-300 dark:bg-zinc-700 hover:bg-zinc-400"
                 }`}
+                aria-label={`Buka langkah ${i + 1}`}
               />
             ))}
           </div>
 
           {activeStep < steps.length - 1 ? (
             <Button
-              size="sm"
+              size="default"
               onClick={() => setActiveStep((prev) => Math.min(steps.length - 1, prev + 1))}
-              className="bg-emerald-600 hover:bg-emerald-500 text-white text-sm gap-1 cursor-pointer"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold gap-1.5 px-5 cursor-pointer shadow-sm"
             >
               <span>Langkah Berikutnya</span>
-              <ArrowRight className="h-3.5 w-3.5" />
+              <ArrowRight className="h-4 w-4" />
             </Button>
           ) : (
             <Button
-              size="sm"
+              size="default"
               onClick={() => setActiveStep(0)}
-              className="bg-zinc-800 hover:bg-zinc-700 text-white text-sm gap-1 cursor-pointer"
+              className="bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white text-white text-sm font-bold gap-1.5 px-5 cursor-pointer shadow-sm"
             >
               <span>Ulangi Panduan</span>
             </Button>
