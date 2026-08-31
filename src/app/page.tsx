@@ -735,7 +735,7 @@ export default function LandingPage() {
             <div>
               <div className="relative h-48 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
                 <Image
-                  src="https://images.unsplash.com/photo-1592417817098-8f3d6910985b?auto=format&fit=crop&w=600&q=80"
+                  src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=600&q=80"
                   alt="Kebutuhan suplai bahan organik segar untuk sentra biokonversi"
                   fill
                   className="object-cover"
