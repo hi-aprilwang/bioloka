@@ -115,15 +115,21 @@ export default function LandingPage() {
             dan selamatkan air sumur pesisir dari cairan limbah busuk.
           </p>
 
-          {/* Dual Call To Actions - Prominent 2-Line Persona Cards */}
+          {/* Dual Call To Actions - Prominent 2-Line Persona Cards with Imagen Portraits */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 w-full max-w-2xl text-left">
             {/* Persona 1: Penyetor Sisa Makanan */}
             <Link
               href="/dashboard?tab=producers"
-              className="group relative flex items-center gap-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white p-5 sm:p-6 shadow-xl shadow-emerald-900/20 hover:shadow-2xl hover:shadow-emerald-900/30 transition-all hover:-translate-y-0.5 border border-emerald-500/30"
+              className="group relative flex items-center gap-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white p-5 sm:p-6 shadow-xl shadow-emerald-900/20 hover:shadow-2xl hover:shadow-emerald-900/30 transition-all hover:-translate-y-0.5 border border-emerald-500/30 overflow-hidden"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/20 text-white shrink-0 group-hover:scale-110 transition-transform">
-                <Building2 className="h-6 w-6" />
+              <div className="relative h-14 w-14 rounded-full overflow-hidden border-2 border-white/40 shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                <Image
+                  src="/images/personas/penyetor.jpg"
+                  alt="Ibu Pengelola Warung & Resto Penyetor Sisa Makanan Semarang"
+                  fill
+                  className="object-cover"
+                  sizes="56px"
+                />
               </div>
               <div className="space-y-0.5">
                 <span className="text-sm uppercase font-bold tracking-wider text-emerald-200 block">
@@ -141,10 +147,16 @@ export default function LandingPage() {
             {/* Persona 2: Peternak Maggot BSF / Biogas */}
             <Link
               href="/dashboard?tab=valorizers"
-              className="group relative flex items-center gap-4 rounded-2xl bg-white dark:bg-zinc-900/90 hover:bg-zinc-50 dark:hover:bg-zinc-800 text-zinc-900 dark:text-white p-5 sm:p-6 shadow-md hover:shadow-xl transition-all hover:-translate-y-0.5 border border-zinc-200 dark:border-zinc-800"
+              className="group relative flex items-center gap-4 rounded-2xl bg-white dark:bg-zinc-900/90 hover:bg-zinc-50 dark:hover:bg-zinc-800 text-zinc-900 dark:text-white p-5 sm:p-6 shadow-md hover:shadow-xl transition-all hover:-translate-y-0.5 border border-zinc-200 dark:border-zinc-800 overflow-hidden"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 dark:bg-emerald-500/20 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 shrink-0 group-hover:scale-110 transition-transform">
-                <Bug className="h-6 w-6" />
+              <div className="relative h-14 w-14 rounded-full overflow-hidden border-2 border-emerald-500/40 shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                <Image
+                  src="/images/personas/peternak.jpg"
+                  alt="Peternak Maggot BSF & Biogas Semarang"
+                  fill
+                  className="object-cover"
+                  sizes="56px"
+                />
               </div>
               <div className="space-y-0.5">
                 <span className="text-sm uppercase font-bold tracking-wider text-emerald-600 dark:text-emerald-400 block">
@@ -876,10 +888,16 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 max-w-2xl mx-auto text-left">
             <Link
               href="/dashboard?tab=producers"
-              className="group relative flex items-center gap-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white p-5 sm:p-6 shadow-xl shadow-emerald-900/20 hover:shadow-2xl transition-all hover:-translate-y-0.5 border border-emerald-500/30"
+              className="group relative flex items-center gap-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white p-5 sm:p-6 shadow-xl shadow-emerald-900/20 hover:shadow-2xl transition-all hover:-translate-y-0.5 border border-emerald-500/30 overflow-hidden"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/20 text-white shrink-0 group-hover:scale-110 transition-transform">
-                <Building2 className="h-6 w-6" />
+              <div className="relative h-14 w-14 rounded-full overflow-hidden border-2 border-white/40 shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                <Image
+                  src="/images/personas/penyetor.jpg"
+                  alt="Penyetor Sisa Makanan Semarang"
+                  fill
+                  className="object-cover"
+                  sizes="56px"
+                />
               </div>
               <div className="space-y-0.5">
                 <span className="text-sm uppercase font-bold tracking-wider text-emerald-200 block">
@@ -896,10 +914,16 @@ export default function LandingPage() {
 
             <Link
               href="/dashboard?tab=valorizers"
-              className="group relative flex items-center gap-4 rounded-2xl bg-white dark:bg-zinc-900/90 hover:bg-zinc-50 dark:hover:bg-zinc-800 text-zinc-900 dark:text-white p-5 sm:p-6 shadow-md hover:shadow-xl transition-all hover:-translate-y-0.5 border border-zinc-200 dark:border-zinc-800"
+              className="group relative flex items-center gap-4 rounded-2xl bg-white dark:bg-zinc-900/90 hover:bg-zinc-50 dark:hover:bg-zinc-800 text-zinc-900 dark:text-white p-5 sm:p-6 shadow-md hover:shadow-xl transition-all hover:-translate-y-0.5 border border-zinc-200 dark:border-zinc-800 overflow-hidden"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 dark:bg-emerald-500/20 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 shrink-0 group-hover:scale-110 transition-transform">
-                <Bug className="h-6 w-6" />
+              <div className="relative h-14 w-14 rounded-full overflow-hidden border-2 border-emerald-500/40 shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                <Image
+                  src="/images/personas/peternak.jpg"
+                  alt="Peternak Maggot BSF & Biogas Semarang"
+                  fill
+                  className="object-cover"
+                  sizes="56px"
+                />
               </div>
               <div className="space-y-0.5">
                 <span className="text-sm uppercase font-bold tracking-wider text-emerald-600 dark:text-emerald-400 block">
