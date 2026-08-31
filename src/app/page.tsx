@@ -187,48 +187,53 @@ export default function LandingPage() {
             className="overflow-hidden border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
             spotlightColor="rgba(16, 185, 129, 0.15)"
           >
-            <div>
-              {/* Card Photo Header */}
-              <div className="relative h-44 w-full overflow-hidden rounded-xl mb-5 bg-zinc-100 dark:bg-zinc-800">
-                <Image
-                  src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80"
-                  alt="Pemilahan sisa sayur dan buah segar di pasar"
-                  fill
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                <span className="absolute top-3 right-3 text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/90 dark:bg-zinc-900/90 text-emerald-700 dark:text-emerald-300 backdrop-blur-xs border border-emerald-500/30">
-                  Langkah 01
-                </span>
-                <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600/90 text-white backdrop-blur-xs">
-                    <Building2 className="h-4 w-4" />
+            <div className="flex flex-col h-full justify-between">
+              <div>
+                {/* Flush Image Header */}
+                <div className="relative h-48 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                  <Image
+                    src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80"
+                    alt="Pemilahan sisa sayur dan buah segar di pasar"
+                    fill
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                  <span className="absolute top-3 right-3 text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/95 dark:bg-zinc-900/95 text-emerald-700 dark:text-emerald-300 backdrop-blur-xs border border-emerald-500/30">
+                    Langkah 01
+                  </span>
+                  <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600/90 text-white backdrop-blur-xs">
+                      <Building2 className="h-4 w-4" />
+                    </div>
+                    <span className="text-sm font-semibold drop-shadow-sm">Warung & Resto</span>
                   </div>
-                  <span className="text-sm font-semibold drop-shadow-sm">Warung & Resto</span>
+                </div>
+
+                {/* Content with Proper Breathing Padding */}
+                <div className="p-6">
+                  <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 block mb-1">
+                    Warung, Kafe, Pasar & Dapur
+                  </span>
+                  <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
+                    Kumpulkan Sisa Makanan
+                  </h3>
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
+                    Cukup catatkan perkiraan berat (kg) sayur, buah, ampas kopi, atau sisa masak dapur yang masih bersih
+                    sebelum dibuang ke tempat sampah.
+                  </p>
                 </div>
               </div>
 
-              <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 block mb-1">
-                Warung, Kafe, Pasar & Dapur
-              </span>
-              <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
-                Kumpulkan Sisa Makanan
-              </h3>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
-                Cukup catatkan perkiraan berat (kg) sayur, buah, ampas kopi, atau sisa masak dapur yang masih bersih
-                sebelum dibuang ke tempat sampah.
-              </p>
-            </div>
-
-            <div className="pt-4 mt-4 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0" />
-                <span>Terpisah dari plastik & tisu</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <Clock className="h-4 w-4 text-emerald-500 shrink-0" />
-                <span>Batas segar &lt; 24 jam</span>
+              <div className="px-6 pb-6 pt-3 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0" />
+                  <span>Terpisah dari plastik & tisu</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <Clock className="h-4 w-4 text-emerald-500 shrink-0" />
+                  <span>Batas segar &lt; 24 jam</span>
+                </div>
               </div>
             </div>
           </SpotlightCard>
@@ -238,48 +243,53 @@ export default function LandingPage() {
             className="overflow-hidden border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
             spotlightColor="rgba(59, 130, 246, 0.15)"
           >
-            <div>
-              {/* Card Photo Header */}
-              <div className="relative h-44 w-full overflow-hidden rounded-xl mb-5 bg-zinc-100 dark:bg-zinc-800">
-                <Image
-                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80"
-                  alt="Logistik penjemputan terdesentralisasi"
-                  fill
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                <span className="absolute top-3 right-3 text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/90 dark:bg-zinc-900/90 text-blue-700 dark:text-blue-300 backdrop-blur-xs border border-blue-500/30">
-                  Langkah 02
-                </span>
-                <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600/90 text-white backdrop-blur-xs">
-                    <Truck className="h-4 w-4" />
+            <div className="flex flex-col h-full justify-between">
+              <div>
+                {/* Flush Image Header */}
+                <div className="relative h-48 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                  <Image
+                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80"
+                    alt="Logistik penjemputan terdesentralisasi"
+                    fill
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                  <span className="absolute top-3 right-3 text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/95 dark:bg-zinc-900/95 text-blue-700 dark:text-blue-300 backdrop-blur-xs border border-blue-500/30">
+                    Langkah 02
+                  </span>
+                  <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600/90 text-white backdrop-blur-xs">
+                      <Truck className="h-4 w-4" />
+                    </div>
+                    <span className="text-sm font-semibold drop-shadow-sm">Logistik Lokal</span>
                   </div>
-                  <span className="text-sm font-semibold drop-shadow-sm">Logistik Lokal</span>
+                </div>
+
+                {/* Content with Proper Breathing Padding */}
+                <div className="p-6">
+                  <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 block mb-1">
+                    Peternak Sekitar Anda
+                  </span>
+                  <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
+                    Dijemput Peternak Terdekat
+                  </h3>
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
+                    Peternak maggot atau pengelola biogas di radius terdekat (&le; 15 km) menerima notifikasi dan
+                    menjemput kiriman dengan motor roda-tiga atau pickup.
+                  </p>
                 </div>
               </div>
 
-              <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 block mb-1">
-                Peternak Sekitar Anda
-              </span>
-              <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
-                Dijemput Peternak Terdekat
-              </h3>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
-                Peternak maggot atau pengelola biogas di radius terdekat (&le; 15 km) menerima notifikasi dan
-                menjemput kiriman dengan motor roda-tiga atau pickup.
-              </p>
-            </div>
-
-            <div className="pt-4 mt-4 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
-              <div className="flex items-center gap-1.5">
-                <Truck className="h-4 w-4 text-blue-500 shrink-0" />
-                <span>Langsung ke alamat Anda</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-blue-500 shrink-0" />
-                <span>Peternak siap jemput 1-klik</span>
+              <div className="px-6 pb-6 pt-3 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
+                <div className="flex items-center gap-1.5">
+                  <Truck className="h-4 w-4 text-blue-500 shrink-0" />
+                  <span>Langsung ke alamat Anda</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle2 className="h-4 w-4 text-blue-500 shrink-0" />
+                  <span>Peternak siap jemput 1-klik</span>
+                </div>
               </div>
             </div>
           </SpotlightCard>
@@ -289,48 +299,53 @@ export default function LandingPage() {
             className="overflow-hidden border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
             spotlightColor="rgba(245, 158, 11, 0.15)"
           >
-            <div>
-              {/* Card Photo Header */}
-              <div className="relative h-44 w-full overflow-hidden rounded-xl mb-5 bg-zinc-100 dark:bg-zinc-800">
-                <Image
-                  src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=600&q=80"
-                  alt="Biokonversi maggot dan pupuk organik"
-                  fill
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                <span className="absolute top-3 right-3 text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/90 dark:bg-zinc-900/90 text-amber-700 dark:text-amber-300 backdrop-blur-xs border border-amber-500/30">
-                  Langkah 03
-                </span>
-                <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-600/90 text-white backdrop-blur-xs">
-                    <Bug className="h-4 w-4" />
+            <div className="flex flex-col h-full justify-between">
+              <div>
+                {/* Flush Image Header */}
+                <div className="relative h-48 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                  <Image
+                    src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=600&q=80"
+                    alt="Biokonversi maggot dan pupuk organik"
+                    fill
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                  <span className="absolute top-3 right-3 text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/95 dark:bg-zinc-900/95 text-amber-700 dark:text-amber-300 backdrop-blur-xs border border-amber-500/30">
+                    Langkah 03
+                  </span>
+                  <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-600/90 text-white backdrop-blur-xs">
+                      <Bug className="h-4 w-4" />
+                    </div>
+                    <span className="text-sm font-semibold drop-shadow-sm">Biokonversi</span>
                   </div>
-                  <span className="text-sm font-semibold drop-shadow-sm">Biokonversi</span>
+                </div>
+
+                {/* Content with Proper Breathing Padding */}
+                <div className="p-6">
+                  <span className="text-sm font-semibold text-amber-600 dark:text-amber-400 block mb-1">
+                    Peternak Tembalang & Mijen
+                  </span>
+                  <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
+                    Disulap Jadi Pakan & Pupuk
+                  </h3>
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
+                    Ribuan larva Maggot BSF melahap sisa makanan menjadi pakan ikan/unggas tinggi protein,
+                    dan menghasilkan pupuk kasgot organik untuk tanaman warga.
+                  </p>
                 </div>
               </div>
 
-              <span className="text-sm font-semibold text-amber-600 dark:text-amber-400 block mb-1">
-                Peternak Tembalang & Mijen
-              </span>
-              <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
-                Disulap Jadi Pakan & Pupuk
-              </h3>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
-                Ribuan larva Maggot BSF melahap sisa makanan menjadi pakan ikan/unggas tinggi protein,
-                dan menghasilkan pupuk kasgot organik untuk tanaman warga.
-              </p>
-            </div>
-
-            <div className="pt-4 mt-4 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-amber-500 shrink-0" />
-                <span>100% habis tanpa bau busuk</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <Activity className="h-4 w-4 text-amber-500 shrink-0" />
-                <span>Bantu ekonomi peternak lokal</span>
+              <div className="px-6 pb-6 pt-3 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle2 className="h-4 w-4 text-amber-500 shrink-0" />
+                  <span>100% habis tanpa bau busuk</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <Activity className="h-4 w-4 text-amber-500 shrink-0" />
+                  <span>Bantu ekonomi peternak lokal</span>
+                </div>
               </div>
             </div>
           </SpotlightCard>
@@ -340,48 +355,53 @@ export default function LandingPage() {
             className="overflow-hidden border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
             spotlightColor="rgba(16, 185, 129, 0.15)"
           >
-            <div>
-              {/* Card Photo Header */}
-              <div className="relative h-44 w-full overflow-hidden rounded-xl mb-5 bg-zinc-100 dark:bg-zinc-800">
-                <Image
-                  src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=600&q=80"
-                  alt="Dampak hijau terukur dan kelestarian lingkungan"
-                  fill
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                <span className="absolute top-3 right-3 text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/90 dark:bg-zinc-900/90 text-teal-700 dark:text-teal-300 backdrop-blur-xs border border-teal-500/30">
-                  Langkah 04
-                </span>
-                <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-600/90 text-white backdrop-blur-xs">
-                    <Leaf className="h-4 w-4" />
+            <div className="flex flex-col h-full justify-between">
+              <div>
+                {/* Flush Image Header */}
+                <div className="relative h-48 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                  <Image
+                    src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=600&q=80"
+                    alt="Dampak hijau terukur dan kelestarian lingkungan"
+                    fill
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                  <span className="absolute top-3 right-3 text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/95 dark:bg-zinc-900/95 text-teal-700 dark:text-teal-300 backdrop-blur-xs border border-teal-500/30">
+                    Langkah 04
+                  </span>
+                  <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-600/90 text-white backdrop-blur-xs">
+                      <Leaf className="h-4 w-4" />
+                    </div>
+                    <span className="text-sm font-semibold drop-shadow-sm">Dampak Hijau</span>
                   </div>
-                  <span className="text-sm font-semibold drop-shadow-sm">Dampak Hijau</span>
+                </div>
+
+                {/* Content with Proper Breathing Padding */}
+                <div className="p-6">
+                  <span className="text-sm font-semibold text-teal-600 dark:text-teal-400 block mb-1">
+                    Kebaikan yang Terukur
+                  </span>
+                  <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
+                    Pantau Kebaikan & Lencana Hijau
+                  </h3>
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
+                    Lihat langsung berapa liter air sumur warga yang Anda selamatkan dan kurangi risiko kebakaran
+                    di TPA Jatibarang. Dapatkan lencana usaha ramah lingkungan!
+                  </p>
                 </div>
               </div>
 
-              <span className="text-sm font-semibold text-teal-600 dark:text-teal-400 block mb-1">
-                Kebaikan yang Terukur
-              </span>
-              <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
-                Pantau Kebaikan & Lencana Hijau
-              </h3>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
-                Lihat langsung berapa liter air sumur warga yang Anda selamatkan dan kurangi risiko kebakaran
-                di TPA Jatibarang. Dapatkan lencana usaha ramah lingkungan!
-              </p>
-            </div>
-
-            <div className="pt-4 mt-4 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-teal-500 shrink-0" />
-                <span>Kalkulasi sains resmi IPCC</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-teal-500 shrink-0" />
-                <span>Lencana Usaha Hijau Semarang</span>
+              <div className="px-6 pb-6 pt-3 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle2 className="h-4 w-4 text-teal-500 shrink-0" />
+                  <span>Kalkulasi sains resmi IPCC</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle2 className="h-4 w-4 text-teal-500 shrink-0" />
+                  <span>Lencana Usaha Hijau Semarang</span>
+                </div>
               </div>
             </div>
           </SpotlightCard>
@@ -423,49 +443,53 @@ export default function LandingPage() {
             className="overflow-hidden border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
             spotlightColor="rgba(16, 185, 129, 0.15)"
           >
-            <div>
-              {/* Product Photo Header */}
-              <div className="relative h-48 w-full overflow-hidden rounded-xl mb-5 bg-zinc-100 dark:bg-zinc-800">
-                <Image
-                  src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=600&q=80"
-                  alt="Pakan alternatif bernutrisi tinggi BSF untuk perikanan dan unggas"
-                  fill
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                <Badge variant="outline" className="absolute top-3 right-3 border-emerald-500/40 bg-white/90 dark:bg-zinc-900/90 text-emerald-700 dark:text-emerald-300 text-sm font-semibold backdrop-blur-xs">
-                  Biomassa Protein
-                </Badge>
-                <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600/90 text-white backdrop-blur-xs">
-                    <Bug className="h-4 w-4" />
+            <div className="flex flex-col h-full justify-between">
+              <div>
+                {/* Product Photo Header */}
+                <div className="relative h-52 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                  <Image
+                    src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=600&q=80"
+                    alt="Pakan alternatif bernutrisi tinggi BSF untuk perikanan dan unggas"
+                    fill
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                  <Badge variant="outline" className="absolute top-3 right-3 border-emerald-500/40 bg-white/95 dark:bg-zinc-900/95 text-emerald-700 dark:text-emerald-300 text-sm font-semibold backdrop-blur-xs">
+                    Biomassa Protein
+                  </Badge>
+                  <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600/90 text-white backdrop-blur-xs">
+                      <Bug className="h-4 w-4" />
+                    </div>
+                    <span className="text-sm font-semibold drop-shadow-sm">Hermetia illucens</span>
                   </div>
-                  <span className="text-sm font-semibold drop-shadow-sm">Hermetia illucens</span>
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
+                    Larva BSF Segar & Kering
+                  </h3>
+                  <span className="text-sm font-mono text-emerald-600 dark:text-emerald-400 block mt-1">
+                    40% - 45% Crude Protein • FCR 5:1
+                  </span>
+
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 leading-relaxed">
+                    Pakan bernutrisi tinggi pengganti tepung ikan impor untuk tambak bandeng, budidaya lele,
+                    serta peternak ayam di Semarang. Kaya akan asam laurat antimikroba alami.
+                  </p>
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
-                Larva BSF Segar & Kering
-              </h3>
-              <span className="text-sm font-mono text-emerald-600 dark:text-emerald-400 block mt-1">
-                40% - 45% Crude Protein • FCR 5:1
-              </span>
-
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 leading-relaxed">
-                Pakan bernutrisi tinggi pengganti tepung ikan impor untuk tambak bandeng, budidaya lele,
-                serta peternak ayam di Semarang. Kaya akan asam laurat antimikroba alami.
-              </p>
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800 space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-              <div className="flex items-center justify-between">
-                <span>Nilai Pasar Semarang:</span>
-                <span className="font-semibold text-zinc-900 dark:text-white">Rp8.000 - Rp45.000/kg</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span>Subtitusi Impor:</span>
-                <span className="font-semibold text-emerald-600 dark:text-emerald-400">100% Organik Lokal</span>
+              <div className="px-6 pb-6 pt-4 border-t border-zinc-100 dark:border-zinc-800 space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+                <div className="flex items-center justify-between">
+                  <span>Nilai Pasar Semarang:</span>
+                  <span className="font-semibold text-zinc-900 dark:text-white">Rp8.000 - Rp45.000/kg</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span>Subtitusi Impor:</span>
+                  <span className="font-semibold text-emerald-600 dark:text-emerald-400">100% Organik Lokal</span>
+                </div>
               </div>
             </div>
           </SpotlightCard>
@@ -475,49 +499,53 @@ export default function LandingPage() {
             className="overflow-hidden border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
             spotlightColor="rgba(245, 158, 11, 0.15)"
           >
-            <div>
-              {/* Product Photo Header */}
-              <div className="relative h-48 w-full overflow-hidden rounded-xl mb-5 bg-zinc-100 dark:bg-zinc-800">
-                <Image
-                  src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80"
-                  alt="Pupuk Kasgot organik ramah lingkungan untuk tanaman"
-                  fill
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                <Badge variant="outline" className="absolute top-3 right-3 border-amber-500/40 bg-white/90 dark:bg-zinc-900/90 text-amber-700 dark:text-amber-300 text-sm font-semibold backdrop-blur-xs">
-                  Pupuk Bio-Kasgot
-                </Badge>
-                <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-600/90 text-white backdrop-blur-xs">
-                    <Sprout className="h-4 w-4" />
+            <div className="flex flex-col h-full justify-between">
+              <div>
+                {/* Product Photo Header */}
+                <div className="relative h-52 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                  <Image
+                    src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80"
+                    alt="Pupuk Kasgot organik ramah lingkungan untuk tanaman"
+                    fill
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                  <Badge variant="outline" className="absolute top-3 right-3 border-amber-500/40 bg-white/95 dark:bg-zinc-900/95 text-amber-700 dark:text-amber-300 text-sm font-semibold backdrop-blur-xs">
+                    Pupuk Bio-Kasgot
+                  </Badge>
+                  <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-600/90 text-white backdrop-blur-xs">
+                      <Sprout className="h-4 w-4" />
+                    </div>
+                    <span className="text-sm font-semibold drop-shadow-sm">Bio-Frass Organik</span>
                   </div>
-                  <span className="text-sm font-semibold drop-shadow-sm">Bio-Frass Organik</span>
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
+                    Pupuk Kasgot (Bio-Frass)
+                  </h3>
+                  <span className="text-sm font-mono text-amber-600 dark:text-amber-400 block mt-1">
+                    Kaya N-P-K Alami • Bebas Gulma
+                  </span>
+
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 leading-relaxed">
+                    Residu organik hasil pencernaan maggot yang telah terfermentasi sempurna. Sangat cocok untuk
+                    pertanian perkotaan (<em>urban farming</em>), sayuran hidroponik, dan penghijauan Kota Semarang.
+                  </p>
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
-                Pupuk Kasgot (Bio-Frass)
-              </h3>
-              <span className="text-sm font-mono text-amber-600 dark:text-amber-400 block mt-1">
-                Kaya N-P-K Alami • Bebas Gulma
-              </span>
-
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 leading-relaxed">
-                Residu organik hasil pencernaan maggot yang telah terfermentasi sempurna. Sangat cocok untuk
-                pertanian perkotaan (<em>urban farming</em>), sayuran hidroponik, dan penghijauan Kota Semarang.
-              </p>
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800 space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-              <div className="flex items-center justify-between">
-                <span>Rasio Produksi:</span>
-                <span className="font-semibold text-zinc-900 dark:text-white">30% dari Bobot Limbah</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span>Karakteristik:</span>
-                <span className="font-semibold text-amber-600 dark:text-amber-400">Tidak Berbau & Remah</span>
+              <div className="px-6 pb-6 pt-4 border-t border-zinc-100 dark:border-zinc-800 space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+                <div className="flex items-center justify-between">
+                  <span>Rasio Produksi:</span>
+                  <span className="font-semibold text-zinc-900 dark:text-white">30% dari Bobot Limbah</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span>Karakteristik:</span>
+                  <span className="font-semibold text-amber-600 dark:text-amber-400">Tidak Berbau & Remah</span>
+                </div>
               </div>
             </div>
           </SpotlightCard>
@@ -527,49 +555,53 @@ export default function LandingPage() {
             className="overflow-hidden border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
             spotlightColor="rgba(59, 130, 246, 0.15)"
           >
-            <div>
-              {/* Product Photo Header */}
-              <div className="relative h-48 w-full overflow-hidden rounded-xl mb-5 bg-zinc-100 dark:bg-zinc-800">
-                <Image
-                  src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=600&q=80"
-                  alt="Energi terbarukan biogas dan konversi bersih"
-                  fill
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                <Badge variant="outline" className="absolute top-3 right-3 border-blue-500/40 bg-white/90 dark:bg-zinc-900/90 text-blue-700 dark:text-blue-300 text-sm font-semibold backdrop-blur-xs">
-                  Energi Terbarukan
-                </Badge>
-                <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600/90 text-white backdrop-blur-xs">
-                    <Flame className="h-4 w-4" />
+            <div className="flex flex-col h-full justify-between">
+              <div>
+                {/* Product Photo Header */}
+                <div className="relative h-52 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                  <Image
+                    src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=600&q=80"
+                    alt="Energi terbarukan biogas dan konversi bersih"
+                    fill
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                  <Badge variant="outline" className="absolute top-3 right-3 border-blue-500/40 bg-white/95 dark:bg-zinc-900/95 text-blue-700 dark:text-blue-300 text-sm font-semibold backdrop-blur-xs">
+                    Energi Terbarukan
+                  </Badge>
+                  <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600/90 text-white backdrop-blur-xs">
+                      <Flame className="h-4 w-4" />
+                    </div>
+                    <span className="text-sm font-semibold drop-shadow-sm">Methane Capture</span>
                   </div>
-                  <span className="text-sm font-semibold drop-shadow-sm">Methane Capture</span>
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
+                    Biogas & Methane Capture
+                  </h3>
+                  <span className="text-sm font-mono text-blue-600 dark:text-blue-400 block mt-1">
+                    Substitusi LPG • Nol Emisi Liar
+                  </span>
+
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 leading-relaxed">
+                    Menangkap gas metana yang seharusnya meledak di TPA Jatibarang ke dalam biodigester tertutup
+                    menjadi sumber bahan bakar kompor memasak dan listrik mandiri sentra pengolah.
+                  </p>
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
-                Biogas & Methane Capture
-              </h3>
-              <span className="text-sm font-mono text-blue-600 dark:text-blue-400 block mt-1">
-                Substitusi LPG • Nol Emisi Liar
-              </span>
-
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 leading-relaxed">
-                Menangkap gas metana yang seharusnya meledak di TPA Jatibarang ke dalam biodigester tertutup
-                menjadi sumber bahan bakar kompor memasak dan listrik mandiri sentra pengolah.
-              </p>
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800 space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-              <div className="flex items-center justify-between">
-                <span>Potensi Energi:</span>
-                <span className="font-semibold text-zinc-900 dark:text-white">~0.25 m³ Biogas / kg limbah</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span>Dampak Eko-Kesehatan:</span>
-                <span className="font-semibold text-blue-600 dark:text-blue-400">Reduksi Asap Kebakaran TPA</span>
+              <div className="px-6 pb-6 pt-4 border-t border-zinc-100 dark:border-zinc-800 space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+                <div className="flex items-center justify-between">
+                  <span>Potensi Energi:</span>
+                  <span className="font-semibold text-zinc-900 dark:text-white">~0.25 m³ Biogas / kg limbah</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span>Dampak Eko-Kesehatan:</span>
+                  <span className="font-semibold text-blue-600 dark:text-blue-400">Reduksi Asap Kebakaran TPA</span>
+                </div>
               </div>
             </div>
           </SpotlightCard>
