@@ -46,7 +46,7 @@ export default function LandingPage() {
             </div>
             <div>
               <span className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white block leading-tight">
-                Circu<span className="text-emerald-600 dark:text-emerald-400">Loop</span>
+                Bio<span className="text-emerald-600 dark:text-emerald-400">Loka</span>
               </span>
               <span className="text-sm text-zinc-500 dark:text-zinc-400 font-medium block leading-none mt-0.5">
                 Semarang Node
@@ -252,7 +252,7 @@ export default function LandingPage() {
             Alur Partisipasi 4 Langkah
           </Badge>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight text-balance">
-            Bagaimana Gerakan CircuLoop Bekerja?
+            Bagaimana Gerakan BioLoka Bekerja?
           </h2>
           <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed text-balance">
             Menghubungkan sisa makanan segar dari warung, kafe, pasar, dan rumah Anda dengan peternak
@@ -750,7 +750,7 @@ export default function LandingPage() {
             Mengapa Dibangun Khusus untuk Semarang & Bagaimana Ekosistemnya Terhubung?
           </h2>
           <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed text-balance">
-            CircuLoop menjawab langsung tiga krisis sanitasi mendesak di Kota Semarang dengan menghubungkan titik penghasil sisa makanan komersial ke simpul biokonversi lokal.
+            BioLoka menjawab langsung tiga krisis sanitasi mendesak di Kota Semarang dengan menghubungkan titik penghasil sisa makanan komersial ke simpul biokonversi lokal.
           </p>
         </div>
 
@@ -932,7 +932,7 @@ export default function LandingPage() {
               Metodologi Hitung Dampak Standar IPCC Tier 1
             </h2>
             <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              CircuLoop tidak menggunakan estimasi fiktif. Seluruh kalkulasi emisi dan hidrologi diprogram
+              BioLoka tidak menggunakan estimasi fiktif. Seluruh kalkulasi emisi dan hidrologi diprogram
               berdasarkan dokumen resmi{" "}
               <a
                 href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/vol5.html"
@@ -1125,7 +1125,7 @@ V_{\mathrm{lindi}} &= W \times \eta_{\mathrm{moisture}} \times \gamma_{\mathrm{c
             Mulai Gerakan Sirkularitas Sisa Makanan Semarang Hari Ini
           </h2>
           <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto leading-relaxed text-balance">
-            Pilih peran Anda dan coba langsung platform CircuLoop untuk menyelamatkan bahan pangan dan menjaga kebersihan Kota Semarang.
+            Pilih peran Anda dan coba langsung platform BioLoka untuk menyelamatkan bahan pangan dan menjaga kebersihan Kota Semarang.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-4 max-w-4xl mx-auto text-left">
             <Link
@@ -1205,7 +1205,7 @@ V_{\mathrm{lindi}} &= W \times \eta_{\mathrm{moisture}} \times \gamma_{\mathrm{c
       <footer className="border-t border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950 py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-zinc-500">
           <div>
-            <span className="font-bold text-zinc-800 dark:text-zinc-300">CircuLoop Semarang</span> — Platform Sirkularitas Sisa Makanan & Eko-Kesehatan.
+            <span className="font-bold text-zinc-800 dark:text-zinc-300">BioLoka Semarang</span> — Platform Sirkularitas Sisa Makanan & Eko-Kesehatan.
             <p className="mt-1 text-sm text-zinc-500">
               Inisiatif Kolaboratif Ekonomi Sirkular Kota Semarang • Mencegah Kebakaran TPA & Melindungi Air Pesisir
             </p>

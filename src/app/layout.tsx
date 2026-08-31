@@ -18,7 +18,7 @@ const fontMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CircuLoop Semarang | Platform Sirkularitas Sisa Makanan & Eko-Kesehatan Perkotaan",
+  title: "BioLoka Semarang | Platform Sirkularitas Sisa Makanan & Eko-Kesehatan Perkotaan",
   description:
     "Platform digital pertukaran sisa makanan dan biokonversi terdesentralisasi untuk pencegahan emisi metana TPA Jatibarang dan perlindungan sanitasi pesisir Kota Semarang.",
 };

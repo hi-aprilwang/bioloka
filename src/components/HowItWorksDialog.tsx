@@ -129,7 +129,7 @@ export function HowItWorksDialog({ className, children }: HowItWorksDialogProps)
             <span className="text-sm text-zinc-500 font-medium">Langkah Sederhana</span>
           </div>
           <DialogTitle className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-white mt-1">
-            Bagaimana Gerakan CircuLoop Bekerja?
+            Bagaimana Gerakan BioLoka Bekerja?
           </DialogTitle>
           <DialogDescription className="text-sm text-zinc-600 dark:text-zinc-400">
             Cara mudah menyelamatkan sisa makanan dapur untuk membantu peternak maggot dan menjaga kelestarian lingkungan Kota Semarang.

@@ -294,7 +294,7 @@ function DashboardContent() {
       {/* Footer with Generous Breathing Room */}
       <footer className="mt-24 sm:mt-32 border-t border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950 py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
-          <span>CircuLoop Semarang — Platform Sirkularitas Sisa Makanan & Eko-Kesehatan Perkotaan.</span>
+          <span>BioLoka Semarang — Platform Sirkularitas Sisa Makanan & Eko-Kesehatan Perkotaan.</span>
           <span className="font-mono text-emerald-600 dark:text-emerald-400">Node Status: Online (Semarang Area)</span>
         </div>
       </footer>
@@ -307,7 +307,7 @@ export default function DashboardPage() {
     <Suspense
       fallback={
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center text-sm text-zinc-500">
-          Memuat Dashboard CircuLoop Semarang...
+          Memuat Dashboard BioLoka Semarang...
         </div>
       }
     >

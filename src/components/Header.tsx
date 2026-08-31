@@ -24,7 +24,7 @@ export function Header({ activeTab, setActiveTab, onQuickDemo }: HeaderProps) {
             <Leaf className="h-4 w-4" />
           </div>
           <span className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white">
-            Circu<span className="text-emerald-600 dark:text-emerald-400">Loop</span>
+            Bio<span className="text-emerald-600 dark:text-emerald-400">Loka</span>
           </span>
         </Link>
 
