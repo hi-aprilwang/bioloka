@@ -28,6 +28,8 @@ import {
 } from "lucide-react"
 
 export default function LandingPage() {
+  const [activePersona, setActivePersona] = React.useState<"warung" | "peternak">("warung")
+
   return (
     <main className="relative min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 selection:bg-emerald-500/20 font-sans transition-colors duration-200">
       {/* Background Pattern */}
@@ -108,137 +110,217 @@ export default function LandingPage() {
             />
           </h1>
 
-          {/* Subtitle with balanced text */}
+          {/* Subtitle - Friendly & Conversational */}
           <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed max-w-3xl text-balance">
-            Hubungkan sisa dapur dari warung makan, kafe, hotel, pasar Johar, hingga katering langsung ke peternak
-            maggot BSF & biogas lokal di Semarang sebelum basi (&lt; 24 jam). Bersama hentikan risiko kebakaran TPA Jatibarang
-            dan selamatkan air tanah pesisir dari rembesan air lindi tercemar.
+            Hubungkan sisa makanan segar dari warung, kafe, resto, dan pasar langsung ke peternak
+            maggot lokal di Semarang sebelum basi (&lt; 24 jam). Sisa dapur jadi pakan bergizi, lingkungan kota lebih bersih dan asri.
           </p>
 
-          {/* Dual Call To Actions - Full Height Flush Portrait Image Persona Cards with Explicit Click Badges */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-4 w-full max-w-4xl text-left">
-            {/* Persona 1: Penyetor Sisa Makanan */}
-            <Link
-              href="/dashboard?tab=producers"
-              className="group relative flex items-stretch rounded-3xl bg-emerald-600 hover:bg-emerald-500 text-white shadow-xl shadow-emerald-900/20 hover:shadow-2xl hover:shadow-emerald-900/30 transition-all hover:-translate-y-0.5 border border-emerald-500/30 overflow-hidden min-h-[155px]"
-            >
-              {/* Flush Full-Height Portrait Image */}
-              <div className="relative w-28 sm:w-32 md:w-36 shrink-0 overflow-hidden bg-emerald-700">
-                <Image
-                  src="/images/personas/penyetor.jpg"
-                  alt="Ibu Pengelola Warung & Resto Penyetor Sisa Makanan Semarang"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 640px) 112px, 144px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-emerald-600/60" />
+          {/* Interactive Persona Selector / Switcher */}
+          <div className="w-full max-w-4xl pt-4 space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                Pilih Peran Anda:
+              </span>
+              <div className="flex p-1 bg-zinc-200/80 dark:bg-zinc-800/80 rounded-2xl border border-zinc-300/60 dark:border-zinc-700/60">
+                <button
+                  type="button"
+                  onClick={() => setActivePersona("warung")}
+                  className={`px-4 py-1.5 rounded-xl text-sm font-bold transition-all ${
+                    activePersona === "warung"
+                      ? "bg-emerald-600 text-white shadow-sm"
+                      : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
+                  }`}
+                >
+                  Warung & Resto
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActivePersona("peternak")}
+                  className={`px-4 py-1.5 rounded-xl text-sm font-bold transition-all ${
+                    activePersona === "peternak"
+                      ? "bg-emerald-600 text-white shadow-sm"
+                      : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
+                  }`}
+                >
+                  Peternak Maggot
+                </button>
               </div>
+            </div>
 
-              {/* Card Content */}
-              <div className="flex flex-col justify-center p-4.5 sm:p-5 md:p-6 space-y-1.5 flex-1 min-w-0">
-                <span className="text-sm uppercase font-bold tracking-wider text-emerald-200 block truncate">
-                  Warung • Resto • Pasar
-                </span>
-                <span className="text-lg sm:text-xl font-extrabold text-white block leading-tight truncate">
-                  Salurkan Sisa Dapur
-                </span>
-                <p className="text-sm text-emerald-100/90 block leading-snug line-clamp-1">
-                  Input sisa makanan & klaim Lencana Hijau
-                </p>
-                <div className="pt-1">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-white text-emerald-800 px-3 py-1 text-sm font-bold shadow-xs group-hover:bg-emerald-50 group-hover:translate-x-0.5 transition-all">
-                    <span>Klik di sini untuk menyalurkan</span>
-                    <ArrowRight className="h-3.5 w-3.5 shrink-0" />
-                  </span>
+            {/* Dual Persona Cards Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left">
+              {/* Persona 1: Penyetor Sisa Makanan */}
+              <Link
+                href="/dashboard?tab=producers"
+                onClick={() => setActivePersona("warung")}
+                className={`group relative flex items-stretch rounded-3xl transition-all border overflow-hidden min-h-[160px] ${
+                  activePersona === "warung"
+                    ? "bg-emerald-600 text-white shadow-2xl shadow-emerald-900/25 border-emerald-400 ring-2 ring-emerald-500"
+                    : "bg-white dark:bg-zinc-900/90 text-zinc-900 dark:text-white opacity-85 hover:opacity-100 hover:bg-zinc-50 dark:hover:bg-zinc-800 border-zinc-200 dark:border-zinc-800 shadow-sm"
+                }`}
+              >
+                {/* Flush Full-Height Portrait Image */}
+                <div className="relative w-28 sm:w-32 md:w-36 shrink-0 overflow-hidden bg-emerald-700">
+                  <Image
+                    src="/images/personas/penyetor.jpg"
+                    alt="Ibu Pengelola Warung & Resto Penyetor Sisa Makanan Semarang"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 112px, 144px"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-r from-black/20 via-transparent ${
+                    activePersona === "warung" ? "to-emerald-600/60" : "to-white/40 dark:to-zinc-900/60"
+                  }`} />
                 </div>
-              </div>
-            </Link>
 
-            {/* Persona 2: Peternak Maggot BSF / Biogas */}
-            <Link
-              href="/dashboard?tab=valorizers"
-              className="group relative flex items-stretch rounded-3xl bg-white dark:bg-zinc-900/90 hover:bg-zinc-50 dark:hover:bg-zinc-800 text-zinc-900 dark:text-white shadow-md hover:shadow-xl transition-all hover:-translate-y-0.5 border border-zinc-200 dark:border-zinc-800 overflow-hidden min-h-[155px]"
-            >
-              {/* Flush Full-Height Portrait Image */}
-              <div className="relative w-28 sm:w-32 md:w-36 shrink-0 overflow-hidden bg-zinc-100 dark:bg-zinc-800">
-                <Image
-                  src="/images/personas/peternak.jpg"
-                  alt="Peternak Maggot BSF & Biogas Semarang"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 640px) 112px, 144px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-white/40 dark:to-zinc-900/60" />
-              </div>
-
-              {/* Card Content */}
-              <div className="flex flex-col justify-center p-4.5 sm:p-5 md:p-6 space-y-1.5 flex-1 min-w-0">
-                <span className="text-sm uppercase font-bold tracking-wider text-emerald-600 dark:text-emerald-400 block truncate">
-                  Sentra Maggot • Biogas
-                </span>
-                <span className="text-lg sm:text-xl font-extrabold text-zinc-900 dark:text-white block leading-tight truncate">
-                  Jemput Pasokan Pakan
-                </span>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 block leading-snug line-clamp-1">
-                  Bursa pakan organik segar siap jemput
-                </p>
-                <div className="pt-1">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1 text-sm font-bold shadow-xs group-hover:translate-x-0.5 transition-all">
-                    <span>Klik di sini untuk menjemput</span>
-                    <ArrowRight className="h-3.5 w-3.5 shrink-0" />
+                {/* Card Content */}
+                <div className="flex flex-col justify-center p-4.5 sm:p-5 md:p-6 space-y-1.5 flex-1 min-w-0">
+                  <div className="flex items-center justify-between">
+                    <span className={`text-sm uppercase font-bold tracking-wider block truncate ${
+                      activePersona === "warung" ? "text-emerald-200" : "text-emerald-600 dark:text-emerald-400"
+                    }`}>
+                      Warung • Resto • Pasar
+                    </span>
+                    {activePersona === "warung" && (
+                      <span className="text-sm px-2 py-0.5 rounded-full bg-white/20 text-white font-medium">
+                        Aktif
+                      </span>
+                    )}
+                  </div>
+                  <span className={`text-lg sm:text-xl font-extrabold block leading-tight truncate ${
+                    activePersona === "warung" ? "text-white" : "text-zinc-900 dark:text-white"
+                  }`}>
+                    Salurkan Sisa Dapur
                   </span>
+                  <p className={`text-sm block leading-snug line-clamp-1 ${
+                    activePersona === "warung" ? "text-emerald-100/90" : "text-zinc-500 dark:text-zinc-400"
+                  }`}>
+                    Dijemput gratis & dapat Lencana Hijau
+                  </p>
+                  <div className="pt-1">
+                    <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-bold shadow-xs transition-all ${
+                      activePersona === "warung"
+                        ? "bg-white text-emerald-800 group-hover:bg-emerald-50 group-hover:translate-x-0.5"
+                        : "bg-emerald-600 text-white group-hover:bg-emerald-500 group-hover:translate-x-0.5"
+                    }`}>
+                      <span>Buka Dashboard Warung</span>
+                      <ArrowRight className="h-3.5 w-3.5 shrink-0" />
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+
+              {/* Persona 2: Peternak Maggot BSF / Biogas */}
+              <Link
+                href="/dashboard?tab=valorizers"
+                onClick={() => setActivePersona("peternak")}
+                className={`group relative flex items-stretch rounded-3xl transition-all border overflow-hidden min-h-[160px] ${
+                  activePersona === "peternak"
+                    ? "bg-emerald-600 text-white shadow-2xl shadow-emerald-900/25 border-emerald-400 ring-2 ring-emerald-500"
+                    : "bg-white dark:bg-zinc-900/90 text-zinc-900 dark:text-white opacity-85 hover:opacity-100 hover:bg-zinc-50 dark:hover:bg-zinc-800 border-zinc-200 dark:border-zinc-800 shadow-sm"
+                }`}
+              >
+                {/* Flush Full-Height Portrait Image */}
+                <div className="relative w-28 sm:w-32 md:w-36 shrink-0 overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                  <Image
+                    src="/images/personas/peternak.jpg"
+                    alt="Peternak Maggot BSF & Biogas Semarang"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 112px, 144px"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-r from-black/20 via-transparent ${
+                    activePersona === "peternak" ? "to-emerald-600/60" : "to-white/40 dark:to-zinc-900/60"
+                  }`} />
+                </div>
+
+                {/* Card Content */}
+                <div className="flex flex-col justify-center p-4.5 sm:p-5 md:p-6 space-y-1.5 flex-1 min-w-0">
+                  <div className="flex items-center justify-between">
+                    <span className={`text-sm uppercase font-bold tracking-wider block truncate ${
+                      activePersona === "peternak" ? "text-emerald-200" : "text-emerald-600 dark:text-emerald-400"
+                    }`}>
+                      Sentra Maggot • Ternak
+                    </span>
+                    {activePersona === "peternak" && (
+                      <span className="text-sm px-2 py-0.5 rounded-full bg-white/20 text-white font-medium">
+                        Aktif
+                      </span>
+                    )}
+                  </div>
+                  <span className={`text-lg sm:text-xl font-extrabold block leading-tight truncate ${
+                    activePersona === "peternak" ? "text-white" : "text-zinc-900 dark:text-white"
+                  }`}>
+                    Jemput Pasokan Pakan
+                  </span>
+                  <p className={`text-sm block leading-snug line-clamp-1 ${
+                    activePersona === "peternak" ? "text-emerald-100/90" : "text-zinc-500 dark:text-zinc-400"
+                  }`}>
+                    Pakan organik segar & hemat biaya
+                  </p>
+                  <div className="pt-1">
+                    <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-bold shadow-xs transition-all ${
+                      activePersona === "peternak"
+                        ? "bg-white text-emerald-800 group-hover:bg-emerald-50 group-hover:translate-x-0.5"
+                        : "bg-emerald-600 text-white group-hover:bg-emerald-500 group-hover:translate-x-0.5"
+                    }`}>
+                      <span>Buka Dashboard Peternak</span>
+                      <ArrowRight className="h-3.5 w-3.5 shrink-0" />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
 
-          {/* Live Semarang Statistics Proof Strip - Minimalist Flat Data Format (No CTA appearance) */}
+          {/* Simple Proof Metrics - Practical Benefits, Not Heavy Technical Jargon */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full max-w-4xl pt-8 border-t border-zinc-200/80 dark:border-zinc-800/80 text-left">
             <div className="space-y-1">
               <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400 block">
-                Fraksi Sampah Kota
+                Penjemputan Cepat
               </span>
               <span className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 block tracking-tight">
-                62% Organik
+                &lt; 24 Jam
               </span>
               <span className="text-sm text-zinc-400 dark:text-zinc-500 block">
-                Data DLH Semarang 2024
+                Sebelum sisa basi
               </span>
             </div>
 
             <div className="space-y-1 lg:border-l lg:border-zinc-200/70 dark:lg:border-zinc-800/70 lg:pl-6">
               <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400 block">
-                Beban TPA Jatibarang
+                Pangkas Biaya Pakan
               </span>
               <span className="text-2xl font-extrabold text-amber-600 dark:text-amber-400 block tracking-tight">
-                1.200 Ton/Hari
+                Hemat 60%
               </span>
               <span className="text-sm text-zinc-400 dark:text-zinc-500 block">
-                Kondisi timbulan kritis
+                Bagi peternak lokal
               </span>
             </div>
 
             <div className="space-y-1 lg:border-l lg:border-zinc-200/70 dark:lg:border-zinc-800/70 lg:pl-6">
               <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400 block">
-                Faktor Metana IPCC
+                Cakupan Area
               </span>
               <span className="text-2xl font-extrabold text-zinc-800 dark:text-zinc-200 block tracking-tight">
-                0.040 kg <MathFormula math="\mathrm{CH_4}" />
+                16 Kecamatan
               </span>
               <span className="text-sm text-zinc-400 dark:text-zinc-500 block">
-                Tereduksi per kg limbah
+                Seluruh Kota Semarang
               </span>
             </div>
 
             <div className="space-y-1 lg:border-l lg:border-zinc-200/70 dark:lg:border-zinc-800/70 lg:pl-6">
               <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400 block">
-                Cegah Air Lindi Busuk
+                Dampak Lingkungan
               </span>
               <span className="text-2xl font-extrabold text-blue-600 dark:text-blue-400 block tracking-tight">
-                390 Liter
+                100% Sirkular
               </span>
               <span className="text-sm text-zinc-400 dark:text-zinc-500 block">
-                Per ton sisa makanan
+                Bebas bau & ramah warga
               </span>
             </div>
           </div>
@@ -754,7 +836,7 @@ export default function LandingPage() {
           </p>
         </div>
 
-        {/* 3 Real-World Problem Cards */}
+        {/* 3 Real-World Problem Cards - Human & Relatable Copy */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/50 shadow-sm flex flex-col justify-between">
             <div>
@@ -771,15 +853,14 @@ export default function LandingPage() {
                   <div className="rounded-lg bg-amber-500/90 p-2 text-white backdrop-blur-xs">
                     <Flame className="h-5 w-5" />
                   </div>
-                  <span className="text-sm font-bold text-amber-200 drop-shadow-sm">Bahaya Metana TPA</span>
+                  <span className="text-sm font-bold text-amber-200 drop-shadow-sm">Asap & Kebakaran TPA</span>
                 </div>
               </div>
               <div className="p-7 space-y-3">
-                <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Krisis Kebakaran TPA Jatibarang</h3>
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Asap Kebakaran TPA Jatibarang</h3>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Timbunan sampah organik basah yang membusuk anaerobik di TPA Jatibarang menghasilkan gas metana (<MathFormula math="\mathrm{CH_4}" />)
-                  konsentrasi tinggi yang memicu kebakaran besar pada September–Oktober 2023 dan 2024, mengancam kesehatan
-                  pernapasan ribuan warga Mijen dan sekitarnya.
+                  Tumpukan sampah makanan busuk di TPA Jatibarang menghasilkan gas panas yang mudah terbakar,
+                  menimbulkan kepulan asap pekat yang mengganggu udara bersih warga sekitar Mijen dan Semarang Barat.
                 </p>
               </div>
             </div>
@@ -800,14 +881,14 @@ export default function LandingPage() {
                   <div className="rounded-lg bg-blue-500/90 p-2 text-white backdrop-blur-xs">
                     <Droplets className="h-5 w-5" />
                   </div>
-                  <span className="text-sm font-bold text-blue-200 drop-shadow-sm">Banjir Rob & Air Lindi</span>
+                  <span className="text-sm font-bold text-blue-200 drop-shadow-sm">Air Sumur & Banjir Rob</span>
                 </div>
               </div>
               <div className="p-7 space-y-3">
-                <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Pencemaran Air Lindi Saat Rob</h3>
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Genangan Air Busuk Saat Rob</h3>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Di wilayah Semarang Bawah (Semarang Utara, Kaligawe, Genuk), banjir rob berkala bercampur dengan air lindi
-                  sampah perkotaan yang merembes ke air sumur dangkal, memicu lonjakan kasus diare bakteri (<em>E. coli</em>) dan infeksi kulit.
+                  Di wilayah pesisir (Semarang Utara, Kaligawe, Genuk), genangan banjir rob bercampur sampah basah
+                  bisa merembes dan mencemari air sumur warga sehingga memicu bau busuk dan masalah kesehatan kulit.
                 </p>
               </div>
             </div>
@@ -828,14 +909,14 @@ export default function LandingPage() {
                   <div className="rounded-lg bg-emerald-500/90 p-2 text-white backdrop-blur-xs">
                     <Bug className="h-5 w-5" />
                   </div>
-                  <span className="text-sm font-bold text-emerald-200 drop-shadow-sm">Sentra Biokonversi</span>
+                  <span className="text-sm font-bold text-emerald-200 drop-shadow-sm">Peluang Pakan Ternak</span>
                 </div>
               </div>
               <div className="p-7 space-y-3">
-                <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Kekurangan Bahan Baku Biokonversi</h3>
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Peternak Butuh Tambahan Pakan</h3>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Peternak Maggot BSF di Tembalang dan reaktor biogas di Gunungpati memiliki kapasitas serap ton-an per hari,
-                  namun kesulitan pasokan limbah organik terpilah karena belum ada rantai pasok digital yang menghubungkannya dengan sektor komersial.
+                  Peternak maggot BSF di Tembalang dan pengolah biogas di Gunungpati punya kapasitas besar,
+                  namun sering kekurangan pasokan sisa dapur segar karena belum terhubung langsung dengan warung dan resto.
                 </p>
               </div>
             </div>
