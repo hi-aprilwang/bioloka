@@ -19,6 +19,9 @@ import {
   Activity,
   MapPin,
   ExternalLink,
+  CheckCircle2,
+  Clock,
+  Truck,
 } from "lucide-react"
 
 export default function LandingPage() {
@@ -51,6 +54,9 @@ export default function LandingPage() {
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-300">
             <a href="#masalah" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Urgensi Semarang
+            </a>
+            <a href="#cara-kerja" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              Cara Kerja
             </a>
             <a href="#solusi" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Arsitektur Solusi
@@ -153,7 +159,188 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 3. Interactive Product Sneak-Peek */}
+      {/* 3. Dedicated How It Works Pipeline Section */}
+      <section id="cara-kerja" className="relative mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-24 border-t border-zinc-200 dark:border-zinc-800/80">
+        <div className="text-center space-y-3 max-w-3xl mx-auto mb-14">
+          <Badge variant="outline" className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-3 py-1 font-medium">
+            Alur Simbiosis B2B 4-Tahap
+          </Badge>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+            Bagaimana Platform CircuLoop Bekerja?
+          </h2>
+          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            Menghubungkan rantai pasok sampah organik komersial dengan fasilitas biokonversi perkotaan
+            di Semarang dalam kurun waktu &lt; 24 jam sebelum proses dekomposisi berbau dimulai.
+          </p>
+        </div>
+
+        {/* 4 Steps Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+          {/* Step 1 */}
+          <SpotlightCard
+            className="p-6 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
+            spotlightColor="rgba(16, 185, 129, 0.15)"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400">
+                  <Building2 className="h-5 w-5" />
+                </div>
+                <span className="text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30">
+                  Langkah 01
+                </span>
+              </div>
+              <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 block mb-1">
+                Hotel, Resto & Pasar
+              </span>
+              <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
+                Pencatatan Batch Limbah
+              </h3>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
+                Produsen komersial mencatatkan volume (kg), kategori sisa makanan, dan jendela waktu penjemputan
+                sebelum bau busuk timbul.
+              </p>
+            </div>
+
+            <div className="pt-4 mt-4 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0" />
+                <span>Terpilah 100% dari sumber</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Clock className="h-4 w-4 text-emerald-500 shrink-0" />
+                <span>Batas segar &lt; 24 jam</span>
+              </div>
+            </div>
+          </SpotlightCard>
+
+          {/* Step 2 */}
+          <SpotlightCard
+            className="p-6 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
+            spotlightColor="rgba(59, 130, 246, 0.15)"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400">
+                  <MapPin className="h-5 w-5" />
+                </div>
+                <span className="text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-500/30">
+                  Langkah 02
+                </span>
+              </div>
+              <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 block mb-1">
+                Mesin Geospasial
+              </span>
+              <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
+                Geo-Match & Dispatch
+              </h3>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
+                Algoritma radius mencocokkan batch dengan fasilitas biokonversi terdekat (radius &le; 15 km)
+                untuk memangkas emisi rute transportasi.
+              </p>
+            </div>
+
+            <div className="pt-4 mt-4 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
+              <div className="flex items-center gap-1.5">
+                <Truck className="h-4 w-4 text-blue-500 shrink-0" />
+                <span>Rute pickup teroptimasi</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-4 w-4 text-blue-500 shrink-0" />
+                <span>Klaim langsung 1-klik</span>
+              </div>
+            </div>
+          </SpotlightCard>
+
+          {/* Step 3 */}
+          <SpotlightCard
+            className="p-6 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
+            spotlightColor="rgba(245, 158, 11, 0.15)"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400">
+                  <Bug className="h-5 w-5" />
+                </div>
+                <span className="text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-500/30">
+                  Langkah 03
+                </span>
+              </div>
+              <span className="text-sm font-semibold text-amber-600 dark:text-amber-400 block mb-1">
+                Fasilitas Maggot & Biogas
+              </span>
+              <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
+                Biokonversi Nilai Tinggi
+              </h3>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
+                Bioreaktor larva Black Soldier Fly (BSF) melahap limbah menjadi pakan protein unggas/lele (FCR 5:1)
+                dan pupuk kasgot organik.
+              </p>
+            </div>
+
+            <div className="pt-4 mt-4 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-4 w-4 text-amber-500 shrink-0" />
+                <span>Zero waste ke TPA</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Activity className="h-4 w-4 text-amber-500 shrink-0" />
+                <span>Valuasi Rp1,9 Juta / ton</span>
+              </div>
+            </div>
+          </SpotlightCard>
+
+          {/* Step 4 */}
+          <SpotlightCard
+            className="p-6 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
+            spotlightColor="rgba(16, 185, 129, 0.15)"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400">
+                  <Activity className="h-5 w-5" />
+                </div>
+                <span className="text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-teal-100 dark:bg-teal-950/60 text-teal-700 dark:text-teal-300 border border-teal-500/30">
+                  Langkah 04
+                </span>
+              </div>
+              <span className="text-sm font-semibold text-teal-600 dark:text-teal-400 block mb-1">
+                Kalkulator IPCC Tier 1
+              </span>
+              <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
+                Audit Eko-Kesehatan & ESG
+              </h3>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
+                Timbangan digital otomatis menghitung reduksi metana (0,04 kg CH4/kg) dan pencegahan 390 L
+                lindi bagi sanitasi air pesisir Semarang.
+              </p>
+            </div>
+
+            <div className="pt-4 mt-4 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400">
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-4 w-4 text-teal-500 shrink-0" />
+                <span>Standar resmi IPCC AR6</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-4 w-4 text-teal-500 shrink-0" />
+                <span>Sertifikat Hijau ESG</span>
+              </div>
+            </div>
+          </SpotlightCard>
+        </div>
+
+        {/* Action Link to Platform Simulation */}
+        <div className="mt-10 text-center">
+          <Link href="/dashboard">
+            <Button variant="outline" className="border-emerald-500/40 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-sm font-medium gap-2">
+              <span>Uji Coba Langsung Alur Ini di Dashboard</span>
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </Link>
+        </div>
+      </section>
+
+      {/* 4. Interactive Product Sneak-Peek */}
       <section id="solusi" className="relative mx-auto max-w-7xl px-6 pb-20 sm:px-10 sm:pb-28">
         <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/50 p-6 sm:p-10 shadow-xl backdrop-blur-sm">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-zinc-200 dark:border-zinc-800">
@@ -204,7 +391,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 4. The Local Semarang Problem Space */}
+      {/* 5. The Local Semarang Problem Space */}
       <section id="masalah" className="relative mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-24 border-t border-zinc-200 dark:border-zinc-800/80">
         <div className="space-y-4 max-w-2xl mb-12">
           <Badge variant="outline" className="border-red-500/30 bg-red-50 dark:bg-red-500/10 text-red-700 dark:text-red-300 text-sm px-3 py-1 font-medium">
@@ -386,6 +573,9 @@ export default function LandingPage() {
             <Link href="/dashboard" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Aplikasi Dashboard
             </Link>
+            <a href="#cara-kerja" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              Cara Kerja
+            </a>
             <a href="#masalah" className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Urgensi Semarang
             </a>

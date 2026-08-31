@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { ShinyText } from "@/components/react-bits/ShinyText"
 import { ThemeToggle } from "@/components/ThemeToggle"
 import { Leaf, Activity, Sparkles, Building2, Bug } from "lucide-react"
+import { HowItWorksDialog } from "@/components/HowItWorksDialog"
 
 interface HeaderProps {
   activeTab: string
@@ -74,8 +75,10 @@ export function Header({ activeTab, setActiveTab, onQuickDemo }: HeaderProps) {
           </button>
         </nav>
 
-        {/* Action Button & Theme Switcher */}
-        <div className="flex items-center gap-3">
+        {/* Action Buttons & Theme Switcher */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          <HowItWorksDialog />
+
           <Button
             size="default"
             onClick={onQuickDemo}

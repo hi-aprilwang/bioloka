@@ -10,6 +10,7 @@ import { BatchList } from "@/components/BatchList"
 import { BatchCreateDialog } from "@/components/BatchCreateDialog"
 import { EcoHealthCalculator } from "@/components/EcoHealthCalculator"
 import { ValorizerHubs } from "@/components/ValorizerHubs"
+import { HowItWorksDialog } from "@/components/HowItWorksDialog"
 import { INITIAL_BATCHES, calculateEnvironmentalImpact } from "@/lib/circuloop-data"
 import { WasteBatch } from "@/lib/types"
 import { Badge } from "@/components/ui/badge"
@@ -166,6 +167,10 @@ export default function DashboardPage() {
 
             <div className="flex flex-col sm:flex-row lg:flex-col items-stretch gap-3.5 shrink-0">
               <BatchCreateDialog onAddBatch={handleAddBatch} />
+              <HowItWorksDialog className="inline-flex items-center justify-center rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/90 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-sm h-11 px-5 shadow-sm cursor-pointer transition-colors">
+                <ShieldCheck className="mr-2 h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                Panduan Alur Simbiosis
+              </HowItWorksDialog>
               <Button
                 variant="outline"
                 onClick={() => setActiveTab("calculator")}
