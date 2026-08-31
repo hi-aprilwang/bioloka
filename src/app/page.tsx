@@ -725,7 +725,7 @@ export default function LandingPage() {
                 <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Pencemaran Air Lindi Saat Rob</h3>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
                   Di wilayah Semarang Bawah (Semarang Utara, Kaligawe, Genuk), banjir rob berkala bercampur dengan air lindi
-                  sampah perkotaan yang merembes ke air sumur dangkal, memicu lonjakan kasus diare bakteri (*E. coli*) dan infeksi kulit.
+                  sampah perkotaan yang merembes ke air sumur dangkal, memicu lonjakan kasus diare bakteri (<em>E. coli</em>) dan infeksi kulit.
                 </p>
               </div>
             </div>
@@ -856,7 +856,7 @@ export default function LandingPage() {
                     >
                       <em>Methane Correction Factor</em> <ExternalLink className="h-3 w-3 inline" />
                     </a>{" "}
-                    — koefisien TPA semiterkendali (*unmanaged deep landfill*) seperti zona aktif TPA Jatibarang.
+                    — koefisien TPA semiterkendali (<em>unmanaged deep landfill</em>) seperti zona aktif TPA Jatibarang.
                   </li>
                   <li>
                     <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\frac{16}{12}" /> (1.333):</strong>{" "}
@@ -919,7 +919,7 @@ V_{\mathrm{lindi}} &= W \times \eta_{\mathrm{moisture}} \times \gamma_{\mathrm{c
                   </li>
                   <li>
                     <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\gamma_{\mathrm{compaction}}" /> (0.60):</strong>{" "}
-                    Efisiensi pelepasan cairan akibat tekanan timbunan (*gravity percolation & self-compaction*).
+                    Efisiensi pelepasan cairan akibat tekanan timbunan (<em>gravity percolation & self-compaction</em>).
                   </li>
                   <li>
                     <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\mathrm{BOD}" /> (15.000 mg/L):</strong>{" "}
