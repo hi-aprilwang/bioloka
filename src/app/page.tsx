@@ -115,25 +115,48 @@ export default function LandingPage() {
             dan selamatkan air sumur pesisir dari cairan limbah busuk.
           </p>
 
-          {/* Dual Call To Actions - Persona Split */}
-          <div className="flex flex-col sm:flex-row items-center gap-3.5 pt-3 w-full max-w-xl justify-center">
+          {/* Dual Call To Actions - Prominent 2-Line Persona Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 w-full max-w-2xl text-left">
             {/* Persona 1: Penyetor Sisa Makanan */}
-            <Link href="/dashboard?tab=producers" className="w-full sm:w-auto">
-              <Button size="default" className="w-full sm:w-auto h-12 bg-emerald-600 hover:bg-emerald-500 text-white text-base px-6 font-semibold gap-2.5 shadow-lg shadow-emerald-900/20">
-                <Building2 className="h-4 w-4 shrink-0" />
-                <span>Saya Punya Sisa Makanan (Penyetor)</span>
-              </Button>
+            <Link
+              href="/dashboard?tab=producers"
+              className="group relative flex items-center gap-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white p-5 sm:p-6 shadow-xl shadow-emerald-900/20 hover:shadow-2xl hover:shadow-emerald-900/30 transition-all hover:-translate-y-0.5 border border-emerald-500/30"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/20 text-white shrink-0 group-hover:scale-110 transition-transform">
+                <Building2 className="h-6 w-6" />
+              </div>
+              <div className="space-y-0.5">
+                <span className="text-sm uppercase font-bold tracking-wider text-emerald-200 block">
+                  Warung • Kafe • Resto • Pasar
+                </span>
+                <span className="text-lg font-extrabold text-white block leading-tight">
+                  Salurkan Sisa Dapur
+                </span>
+                <span className="text-sm text-emerald-100/90 block">
+                  Input jemputan & klaim Lencana Hijau &rarr;
+                </span>
+              </div>
             </Link>
 
             {/* Persona 2: Peternak Maggot BSF / Biogas */}
-            <Link href="/dashboard?tab=valorizers" className="w-full sm:w-auto">
-              <Button
-                variant="outline"
-                className="w-full sm:w-auto h-12 border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-base px-6 font-semibold gap-2.5 shadow-sm"
-              >
-                <Bug className="h-4 w-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                <span>Saya Peternak Maggot / Biogas</span>
-              </Button>
+            <Link
+              href="/dashboard?tab=valorizers"
+              className="group relative flex items-center gap-4 rounded-2xl bg-white dark:bg-zinc-900/90 hover:bg-zinc-50 dark:hover:bg-zinc-800 text-zinc-900 dark:text-white p-5 sm:p-6 shadow-md hover:shadow-xl transition-all hover:-translate-y-0.5 border border-zinc-200 dark:border-zinc-800"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 dark:bg-emerald-500/20 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 shrink-0 group-hover:scale-110 transition-transform">
+                <Bug className="h-6 w-6" />
+              </div>
+              <div className="space-y-0.5">
+                <span className="text-sm uppercase font-bold tracking-wider text-emerald-600 dark:text-emerald-400 block">
+                  Sentra Maggot • Biogas
+                </span>
+                <span className="text-lg font-extrabold text-zinc-900 dark:text-white block leading-tight">
+                  Jemput Pasokan Pakan
+                </span>
+                <span className="text-sm text-zinc-500 dark:text-zinc-400 block">
+                  Buka bursa sisa makanan siap ambil &rarr;
+                </span>
+              </div>
             </Link>
           </div>
 
@@ -850,18 +873,45 @@ export default function LandingPage() {
           <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto leading-relaxed">
             Pilih peran Anda dan coba langsung platform CircuLoop untuk menyelamatkan bahan pangan dan menjaga kebersihan Kota Semarang.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-            <Link href="/dashboard?tab=producers" className="w-full sm:w-auto">
-              <Button size="default" className="w-full sm:w-auto h-12 bg-emerald-600 hover:bg-emerald-500 text-white text-base px-6 font-semibold gap-2 shadow-lg">
-                <Building2 className="h-4 w-4" />
-                <span>Masuk sebagai Penyetor Sisa Makanan</span>
-              </Button>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 max-w-2xl mx-auto text-left">
+            <Link
+              href="/dashboard?tab=producers"
+              className="group relative flex items-center gap-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white p-5 sm:p-6 shadow-xl shadow-emerald-900/20 hover:shadow-2xl transition-all hover:-translate-y-0.5 border border-emerald-500/30"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/20 text-white shrink-0 group-hover:scale-110 transition-transform">
+                <Building2 className="h-6 w-6" />
+              </div>
+              <div className="space-y-0.5">
+                <span className="text-sm uppercase font-bold tracking-wider text-emerald-200 block">
+                  Warung • Kafe • Resto • Pasar
+                </span>
+                <span className="text-lg font-extrabold text-white block leading-tight">
+                  Salurkan Sisa Dapur
+                </span>
+                <span className="text-sm text-emerald-100/90 block">
+                  Input jemputan & klaim Lencana Hijau &rarr;
+                </span>
+              </div>
             </Link>
-            <Link href="/dashboard?tab=valorizers" className="w-full sm:w-auto">
-              <Button size="default" variant="outline" className="w-full sm:w-auto h-12 border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-base px-6 font-semibold gap-2 shadow-sm">
-                <Bug className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                <span>Masuk sebagai Peternak BSF / Biogas</span>
-              </Button>
+
+            <Link
+              href="/dashboard?tab=valorizers"
+              className="group relative flex items-center gap-4 rounded-2xl bg-white dark:bg-zinc-900/90 hover:bg-zinc-50 dark:hover:bg-zinc-800 text-zinc-900 dark:text-white p-5 sm:p-6 shadow-md hover:shadow-xl transition-all hover:-translate-y-0.5 border border-zinc-200 dark:border-zinc-800"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 dark:bg-emerald-500/20 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 shrink-0 group-hover:scale-110 transition-transform">
+                <Bug className="h-6 w-6" />
+              </div>
+              <div className="space-y-0.5">
+                <span className="text-sm uppercase font-bold tracking-wider text-emerald-600 dark:text-emerald-400 block">
+                  Sentra Maggot • Biogas
+                </span>
+                <span className="text-lg font-extrabold text-zinc-900 dark:text-white block leading-tight">
+                  Jemput Pasokan Pakan
+                </span>
+                <span className="text-sm text-zinc-500 dark:text-zinc-400 block">
+                  Buka bursa sisa makanan siap ambil &rarr;
+                </span>
+              </div>
             </Link>
           </div>
         </div>
