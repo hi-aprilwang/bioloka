@@ -108,11 +108,11 @@ export default function LandingPage() {
             />
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed max-w-3xl">
+          {/* Subtitle with balanced text */}
+          <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed max-w-3xl text-balance">
             Hubungkan sisa dapur dari warung makan, kafe, hotel, pasar Johar, hingga katering langsung ke peternak
-            maggot BSF & biogas lokal di Semarang sebelum basi (&lt; 24 jam). Hentikan asap kebakaran TPA Jatibarang
-            dan selamatkan air sumur pesisir dari cairan limbah busuk.
+            maggot BSF & biogas lokal di Semarang sebelum basi (&lt; 24 jam). Bersama hentikan risiko kebakaran TPA Jatibarang
+            dan selamatkan air tanah pesisir dari rembesan air lindi tercemar.
           </p>
 
           {/* Dual Call To Actions - Full Height Flush Portrait Image Persona Cards with Explicit Click Badges */}
@@ -123,32 +123,32 @@ export default function LandingPage() {
               className="group relative flex items-stretch rounded-3xl bg-emerald-600 hover:bg-emerald-500 text-white shadow-xl shadow-emerald-900/20 hover:shadow-2xl hover:shadow-emerald-900/30 transition-all hover:-translate-y-0.5 border border-emerald-500/30 overflow-hidden min-h-[155px]"
             >
               {/* Flush Full-Height Portrait Image */}
-              <div className="relative w-32 sm:w-36 shrink-0 overflow-hidden bg-emerald-700">
+              <div className="relative w-28 sm:w-32 md:w-36 shrink-0 overflow-hidden bg-emerald-700">
                 <Image
                   src="/images/personas/penyetor.jpg"
                   alt="Ibu Pengelola Warung & Resto Penyetor Sisa Makanan Semarang"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 640px) 128px, 144px"
+                  sizes="(max-width: 640px) 112px, 144px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-emerald-600/60" />
               </div>
 
               {/* Card Content */}
-              <div className="flex flex-col justify-center p-5 sm:p-6 space-y-1.5 flex-1">
-                <span className="text-sm uppercase font-bold tracking-wider text-emerald-200 block">
+              <div className="flex flex-col justify-center p-4.5 sm:p-5 md:p-6 space-y-1.5 flex-1 min-w-0">
+                <span className="text-sm uppercase font-bold tracking-wider text-emerald-200 block truncate">
                   Warung • Resto • Pasar
                 </span>
-                <span className="text-xl sm:text-2xl font-extrabold text-white block leading-tight">
+                <span className="text-lg sm:text-xl font-extrabold text-white block leading-tight truncate">
                   Salurkan Sisa Dapur
                 </span>
-                <p className="text-sm text-emerald-100/90 block leading-snug">
+                <p className="text-sm text-emerald-100/90 block leading-snug line-clamp-1">
                   Input sisa makanan & klaim Lencana Hijau
                 </p>
                 <div className="pt-1">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-white text-emerald-800 px-3 py-1 text-sm font-bold shadow-xs group-hover:bg-emerald-50 group-hover:translate-x-0.5 transition-all">
                     <span>Klik di sini untuk menyalurkan</span>
-                    <ArrowRight className="h-3.5 w-3.5" />
+                    <ArrowRight className="h-3.5 w-3.5 shrink-0" />
                   </span>
                 </div>
               </div>
@@ -160,32 +160,32 @@ export default function LandingPage() {
               className="group relative flex items-stretch rounded-3xl bg-white dark:bg-zinc-900/90 hover:bg-zinc-50 dark:hover:bg-zinc-800 text-zinc-900 dark:text-white shadow-md hover:shadow-xl transition-all hover:-translate-y-0.5 border border-zinc-200 dark:border-zinc-800 overflow-hidden min-h-[155px]"
             >
               {/* Flush Full-Height Portrait Image */}
-              <div className="relative w-32 sm:w-36 shrink-0 overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+              <div className="relative w-28 sm:w-32 md:w-36 shrink-0 overflow-hidden bg-zinc-100 dark:bg-zinc-800">
                 <Image
                   src="/images/personas/peternak.jpg"
                   alt="Peternak Maggot BSF & Biogas Semarang"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 640px) 128px, 144px"
+                  sizes="(max-width: 640px) 112px, 144px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-white/40 dark:to-zinc-900/60" />
               </div>
 
               {/* Card Content */}
-              <div className="flex flex-col justify-center p-5 sm:p-6 space-y-1.5 flex-1">
-                <span className="text-sm uppercase font-bold tracking-wider text-emerald-600 dark:text-emerald-400 block">
+              <div className="flex flex-col justify-center p-4.5 sm:p-5 md:p-6 space-y-1.5 flex-1 min-w-0">
+                <span className="text-sm uppercase font-bold tracking-wider text-emerald-600 dark:text-emerald-400 block truncate">
                   Sentra Maggot • Biogas
                 </span>
-                <span className="text-xl sm:text-2xl font-extrabold text-zinc-900 dark:text-white block leading-tight">
+                <span className="text-lg sm:text-xl font-extrabold text-zinc-900 dark:text-white block leading-tight truncate">
                   Jemput Pasokan Pakan
                 </span>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 block leading-snug">
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 block leading-snug line-clamp-1">
                   Bursa pakan organik segar siap jemput
                 </p>
                 <div className="pt-1">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1 text-sm font-bold shadow-xs group-hover:translate-x-0.5 transition-all">
                     <span>Klik di sini untuk menjemput</span>
-                    <ArrowRight className="h-3.5 w-3.5" />
+                    <ArrowRight className="h-3.5 w-3.5 shrink-0" />
                   </span>
                 </div>
               </div>
@@ -936,31 +936,31 @@ export default function LandingPage() {
               className="group relative flex items-stretch rounded-3xl bg-emerald-600 hover:bg-emerald-500 text-white shadow-xl shadow-emerald-900/20 hover:shadow-2xl transition-all hover:-translate-y-0.5 border border-emerald-500/30 overflow-hidden min-h-[155px]"
             >
               {/* Flush Full-Height Portrait Image */}
-              <div className="relative w-32 sm:w-36 shrink-0 overflow-hidden bg-emerald-700">
+              <div className="relative w-28 sm:w-32 md:w-36 shrink-0 overflow-hidden bg-emerald-700">
                 <Image
                   src="/images/personas/penyetor.jpg"
                   alt="Penyetor Sisa Makanan Semarang"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 640px) 128px, 144px"
+                  sizes="(max-width: 640px) 112px, 144px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-emerald-600/60" />
               </div>
 
-              <div className="flex flex-col justify-center p-5 sm:p-6 space-y-1.5 flex-1">
-                <span className="text-sm uppercase font-bold tracking-wider text-emerald-200 block">
+              <div className="flex flex-col justify-center p-4.5 sm:p-5 md:p-6 space-y-1.5 flex-1 min-w-0">
+                <span className="text-sm uppercase font-bold tracking-wider text-emerald-200 block truncate">
                   Warung • Resto • Pasar
                 </span>
-                <span className="text-xl sm:text-2xl font-extrabold text-white block leading-tight">
+                <span className="text-lg sm:text-xl font-extrabold text-white block leading-tight truncate">
                   Salurkan Sisa Dapur
                 </span>
-                <p className="text-sm text-emerald-100/90 block leading-snug">
+                <p className="text-sm text-emerald-100/90 block leading-snug line-clamp-1">
                   Input sisa makanan & klaim Lencana Hijau
                 </p>
                 <div className="pt-1">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-white text-emerald-800 px-3 py-1 text-sm font-bold shadow-xs group-hover:bg-emerald-50 group-hover:translate-x-0.5 transition-all">
                     <span>Klik di sini untuk menyalurkan</span>
-                    <ArrowRight className="h-3.5 w-3.5" />
+                    <ArrowRight className="h-3.5 w-3.5 shrink-0" />
                   </span>
                 </div>
               </div>
@@ -971,31 +971,31 @@ export default function LandingPage() {
               className="group relative flex items-stretch rounded-3xl bg-white dark:bg-zinc-900/90 hover:bg-zinc-50 dark:hover:bg-zinc-800 text-zinc-900 dark:text-white shadow-md hover:shadow-xl transition-all hover:-translate-y-0.5 border border-zinc-200 dark:border-zinc-800 overflow-hidden min-h-[155px]"
             >
               {/* Flush Full-Height Portrait Image */}
-              <div className="relative w-32 sm:w-36 shrink-0 overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+              <div className="relative w-28 sm:w-32 md:w-36 shrink-0 overflow-hidden bg-zinc-100 dark:bg-zinc-800">
                 <Image
                   src="/images/personas/peternak.jpg"
                   alt="Peternak Maggot BSF & Biogas Semarang"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 640px) 128px, 144px"
+                  sizes="(max-width: 640px) 112px, 144px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-white/40 dark:to-zinc-900/60" />
               </div>
 
-              <div className="flex flex-col justify-center p-5 sm:p-6 space-y-1.5 flex-1">
-                <span className="text-sm uppercase font-bold tracking-wider text-emerald-600 dark:text-emerald-400 block">
+              <div className="flex flex-col justify-center p-4.5 sm:p-5 md:p-6 space-y-1.5 flex-1 min-w-0">
+                <span className="text-sm uppercase font-bold tracking-wider text-emerald-600 dark:text-emerald-400 block truncate">
                   Sentra Maggot • Biogas
                 </span>
-                <span className="text-xl sm:text-2xl font-extrabold text-zinc-900 dark:text-white block leading-tight">
+                <span className="text-lg sm:text-xl font-extrabold text-zinc-900 dark:text-white block leading-tight truncate">
                   Jemput Pasokan Pakan
                 </span>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 block leading-snug">
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 block leading-snug line-clamp-1">
                   Bursa pakan organik segar siap jemput
                 </p>
                 <div className="pt-1">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1 text-sm font-bold shadow-xs group-hover:translate-x-0.5 transition-all">
                     <span>Klik di sini untuk menjemput</span>
-                    <ArrowRight className="h-3.5 w-3.5" />
+                    <ArrowRight className="h-3.5 w-3.5 shrink-0" />
                   </span>
                 </div>
               </div>
