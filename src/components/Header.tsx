@@ -23,9 +23,14 @@ export function Header({ activeTab, setActiveTab, onQuickDemo }: HeaderProps) {
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 group-hover:scale-105 transition-transform">
             <Leaf className="h-4 w-4" />
           </div>
-          <span className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white">
-            Bio<span className="text-emerald-600 dark:text-emerald-400">Loka</span>
-          </span>
+          <div>
+            <span className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white block leading-tight">
+              Bio<span className="text-emerald-600 dark:text-emerald-400">Loka</span>
+            </span>
+            <span className="text-sm text-zinc-500 dark:text-zinc-400 font-medium block leading-none mt-0.5">
+              Kota Semarang
+            </span>
+          </div>
         </Link>
 
         {/* Navigation Tabs - Clean & Spacious */}

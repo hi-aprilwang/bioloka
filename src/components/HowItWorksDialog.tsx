@@ -46,7 +46,7 @@ export function HowItWorksDialog({ className, children }: HowItWorksDialogProps)
         "Tentukan estimasi berat (misal 20 kg atau 150 kg) dan jam siap jemput.",
         "Alamat warung/kafe Anda otomatis terhubung dengan rute penjemputan terdekat.",
       ],
-      tip: "Tekan tombol '+ Salurkan Sisa Makanan Hari Ini' di dashboard untuk mencoba mencatatkan kiriman baru.",
+      tip: "Tekan tombol 'Salurkan Sisa Makanan Hari Ini' di dashboard untuk mencoba mencatatkan kiriman baru.",
     },
     {
       step: 2,

@@ -137,22 +137,6 @@ function DashboardContent() {
         <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-gradient-to-b from-white via-zinc-50 to-zinc-100 dark:from-zinc-900/90 dark:via-zinc-900/50 dark:to-zinc-950/80 p-8 sm:p-10 lg:p-12 backdrop-blur-md relative overflow-hidden shadow-sm">
           <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
             <div className="space-y-3.5 max-w-3xl">
-              <div className="flex flex-wrap items-center gap-2">
-                <Badge
-                  variant="outline"
-                  className="border-emerald-500/40 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-3 py-0.5"
-                >
-                  Kota Semarang
-                </Badge>
-                <div className="flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-0.5 text-sm text-emerald-700 dark:text-emerald-300">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                  </span>
-                  <span>Mitigasi TPA Jatibarang Aktif</span>
-                </div>
-              </div>
-
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-tight pb-1">
                 Pusat Sirkularitas Sisa Makanan &{" "}
                 <ShinyText

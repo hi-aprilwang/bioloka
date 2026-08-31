@@ -60,7 +60,7 @@ export function BatchCreateDialog({ onAddBatch }: BatchCreateDialogProps) {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-emerald-500 transition-colors cursor-pointer">
         <Plus className="h-4 w-4" />
-        + Salurkan Sisa Makanan Hari Ini
+        <span>Salurkan Sisa Makanan Hari Ini</span>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[540px] bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-xl">
         <DialogHeader>

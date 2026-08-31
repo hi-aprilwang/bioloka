@@ -51,7 +51,7 @@ export default function LandingPage() {
                 Bio<span className="text-emerald-600 dark:text-emerald-400">Loka</span>
               </span>
               <span className="text-sm text-zinc-500 dark:text-zinc-400 font-medium block leading-none mt-0.5">
-                Semarang Node
+                Kota Semarang
               </span>
             </div>
           </Link>
