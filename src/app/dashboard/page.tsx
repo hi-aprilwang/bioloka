@@ -15,7 +15,6 @@ import { HowItWorksDialog } from "@/components/HowItWorksDialog"
 import { INITIAL_BATCHES, calculateEnvironmentalImpact } from "@/lib/circuloop-data"
 import { WasteBatch } from "@/lib/types"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
 import {
   ShieldCheck,
   CheckCircle2,
@@ -204,40 +203,31 @@ function DashboardContent() {
                     Penyetor Sisa Makanan (Warung, Kafe, Katering & Pasar)
                   </h2>
                   <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
-                    Salurkan sisa dapur bersih dan unduh Lencana Usaha Hijau Kota Semarang
+                    Catatkan sisa makanan dapur yang siap dijemput oleh peternak terdekat
                   </p>
                 </div>
                 <BatchCreateDialog onAddBatch={handleAddBatch} />
               </div>
 
-              {/* ESG Badge Demo Card */}
-              <div className="rounded-2xl border border-emerald-500/30 bg-emerald-50/50 dark:bg-emerald-950/20 p-6 sm:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+              {/* Practical Dispatch Summary Card */}
+              <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/80 dark:bg-zinc-950/40 p-6 sm:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                 <div className="flex items-center gap-4">
                   <div className="rounded-2xl bg-emerald-500/10 p-3.5 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 shrink-0">
                     <ShieldCheck className="h-9 w-9" />
                   </div>
                   <div>
-                    <div className="flex items-center gap-2.5 flex-wrap">
-                      <span className="text-base font-bold text-zinc-900 dark:text-white">
-                        Lencana Usaha Ramah Lingkungan Kota Semarang
-                      </span>
-                      <Badge className="bg-emerald-600 text-white dark:bg-emerald-500 dark:text-zinc-950 text-sm font-bold px-3 py-0.5">
-                        WARUNG HIJAU
-                      </Badge>
-                    </div>
+                    <span className="text-base font-bold text-zinc-900 dark:text-white block">
+                      Status Penyaluran Sisa Dapur Semarang
+                    </span>
                     <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
-                      Telah menyelamatkan {aggregateImpact.divertedWeightKg} kg makanan dari pembusukan di TPA Jatibarang.
+                      Total {aggregateImpact.divertedWeightKg} kg sisa makanan bersih telah tersalurkan langsung ke peternak lokal tanpa menumpuk di TPA.
                     </p>
                   </div>
                 </div>
-                <Button
-                  size="default"
-                  variant="outline"
-                  onClick={() => alert("Lencana digital 'Warung Hijau Semarang' siap diunduh dan dipajang di tempat usaha Anda.")}
-                  className="border-emerald-500/40 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-900/40 text-sm h-10 px-5 shrink-0 self-start lg:self-auto"
-                >
-                  Unduh Lencana Usaha
-                </Button>
+                <div className="text-left sm:text-right shrink-0">
+                  <span className="text-sm text-zinc-500 block">Estimasi Waktu Jemput</span>
+                  <span className="text-base font-bold text-emerald-600 dark:text-emerald-400">&lt; 3 Jam dari Pendaftaran</span>
+                </div>
               </div>
 
               <BatchList batches={batches} onClaimBatch={handleClaimBatch} />

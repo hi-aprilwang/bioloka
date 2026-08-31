@@ -82,19 +82,19 @@ export function HowItWorksDialog({ className, children }: HowItWorksDialogProps)
     },
     {
       step: 4,
-      title: "4. Pantau Kebaikan Lingkungan & Raih Lencana",
-      actor: "Kalkulator Kebaikan (Standar Sains IPCC)",
+      title: "4. Pantau Dampak Bersih & Reduksi Sampah",
+      actor: "Kalkulator Sains Standar IPCC",
       icon: Activity,
       color: "text-emerald-600 dark:text-teal-400",
       bgColor: "bg-teal-500/10 border-teal-500/20",
       description:
-        "Setiap kilogram makanan yang Anda selamatkan langsung dihitung dampaknya bagi kesehatan warga Semarang dan penurunan risiko kebakaran TPA.",
+        "Setiap kilogram makanan yang Anda selamatkan langsung dihitung dampaknya bagi kebersihan lingkungan Kota Semarang dan penurunan beban TPA Jatibarang.",
       bulletPoints: [
-        "Cegah Gas Metana: 0,040 kg gas metana murni dicegah per kg sisa makanan.",
-        "Lindungi Air Sumur: Mencegah 390 Liter air lindi busuk merembes ke air tanah pesisir Semarang.",
-        "Lencana Warung Hijau: Bukti nyata kepedulian lingkungan yang bisa dipajang di tempat usaha Anda.",
+        "Pencegahan Gas Metana: 0,040 kg gas metana dicegah per kg sisa makanan.",
+        "Perlindungan Air Tanah: Mencegah cairan busuk merembes ke air sumur pesisir Semarang.",
+        "Transparansi Data: Laporan dampak otomatis tercatat dan dapat dipantau bersama.",
       ],
-      tip: "Gunakan tab 'Cek Dampak Lingkungan' untuk menggeser slider volume sampah dan melihat perhitungannya secara langsung.",
+      tip: "Gunakan tab 'Kalkulator' untuk menggeser slider volume sampah dan melihat perhitungannya secara langsung.",
     },
   ]
 
