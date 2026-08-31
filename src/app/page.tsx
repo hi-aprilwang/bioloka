@@ -44,10 +44,10 @@ export default function LandingPage() {
               <Leaf className="h-5 w-5" />
             </div>
             <div>
-              <span className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white">
+              <span className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white block leading-tight">
                 Circu<span className="text-emerald-600 dark:text-emerald-400">Loop</span>
               </span>
-              <span className="text-sm text-zinc-500 dark:text-zinc-400 hidden sm:inline ml-2 font-medium">
+              <span className="text-sm text-zinc-500 dark:text-zinc-400 font-medium block leading-none mt-0.5">
                 Semarang Node
               </span>
             </div>
