@@ -2,6 +2,7 @@
 
 import React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { GridPattern } from "@/components/react-bits/GridPattern"
 import { ShinyText } from "@/components/react-bits/ShinyText"
 import { SpotlightCard } from "@/components/react-bits/SpotlightCard"
@@ -183,18 +184,31 @@ export default function LandingPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           {/* Step 1 */}
           <SpotlightCard
-            className="p-6 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
+            className="overflow-hidden border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
             spotlightColor="rgba(16, 185, 129, 0.15)"
           >
             <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400">
-                  <Building2 className="h-5 w-5" />
-                </div>
-                <span className="text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30">
+              {/* Card Photo Header */}
+              <div className="relative h-44 w-full overflow-hidden rounded-xl mb-5 bg-zinc-100 dark:bg-zinc-800">
+                <Image
+                  src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80"
+                  alt="Pemilahan sisa sayur dan buah segar di pasar"
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <span className="absolute top-3 right-3 text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/90 dark:bg-zinc-900/90 text-emerald-700 dark:text-emerald-300 backdrop-blur-xs border border-emerald-500/30">
                   Langkah 01
                 </span>
+                <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600/90 text-white backdrop-blur-xs">
+                    <Building2 className="h-4 w-4" />
+                  </div>
+                  <span className="text-sm font-semibold drop-shadow-sm">Warung & Resto</span>
+                </div>
               </div>
+
               <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 block mb-1">
                 Warung, Kafe, Pasar & Dapur
               </span>
@@ -221,18 +235,31 @@ export default function LandingPage() {
 
           {/* Step 2 */}
           <SpotlightCard
-            className="p-6 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
+            className="overflow-hidden border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
             spotlightColor="rgba(59, 130, 246, 0.15)"
           >
             <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400">
-                  <MapPin className="h-5 w-5" />
-                </div>
-                <span className="text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-500/30">
+              {/* Card Photo Header */}
+              <div className="relative h-44 w-full overflow-hidden rounded-xl mb-5 bg-zinc-100 dark:bg-zinc-800">
+                <Image
+                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80"
+                  alt="Logistik penjemputan terdesentralisasi"
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <span className="absolute top-3 right-3 text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/90 dark:bg-zinc-900/90 text-blue-700 dark:text-blue-300 backdrop-blur-xs border border-blue-500/30">
                   Langkah 02
                 </span>
+                <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600/90 text-white backdrop-blur-xs">
+                    <Truck className="h-4 w-4" />
+                  </div>
+                  <span className="text-sm font-semibold drop-shadow-sm">Logistik Lokal</span>
+                </div>
               </div>
+
               <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 block mb-1">
                 Peternak Sekitar Anda
               </span>
@@ -259,18 +286,31 @@ export default function LandingPage() {
 
           {/* Step 3 */}
           <SpotlightCard
-            className="p-6 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
+            className="overflow-hidden border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
             spotlightColor="rgba(245, 158, 11, 0.15)"
           >
             <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400">
-                  <Bug className="h-5 w-5" />
-                </div>
-                <span className="text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-500/30">
+              {/* Card Photo Header */}
+              <div className="relative h-44 w-full overflow-hidden rounded-xl mb-5 bg-zinc-100 dark:bg-zinc-800">
+                <Image
+                  src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=600&q=80"
+                  alt="Biokonversi maggot dan pupuk organik"
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <span className="absolute top-3 right-3 text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/90 dark:bg-zinc-900/90 text-amber-700 dark:text-amber-300 backdrop-blur-xs border border-amber-500/30">
                   Langkah 03
                 </span>
+                <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-600/90 text-white backdrop-blur-xs">
+                    <Bug className="h-4 w-4" />
+                  </div>
+                  <span className="text-sm font-semibold drop-shadow-sm">Biokonversi</span>
+                </div>
               </div>
+
               <span className="text-sm font-semibold text-amber-600 dark:text-amber-400 block mb-1">
                 Peternak Tembalang & Mijen
               </span>
@@ -297,18 +337,31 @@ export default function LandingPage() {
 
           {/* Step 4 */}
           <SpotlightCard
-            className="p-6 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
+            className="overflow-hidden border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
             spotlightColor="rgba(16, 185, 129, 0.15)"
           >
             <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400">
-                  <Activity className="h-5 w-5" />
-                </div>
-                <span className="text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-teal-100 dark:bg-teal-950/60 text-teal-700 dark:text-teal-300 border border-teal-500/30">
+              {/* Card Photo Header */}
+              <div className="relative h-44 w-full overflow-hidden rounded-xl mb-5 bg-zinc-100 dark:bg-zinc-800">
+                <Image
+                  src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=600&q=80"
+                  alt="Dampak hijau terukur dan kelestarian lingkungan"
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <span className="absolute top-3 right-3 text-sm font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/90 dark:bg-zinc-900/90 text-teal-700 dark:text-teal-300 backdrop-blur-xs border border-teal-500/30">
                   Langkah 04
                 </span>
+                <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-600/90 text-white backdrop-blur-xs">
+                    <Leaf className="h-4 w-4" />
+                  </div>
+                  <span className="text-sm font-semibold drop-shadow-sm">Dampak Hijau</span>
+                </div>
               </div>
+
               <span className="text-sm font-semibold text-teal-600 dark:text-teal-400 block mb-1">
                 Kebaikan yang Terukur
               </span>
@@ -367,17 +420,29 @@ export default function LandingPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {/* Product 1: BSF Protein Biomass */}
           <SpotlightCard
-            className="p-7 sm:p-8 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
+            className="overflow-hidden border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
             spotlightColor="rgba(16, 185, 129, 0.15)"
           >
             <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400">
-                  <Bug className="h-6 w-6" />
-                </div>
-                <Badge variant="outline" className="border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-sm font-semibold">
+              {/* Product Photo Header */}
+              <div className="relative h-48 w-full overflow-hidden rounded-xl mb-5 bg-zinc-100 dark:bg-zinc-800">
+                <Image
+                  src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=600&q=80"
+                  alt="Pakan alternatif bernutrisi tinggi BSF untuk perikanan dan unggas"
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <Badge variant="outline" className="absolute top-3 right-3 border-emerald-500/40 bg-white/90 dark:bg-zinc-900/90 text-emerald-700 dark:text-emerald-300 text-sm font-semibold backdrop-blur-xs">
                   Biomassa Protein
                 </Badge>
+                <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600/90 text-white backdrop-blur-xs">
+                    <Bug className="h-4 w-4" />
+                  </div>
+                  <span className="text-sm font-semibold drop-shadow-sm">Hermetia illucens</span>
+                </div>
               </div>
 
               <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
@@ -407,17 +472,29 @@ export default function LandingPage() {
 
           {/* Product 2: Kasgot Organic Fertilizer */}
           <SpotlightCard
-            className="p-7 sm:p-8 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
+            className="overflow-hidden border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
             spotlightColor="rgba(245, 158, 11, 0.15)"
           >
             <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400">
-                  <Sprout className="h-6 w-6" />
-                </div>
-                <Badge variant="outline" className="border-amber-500/30 text-amber-700 dark:text-amber-300 text-sm font-semibold">
+              {/* Product Photo Header */}
+              <div className="relative h-48 w-full overflow-hidden rounded-xl mb-5 bg-zinc-100 dark:bg-zinc-800">
+                <Image
+                  src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80"
+                  alt="Pupuk Kasgot organik ramah lingkungan untuk tanaman"
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <Badge variant="outline" className="absolute top-3 right-3 border-amber-500/40 bg-white/90 dark:bg-zinc-900/90 text-amber-700 dark:text-amber-300 text-sm font-semibold backdrop-blur-xs">
                   Pupuk Bio-Kasgot
                 </Badge>
+                <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-600/90 text-white backdrop-blur-xs">
+                    <Sprout className="h-4 w-4" />
+                  </div>
+                  <span className="text-sm font-semibold drop-shadow-sm">Bio-Frass Organik</span>
+                </div>
               </div>
 
               <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
@@ -447,17 +524,29 @@ export default function LandingPage() {
 
           {/* Product 3: Bio-Methane Energy */}
           <SpotlightCard
-            className="p-7 sm:p-8 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
+            className="overflow-hidden border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm flex flex-col justify-between"
             spotlightColor="rgba(59, 130, 246, 0.15)"
           >
             <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400">
-                  <Flame className="h-6 w-6" />
-                </div>
-                <Badge variant="outline" className="border-blue-500/30 text-blue-700 dark:text-blue-300 text-sm font-semibold">
+              {/* Product Photo Header */}
+              <div className="relative h-48 w-full overflow-hidden rounded-xl mb-5 bg-zinc-100 dark:bg-zinc-800">
+                <Image
+                  src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=600&q=80"
+                  alt="Energi terbarukan biogas dan konversi bersih"
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <Badge variant="outline" className="absolute top-3 right-3 border-blue-500/40 bg-white/90 dark:bg-zinc-900/90 text-blue-700 dark:text-blue-300 text-sm font-semibold backdrop-blur-xs">
                   Energi Terbarukan
                 </Badge>
+                <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600/90 text-white backdrop-blur-xs">
+                    <Flame className="h-4 w-4" />
+                  </div>
+                  <span className="text-sm font-semibold drop-shadow-sm">Methane Capture</span>
+                </div>
               </div>
 
               <h3 className="text-xl font-bold text-zinc-900 dark:text-white">
@@ -553,38 +642,89 @@ export default function LandingPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/50 p-8 space-y-4 shadow-sm">
-            <div className="rounded-xl bg-amber-500/10 p-3 text-amber-600 dark:text-amber-400 w-fit border border-amber-500/20">
-              <Flame className="h-6 w-6" />
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/50 shadow-sm flex flex-col justify-between">
+            <div>
+              <div className="relative h-48 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                <Image
+                  src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=600&q=80"
+                  alt="Tumpukan sampah dan ancaman gas metana TPA"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute bottom-3 left-4 flex items-center gap-2 text-white">
+                  <div className="rounded-lg bg-amber-500/90 p-2 text-white backdrop-blur-xs">
+                    <Flame className="h-5 w-5" />
+                  </div>
+                  <span className="text-sm font-bold text-amber-200 drop-shadow-sm">Bahaya Metana TPA</span>
+                </div>
+              </div>
+              <div className="p-7 space-y-3">
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Krisis Kebakaran TPA Jatibarang</h3>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  Timbunan sampah organik basah yang membusuk anaerobik di TPA Jatibarang menghasilkan gas metana (<MathFormula math="\mathrm{CH_4}" />)
+                  konsentrasi tinggi yang memicu kebakaran besar pada September–Oktober 2023 dan 2024, mengancam kesehatan
+                  pernapasan ribuan warga Mijen dan sekitarnya.
+                </p>
+              </div>
             </div>
-            <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Krisis Kebakaran TPA Jatibarang</h3>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              Timbunan sampah organik basah yang membusuk anaerobik di TPA Jatibarang menghasilkan gas metana (<MathFormula math="\mathrm{CH_4}" />)
-              konsentrasi tinggi yang memicu kebakaran besar pada September–Oktober 2023 dan 2024, mengancam kesehatan
-              pernapasan ribuan warga Mijen dan sekitarnya.
-            </p>
           </div>
 
-          <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/50 p-8 space-y-4 shadow-sm">
-            <div className="rounded-xl bg-blue-500/10 p-3 text-blue-600 dark:text-blue-400 w-fit border border-blue-500/20">
-              <Droplets className="h-6 w-6" />
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/50 shadow-sm flex flex-col justify-between">
+            <div>
+              <div className="relative h-48 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                <Image
+                  src="https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=600&q=80"
+                  alt="Banjir rob dan genangan air di pesisir perkotaan"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute bottom-3 left-4 flex items-center gap-2 text-white">
+                  <div className="rounded-lg bg-blue-500/90 p-2 text-white backdrop-blur-xs">
+                    <Droplets className="h-5 w-5" />
+                  </div>
+                  <span className="text-sm font-bold text-blue-200 drop-shadow-sm">Banjir Rob & Air Lindi</span>
+                </div>
+              </div>
+              <div className="p-7 space-y-3">
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Pencemaran Air Lindi Saat Rob</h3>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  Di wilayah Semarang Bawah (Semarang Utara, Kaligawe, Genuk), banjir rob berkala bercampur dengan air lindi
+                  sampah perkotaan yang merembes ke air sumur dangkal, memicu lonjakan kasus diare bakteri (*E. coli*) dan infeksi kulit.
+                </p>
+              </div>
             </div>
-            <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Pencemaran Air Lindi Saat Rob</h3>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              Di wilayah Semarang Bawah (Semarang Utara, Kaligawe, Genuk), banjir rob berkala bercampur dengan air lindi
-              sampah perkotaan yang merembes ke air sumur dangkal, memicu lonjakan kasus diare bakteri (*E. coli*) dan infeksi kulit.
-            </p>
           </div>
 
-          <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/50 p-8 space-y-4 shadow-sm">
-            <div className="rounded-xl bg-emerald-500/10 p-3 text-emerald-600 dark:text-emerald-400 w-fit border border-emerald-500/20">
-              <Bug className="h-6 w-6" />
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/50 shadow-sm flex flex-col justify-between">
+            <div>
+              <div className="relative h-48 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                <Image
+                  src="https://images.unsplash.com/photo-1592417817098-8f3d6910985b?auto=format&fit=crop&w=600&q=80"
+                  alt="Kebutuhan suplai bahan organik segar untuk sentra biokonversi"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute bottom-3 left-4 flex items-center gap-2 text-white">
+                  <div className="rounded-lg bg-emerald-500/90 p-2 text-white backdrop-blur-xs">
+                    <Bug className="h-5 w-5" />
+                  </div>
+                  <span className="text-sm font-bold text-emerald-200 drop-shadow-sm">Sentra Biokonversi</span>
+                </div>
+              </div>
+              <div className="p-7 space-y-3">
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Kekurangan Bahan Baku Biokonversi</h3>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  Peternak Maggot BSF di Tembalang dan reaktor biogas di Gunungpati memiliki kapasitas serap ton-an per hari,
+                  namun kesulitan pasokan limbah organik terpilah karena belum ada rantai pasok digital yang menghubungkannya dengan sektor komersial.
+                </p>
+              </div>
             </div>
-            <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Kekurangan Bahan Baku Biokonversi</h3>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              Peternak Maggot BSF di Tembalang dan reaktor biogas di Gunungpati memiliki kapasitas serap ton-an per hari,
-              namun kesulitan pasokan limbah organik terpilah karena belum ada rantai pasok digital yang menghubungkannya dengan sektor komersial.
-            </p>
           </div>
         </div>
       </section>
