@@ -96,7 +96,7 @@ export default function LandingPage() {
           </div>
 
           {/* Main Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-[1.25] pb-1">
             Jangan Biarkan Sisa Makanan Jadi Bencana:{" "}
             <ShinyText
               text="Ubah Jadi Pakan Bergizi & Energi Bersih Semarang"

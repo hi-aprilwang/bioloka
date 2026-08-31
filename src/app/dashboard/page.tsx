@@ -149,7 +149,7 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-tight pb-1">
                 Penyelamatan Makanan &{" "}
                 <ShinyText
                   text="Perlindungan Lingkungan Semarang"
