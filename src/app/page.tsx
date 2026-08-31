@@ -98,11 +98,11 @@ export default function LandingPage() {
             <span>Jaringan Sirkularitas Sisa Makanan & Eko-Kesehatan Kota Semarang</span>
           </div>
 
-          {/* Main Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-[1.25] pb-1">
-            Jangan Biarkan Sisa Makanan Jadi Bencana:{" "}
+          {/* Main Title - Punchy 2 Lines */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-[1.15] pb-1 text-balance max-w-4xl">
+            Sulap Sisa Makanan Semarang Jadi{" "}
             <ShinyText
-              text="Ubah Jadi Pakan Bergizi & Energi Bersih Semarang"
+              text="Pakan Bergizi & Energi Bersih"
               speed={4}
               className="from-emerald-600 via-teal-500 to-emerald-600 dark:from-emerald-400 dark:via-teal-200 dark:to-emerald-400"
             />
