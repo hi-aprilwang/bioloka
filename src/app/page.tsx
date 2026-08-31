@@ -646,7 +646,7 @@ export default function LandingPage() {
                 </span>
                 <ul className="space-y-1.5 text-zinc-600 dark:text-zinc-400 text-sm">
                   <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200">DOC (0.15):</strong>{" "}
+                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\mathrm{DOC}" /> (0.15):</strong>{" "}
                     <a
                       href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/5_Volume5/V5_3_Ch3_SWDS.pdf#page=12"
                       target="_blank"
@@ -658,15 +658,15 @@ export default function LandingPage() {
                     — fraksi karbon organik aktif pada sampah basah tropis Indonesia.
                   </li>
                   <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200">DOC<sub>f</sub> (0.50):</strong>{" "}
+                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\mathrm{DOC}_f" /> (0.50):</strong>{" "}
                     <em>Fraction of DOC Dissimilated</em> — persentase karbon organik yang terurai secara biologis di landfill.
                   </li>
                   <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200">F (0.50):</strong>{" "}
+                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="F" /> (0.50):</strong>{" "}
                     <em>Fraction of Methane in Landfill Gas</em> — proporsi gas metana murni dalam biogas timbunan sampah.
                   </li>
                   <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200">MCF (0.80):</strong>{" "}
+                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\mathrm{MCF}" /> (0.80):</strong>{" "}
                     <a
                       href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/5_Volume5/V5_3_Ch3_SWDS.pdf#page=15"
                       target="_blank"
@@ -678,7 +678,7 @@ export default function LandingPage() {
                     — koefisien TPA semiterkendali (*unmanaged deep landfill*) seperti zona aktif TPA Jatibarang.
                   </li>
                   <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200">16/12 (1.333):</strong>{" "}
+                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\frac{16}{12}" /> (1.333):</strong>{" "}
                     Rasio stoikiometri berat molekul konversi karbon (<MathFormula math="\mathrm{C}=12" />) menjadi metana (<MathFormula math="\mathrm{CH_4}=16" />).
                   </li>
                 </ul>
@@ -692,7 +692,7 @@ export default function LandingPage() {
               </div>
 
               <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                <strong className="text-zinc-800 dark:text-zinc-200">GWP (29.8):</strong>{" "}
+                <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\mathrm{GWP}_{\mathrm{CH_4}}" /> (29.8):</strong>{" "}
                 <a
                   href="https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-7/"
                   target="_blank"
@@ -724,15 +724,15 @@ export default function LandingPage() {
                 </span>
                 <ul className="space-y-1.5 text-zinc-600 dark:text-zinc-400 text-sm">
                   <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200">&eta;<sub>moisture</sub> (0.65):</strong>{" "}
+                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\eta_{\mathrm{moisture}}" /> (0.65):</strong>{" "}
                     Kadar air rata-rata sampah organik pasar & sisa makanan dapur di kota tropis Indonesia (65%).
                   </li>
                   <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200">&gamma;<sub>compaction</sub> (0.60):</strong>{" "}
+                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\gamma_{\mathrm{compaction}}" /> (0.60):</strong>{" "}
                     Efisiensi pelepasan cairan akibat tekanan timbunan (*gravity percolation & self-compaction*).
                   </li>
                   <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200">BOD (15.000 mg/L):</strong>{" "}
+                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\mathrm{BOD}" /> (15.000 mg/L):</strong>{" "}
                     <a
                       href="https://www.usgs.gov/special-topics/water-science-school/science/biological-oxygen-demand-bod-and-water"
                       target="_blank"
@@ -744,7 +744,7 @@ export default function LandingPage() {
                     — konsumsi oksigen biologis oleh bakteri pembusuk air lindi mentah.
                   </li>
                   <li>
-                    <strong className="text-zinc-800 dark:text-zinc-200">COD (35.000 mg/L):</strong>{" "}
+                    <strong className="text-zinc-800 dark:text-zinc-200"><MathFormula math="\mathrm{COD}" /> (35.000 mg/L):</strong>{" "}
                     <a
                       href="https://www.epa.gov/cwa-methods"
                       target="_blank"
