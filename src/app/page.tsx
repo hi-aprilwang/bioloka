@@ -251,10 +251,10 @@ export default function LandingPage() {
           <Badge variant="outline" className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-3 py-1 font-medium">
             Alur Partisipasi 4 Langkah
           </Badge>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight text-balance">
             Bagaimana Gerakan CircuLoop Bekerja?
           </h2>
-          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
+          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed text-balance">
             Menghubungkan sisa makanan segar dari warung, kafe, pasar, dan rumah Anda dengan peternak
             maggot lokal di Semarang dalam waktu &lt; 24 jam sebelum menimbulkan bau busuk.
           </p>
@@ -505,13 +505,13 @@ export default function LandingPage() {
             <Dna className="mr-1.5 h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
             Bioteknologi Sirkular Masa Depan
           </Badge>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight text-balance">
             Bukan Sekadar Membuang Sampah:{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500 dark:from-emerald-400 dark:to-teal-300">
               Katalog Bioproduk Bernilai Tinggi
             </span>
           </h2>
-          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
+          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed text-balance">
             Melalui biokonversi larva Black Soldier Fly (<em>Hermetia illucens</em>) dan biodigester anaerobik,
             setiap ton sisa makanan disulap menjadi komoditas pangan dan energi bernilai ekonomi tinggi.
           </p>
@@ -696,7 +696,7 @@ export default function LandingPage() {
               <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 tracking-wide uppercase">
                 Antarmuka Platform Nyata
               </span>
-              <h2 className="text-2xl font-bold text-zinc-900 dark:text-white tracking-tight mt-1">
+              <h2 className="text-2xl font-bold text-zinc-900 dark:text-white tracking-tight mt-1 text-balance">
                 Katalog Aliran Sirkular & Simulasi Dampak Semarang
               </h2>
             </div>
@@ -746,10 +746,10 @@ export default function LandingPage() {
           <Badge variant="outline" className="border-red-500/30 bg-red-50 dark:bg-red-500/10 text-red-700 dark:text-red-300 text-sm px-3 py-1 font-medium">
             Konteks & Jaringan Semarang
           </Badge>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight text-balance">
             Mengapa Dibangun Khusus untuk Semarang & Bagaimana Ekosistemnya Terhubung?
           </h2>
-          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
+          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed text-balance">
             CircuLoop menjawab langsung tiga krisis sanitasi mendesak di Kota Semarang dengan menghubungkan titik penghasil sisa makanan komersial ke simpul biokonversi lokal.
           </p>
         </div>
@@ -928,7 +928,7 @@ export default function LandingPage() {
             <Badge variant="outline" className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm px-3 py-1 font-medium">
               Landasan Ilmiah Terverifikasi
             </Badge>
-            <h2 className="text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight text-balance">
               Metodologi Hitung Dampak Standar IPCC Tier 1
             </h2>
             <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
@@ -1121,10 +1121,10 @@ V_{\mathrm{lindi}} &= W \times \eta_{\mathrm{moisture}} \times \gamma_{\mathrm{c
       {/* 7. Call To Action Banner */}
       <section className="relative mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-24">
         <div className="rounded-3xl border border-emerald-500/30 dark:border-emerald-500/40 bg-gradient-to-r from-emerald-50 via-teal-50 to-white dark:from-emerald-950/60 dark:via-zinc-900 dark:to-zinc-950 p-8 sm:p-14 text-center space-y-6 shadow-xl">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight text-balance">
             Mulai Gerakan Sirkularitas Sisa Makanan Semarang Hari Ini
           </h2>
-          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto leading-relaxed text-balance">
             Pilih peran Anda dan coba langsung platform CircuLoop untuk menyelamatkan bahan pangan dan menjaga kebersihan Kota Semarang.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-4 max-w-4xl mx-auto text-left">
