@@ -29,7 +29,7 @@ export function Header({ activeTab, setActiveTab, onQuickDemo }: HeaderProps) {
                 Circu<span className="text-emerald-600 dark:text-emerald-400">Loop</span>
               </span>
               <span className="inline-flex items-center rounded-full border border-emerald-500/30 bg-emerald-50 dark:bg-emerald-950/50 px-2.5 py-0.5 text-sm font-semibold text-emerald-700 dark:text-emerald-300">
-                DSDC ANFORCOM 2026
+                Semarang Hub
               </span>
             </div>
             <p className="text-sm text-zinc-500 dark:text-zinc-400 hidden sm:block">
@@ -103,7 +103,7 @@ export function Header({ activeTab, setActiveTab, onQuickDemo }: HeaderProps) {
             className="h-9 bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-emerald-500/40 text-emerald-800 dark:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-950/50 text-sm gap-1.5 font-medium transition-all shadow-xs"
           >
             <Sparkles className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-            <ShinyText text="Simulasi Juri" speed={4} />
+            <ShinyText text="Simulasi Cepat" speed={4} />
           </Button>
 
           <ThemeToggle />

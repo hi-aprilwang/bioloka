@@ -18,9 +18,9 @@ const fontMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CircuLoop Semarang | B2B Organic Waste Circularity & Eco-Health Platform",
+  title: "CircuLoop Semarang | Platform Sirkularitas Sisa Makanan & Eko-Kesehatan Perkotaan",
   description:
-    "Engineering the Circular City: Simbiosis Sirkular Sampah Organik B2B dan Pencegahan Risiko Eko-Kesehatan Perkotaan - DSDC ANFORCOM 2026",
+    "Platform digital pertukaran sisa makanan dan biokonversi terdesentralisasi untuk pencegahan emisi metana TPA Jatibarang dan perlindungan sanitasi pesisir Kota Semarang.",
 };
 
 export default function RootLayout({

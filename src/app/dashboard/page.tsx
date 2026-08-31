@@ -74,7 +74,7 @@ export default function DashboardPage() {
       readyTime: "Hari ini, 15:00 WIB",
       expiryHours: 6,
       status: "available",
-      notes: "Simulasi Uji Langsung Dewan Juri ANFORCOM 2026.",
+      notes: "Sisa buffet sarapan hotel siap jemput (nasi, sayur, lauk pauk matang terpilah).",
     }
     handleAddBatch(demoBatch)
   }
@@ -297,13 +297,11 @@ export default function DashboardPage() {
       </div>
 
       {/* Footer with Generous Breathing Room */}
-      <footer className="mt-24 sm:mt-32 border-t border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950 py-12 sm:py-16 text-center text-sm text-zinc-500 space-y-2">
-        <p>
-          CircuLoop Semarang — Dikembangkan untuk Diponegoro Software Development Competition (DSDC) ANFORCOM 2026.
-        </p>
-        <p className="text-sm text-zinc-500">
-          HMIF Universitas Diponegoro • Tema: Circular Economy for Eco-Health Cities
-        </p>
+      <footer className="mt-24 sm:mt-32 border-t border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950 py-12 sm:py-16">
+        <div className="mx-auto max-w-7xl px-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
+          <span>CircuLoop Semarang — Platform Sirkularitas Sisa Makanan & Eko-Kesehatan Perkotaan.</span>
+          <span className="font-mono text-emerald-600 dark:text-emerald-400">Node Status: Online (Semarang Area)</span>
+        </div>
       </footer>
     </main>
   )

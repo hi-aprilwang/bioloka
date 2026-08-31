@@ -97,7 +97,7 @@ export default function LandingPage() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
             </span>
-            <span>Gerakan Penyelamatan Makanan Kota Semarang • DSDC 2026</span>
+            <span>Jaringan Sirkularitas Sisa Makanan & Eko-Kesehatan Kota Semarang</span>
           </div>
 
           {/* Main Title */}
@@ -845,9 +845,9 @@ V_{\mathrm{lindi}} &= W \times \eta_{\mathrm{moisture}} \times \gamma_{\mathrm{c
       <footer className="border-t border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950 py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-zinc-500">
           <div>
-            <span className="font-bold text-zinc-800 dark:text-zinc-300">CircuLoop Semarang</span> — Diponegoro Software Development Competition 2026.
+            <span className="font-bold text-zinc-800 dark:text-zinc-300">CircuLoop Semarang</span> — Platform Sirkularitas Sisa Makanan & Eko-Kesehatan.
             <p className="mt-1 text-sm text-zinc-500">
-              HMIF Universitas Diponegoro • Tema: Circular Economy for Eco-Health Cities
+              Inisiatif Kolaboratif Ekonomi Sirkular Kota Semarang • Mencegah Kebakaran TPA & Melindungi Air Pesisir
             </p>
           </div>
 
