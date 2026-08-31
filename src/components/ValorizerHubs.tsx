@@ -93,6 +93,28 @@ export function ValorizerHubs() {
                     <span>Sisa kuota: {facility.dailyCapacityKg - facility.currentIntakeKg} kg</span>
                   </div>
                 </div>
+
+                {/* Bioproduct Output Estimation Pill */}
+                <div className="rounded-xl bg-zinc-50 dark:bg-zinc-950/70 p-3 border border-zinc-200 dark:border-zinc-800 text-sm space-y-1">
+                  <span className="text-sm font-semibold text-zinc-500 uppercase tracking-wider block">
+                    Estimasi Panen Bioproduk:
+                  </span>
+                  {facility.type === "Maggot BSF" && (
+                    <div className="text-emerald-700 dark:text-emerald-400 font-medium">
+                      +{(facility.currentIntakeKg / 5).toFixed(0)} kg Larva Protein (FCR 5:1) & +{(facility.currentIntakeKg * 0.3).toFixed(0)} kg Kasgot
+                    </div>
+                  )}
+                  {facility.type === "Biogas Digester" && (
+                    <div className="text-blue-700 dark:text-blue-400 font-medium">
+                      +{(facility.currentIntakeKg * 0.25).toFixed(0)} m³ Biogas Energi Bersih
+                    </div>
+                  )}
+                  {facility.type === "Organic Composting" && (
+                    <div className="text-amber-700 dark:text-amber-400 font-medium">
+                      +{(facility.currentIntakeKg * 0.4).toFixed(0)} kg Kompos Organik Terverifikasi
+                    </div>
+                  )}
+                </div>
               </div>
 
               <div className="mt-6 pt-4 border-t border-zinc-200 dark:border-zinc-800/70 text-sm text-zinc-500 dark:text-zinc-400 flex items-center justify-between">
