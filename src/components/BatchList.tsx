@@ -5,14 +5,11 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { WasteBatch, WasteCategory } from "@/lib/types"
 import { calculateEnvironmentalImpact } from "@/lib/circuloop-data"
-import { MathFormula } from "@/components/MathFormula"
 import {
   MapPin,
   Clock,
   CheckCircle2,
   ArrowRight,
-  Flame,
-  Droplets,
   Building2,
   Utensils,
   Store,
@@ -177,18 +174,14 @@ export function BatchList({ batches, onClaimBatch }: BatchListProps) {
                   </p>
                 )}
 
-                {/* Eco-Health Metrics Pill */}
-                <div className="rounded-xl bg-zinc-50 dark:bg-zinc-950/70 p-3.5 border border-zinc-200 dark:border-zinc-800/80 flex items-center justify-between text-sm">
-                  <div className="flex items-center gap-1.5 text-amber-700 dark:text-amber-400">
-                    <Flame className="h-4 w-4" />
-                    <span>-{impact.methaneAvoidedKg.toFixed(1)} kg <MathFormula math="\mathrm{CH_4}" /></span>
+                {/* Practical Feed Value & Pickup Info */}
+                <div className="rounded-xl bg-zinc-50 dark:bg-zinc-950/70 p-3 border border-zinc-200 dark:border-zinc-800/80 flex items-center justify-between text-sm">
+                  <div className="flex items-center gap-1.5 text-zinc-600 dark:text-zinc-400">
+                    <Clock className="h-4 w-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                    <span>Jemput: {batch.readyTime}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-blue-700 dark:text-blue-400">
-                    <Droplets className="h-4 w-4" />
-                    <span>-{impact.leachatePreventedLiters.toFixed(1)} L Lindi</span>
-                  </div>
-                  <div className="text-emerald-700 dark:text-emerald-400 font-medium">
-                    +{impact.maggotProducedKg.toFixed(0)} kg Pakan
+                  <div className="text-emerald-700 dark:text-emerald-400 font-semibold">
+                    Hasil: +{impact.maggotProducedKg.toFixed(0)} kg Pakan Maggot
                   </div>
                 </div>
               </div>

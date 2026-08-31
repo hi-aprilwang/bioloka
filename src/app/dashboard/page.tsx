@@ -132,41 +132,40 @@ function DashboardContent() {
           </div>
         )}
 
-        {/* Platform Control Banner */}
-        <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-gradient-to-b from-white via-zinc-50 to-zinc-100 dark:from-zinc-900/90 dark:via-zinc-900/50 dark:to-zinc-950/80 p-8 sm:p-10 lg:p-12 backdrop-blur-md relative overflow-hidden shadow-sm">
-          <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-            <div className="space-y-3.5 max-w-3xl">
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-tight pb-1">
-                Pusat Sirkularitas Sisa Makanan &{" "}
-                <ShinyText
-                  text="Perlindungan Eko-Kesehatan"
-                  speed={4}
-                  className="from-emerald-600 via-teal-500 to-emerald-600 dark:from-emerald-400 dark:via-teal-200 dark:to-emerald-400"
-                />
-              </h1>
-
-              <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Salurkan sisa makanan dari warung, kafe, dan pasar langsung ke peternak maggot BSF & biogas lokal.
-                Cegah emisi metana TPA Jatibarang dan lindungi air tanah pesisir Semarang.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row lg:flex-col items-stretch gap-3 shrink-0">
-              <BatchCreateDialog onAddBatch={handleAddBatch} />
-              <HowItWorksDialog className="inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/90 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-sm h-10 px-4 shadow-xs cursor-pointer transition-colors">
-                <ShieldCheck className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                Cara Kerja Gerakan
-              </HowItWorksDialog>
-            </div>
-          </div>
-        </div>
-
-        {/* Global Impact Scorecards */}
-        <ImpactScorecard impact={aggregateImpact} />
-
-        {/* Tab 1: Dashboard Overview */}
+        {/* Tab 1: Dashboard Overview (Dinas Lingkungan & Pemantau Kota) */}
         {activeTab === "overview" && (
           <div className="space-y-10 sm:space-y-14">
+            {/* Platform Control Banner */}
+            <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-gradient-to-b from-white via-zinc-50 to-zinc-100 dark:from-zinc-900/90 dark:via-zinc-900/50 dark:to-zinc-950/80 p-8 sm:p-10 lg:p-12 backdrop-blur-md relative overflow-hidden shadow-sm">
+              <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+                <div className="space-y-3.5 max-w-3xl">
+                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-tight pb-1">
+                    Pusat Sirkularitas Sisa Makanan &{" "}
+                    <ShinyText
+                      text="Perlindungan Eko-Kesehatan"
+                      speed={4}
+                      className="from-emerald-600 via-teal-500 to-emerald-600 dark:from-emerald-400 dark:via-teal-200 dark:to-emerald-400"
+                    />
+                  </h1>
+
+                  <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                    Pemantauan tonnase limbah TPA Jatibarang yang dialihkan, reduksi emisi metana standar IPCC, dan valuasi ekonomi sirkular Kota Semarang.
+                  </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row lg:flex-col items-stretch gap-3 shrink-0">
+                  <BatchCreateDialog onAddBatch={handleAddBatch} />
+                  <HowItWorksDialog className="inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/90 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-sm h-10 px-4 shadow-xs cursor-pointer transition-colors">
+                    <ShieldCheck className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                    Cara Kerja Gerakan
+                  </HowItWorksDialog>
+                </div>
+              </div>
+            </div>
+
+            {/* Global Impact Scorecards for DLH & City Overview */}
+            <ImpactScorecard impact={aggregateImpact} />
+
             <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/40 p-8 sm:p-10 space-y-8 shadow-sm">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zinc-200 dark:border-zinc-800/80">
                 <div>
@@ -179,7 +178,7 @@ function DashboardContent() {
                 </div>
                 <Badge
                   variant="outline"
-                  className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm font-mono px-3.5 py-1.5 self-start sm:self-auto"
+                  className="border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm font-semibold px-3.5 py-1.5 self-start sm:self-auto"
                 >
                   {batches.filter((b) => b.status === "available").length} Siap Dijemput
                 </Badge>
@@ -192,41 +191,59 @@ function DashboardContent() {
           </div>
         )}
 
-        {/* Tab 2: Producer Portal (Hotel/Pasar/Warung) */}
+        {/* Tab 2: Producer Portal (Warung, Resto, Pasar) - Direct & Need-Focused */}
         {activeTab === "producers" && (
-          <div className="space-y-10 sm:space-y-14">
-            <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/60 p-8 sm:p-10 space-y-8 shadow-sm">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zinc-200 dark:border-zinc-800/80">
-                <div>
-                  <h2 className="text-xl font-bold text-zinc-900 dark:text-white flex items-center gap-3">
-                    <Building2 className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
-                    Penyetor Sisa Makanan (Warung, Kafe, Katering & Pasar)
-                  </h2>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
-                    Catatkan sisa makanan dapur yang siap dijemput oleh peternak terdekat
-                  </p>
+          <div className="space-y-8 sm:space-y-10">
+            {/* Action-Oriented Header Strip for Warung/Resto */}
+            <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/80 p-8 sm:p-10 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="space-y-2 max-w-2xl">
+                <div className="flex items-center gap-2.5">
+                  <div className="rounded-xl bg-emerald-500/10 p-2.5 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400">
+                    <Building2 className="h-6 w-6" />
+                  </div>
+                  <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
+                    Penyetor Sisa Dapur & Makanan
+                  </h1>
                 </div>
-                <BatchCreateDialog onAddBatch={handleAddBatch} />
+                <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  Catat sisa makanan dari warung, kafe, atau katering Anda. Peternak terdekat akan datang menjemput secara gratis sebelum sisa makanan basi.
+                </p>
               </div>
 
-              {/* Practical Dispatch Summary Card */}
-              <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/80 dark:bg-zinc-950/40 p-6 sm:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-                <div className="flex items-center gap-4">
-                  <div className="rounded-2xl bg-emerald-500/10 p-3.5 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 shrink-0">
-                    <ShieldCheck className="h-9 w-9" />
-                  </div>
-                  <div>
-                    <span className="text-base font-bold text-zinc-900 dark:text-white block">
-                      Status Penyaluran Sisa Dapur Semarang
-                    </span>
-                    <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1.5 leading-relaxed">
-                      Total {aggregateImpact.divertedWeightKg} kg sisa makanan bersih telah tersalurkan langsung ke peternak lokal tanpa menumpuk di TPA.
-                    </p>
-                  </div>
-                </div>
-                <div className="text-left sm:text-right shrink-0">
-                  <span className="text-sm text-zinc-500 block">Estimasi Waktu Jemput</span>
-                  <span className="text-base font-bold text-emerald-600 dark:text-emerald-400">&lt; 3 Jam dari Pendaftaran</span>
+              <div className="shrink-0 flex items-center gap-3">
+                <BatchCreateDialog onAddBatch={handleAddBatch} />
+              </div>
+            </div>
+
+            {/* Quick Practical Stats for Producers */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 p-6 space-y-1 shadow-xs">
+                <span className="text-sm font-medium text-zinc-500 block">Biaya Penjemputan</span>
+                <span className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 block">Rp 0 (Gratis)</span>
+                <span className="text-sm text-zinc-400 block">Langsung ke lokasi Anda</span>
+              </div>
+              <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 p-6 space-y-1 shadow-xs">
+                <span className="text-sm font-medium text-zinc-500 block">Respon Penjemputan</span>
+                <span className="text-2xl font-extrabold text-zinc-900 dark:text-white block">&lt; 3 Jam</span>
+                <span className="text-sm text-zinc-400 block">Sebelum sisa basi & bau</span>
+              </div>
+              <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 p-6 space-y-1 shadow-xs">
+                <span className="text-sm font-medium text-zinc-500 block">Sisa Makanan Tersalurkan</span>
+                <span className="text-2xl font-extrabold text-zinc-900 dark:text-white block">{totalDivertedKg} kg</span>
+                <span className="text-sm text-zinc-400 block">Bermanfaat jadi pakan ternak</span>
+              </div>
+            </div>
+
+            {/* Live Batch List */}
+            <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/60 p-8 sm:p-10 space-y-6 shadow-sm">
+              <div className="flex items-center justify-between pb-4 border-b border-zinc-200 dark:border-zinc-800/80">
+                <div>
+                  <h2 className="text-lg sm:text-xl font-bold text-zinc-900 dark:text-white tracking-tight">
+                    Kiriman Aktif di Sekitar Semarang
+                  </h2>
+                  <p className="text-sm text-zinc-500 mt-0.5">
+                    Pantau status penjemputan kiriman sisa dapur Anda dan tempat usaha lainnya
+                  </p>
                 </div>
               </div>
 
@@ -235,29 +252,73 @@ function DashboardContent() {
           </div>
         )}
 
-        {/* Tab 3: Valorizer Facility Portal */}
+        {/* Tab 3: Valorizer Facility Portal (Peternak Maggot & Biogas) - Direct & Need-Focused */}
         {activeTab === "valorizers" && (
-          <div className="space-y-10 sm:space-y-14">
-            <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/60 p-8 sm:p-10 space-y-8 shadow-sm">
-              <div className="pb-4 border-b border-zinc-200 dark:border-zinc-800/80">
-                <h2 className="text-xl font-bold text-zinc-900 dark:text-white flex items-center gap-3">
-                  <Bug className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
-                  Peternak Maggot BSF & Pengolah Biogas Semarang
-                </h2>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
-                  Temukan pasokan sisa makanan segar terdekat untuk pakan maggot berprotein tinggi dan biogas
+          <div className="space-y-8 sm:space-y-10">
+            {/* Action-Oriented Header Strip for Peternak */}
+            <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/80 p-8 sm:p-10 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="space-y-2 max-w-2xl">
+                <div className="flex items-center gap-2.5">
+                  <div className="rounded-xl bg-amber-500/10 p-2.5 border border-amber-500/30 text-amber-600 dark:text-amber-400">
+                    <Bug className="h-6 w-6" />
+                  </div>
+                  <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
+                    Bursa Pasokan Pakan Maggot & Biogas
+                  </h1>
+                </div>
+                <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  Dapatkan pasokan pakan organik gratis dan segar dari warung, restoran, serta pasar di Semarang. Klaim batch terdekat untuk menekan biaya pakan hingga 60%.
                 </p>
               </div>
 
-              <ValorizerHubs />
-
-              <div className="pt-8 border-t border-zinc-200 dark:border-zinc-800/80">
-                <h3 className="text-base font-semibold text-zinc-800 dark:text-zinc-200 mb-4">
-                  Daftar Kiriman yang Siap Dijemput Hari Ini:
-                </h3>
-                <BatchList batches={batches} onClaimBatch={handleClaimBatch} />
+              <div className="shrink-0">
+                <Badge className="bg-emerald-600 hover:bg-emerald-500 text-white text-sm px-4 py-2 font-bold shadow-xs">
+                  {batches.filter((b) => b.status === "available").length} Batch Siap Jemput
+                </Badge>
               </div>
             </div>
+
+            {/* Quick Practical Stats for Peternak */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 p-6 space-y-1 shadow-xs">
+                <span className="text-sm font-medium text-zinc-500 block">Total Pasokan Tersedia</span>
+                <span className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 block">
+                  {batches.filter((b) => b.status === "available").reduce((s, b) => s + b.weightKg, 0)} kg
+                </span>
+                <span className="text-sm text-zinc-400 block">Pakan organik segar hari ini</span>
+              </div>
+              <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 p-6 space-y-1 shadow-xs">
+                <span className="text-sm font-medium text-zinc-500 block">Penghematan Biaya Pakan</span>
+                <span className="text-2xl font-extrabold text-amber-600 dark:text-amber-400 block">Hingga 60%</span>
+                <span className="text-sm text-zinc-400 block">Substitusi pelet & konsentrat</span>
+              </div>
+              <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 p-6 space-y-1 shadow-xs">
+                <span className="text-sm font-medium text-zinc-500 block">Estimasi Hasil Maggot</span>
+                <span className="text-2xl font-extrabold text-zinc-900 dark:text-white block">
+                  {(totalDivertedKg * 0.2).toFixed(0)} kg
+                </span>
+                <span className="text-sm text-zinc-400 block">Protein segar (FCR 5:1)</span>
+              </div>
+            </div>
+
+            {/* Available Batches to Claim */}
+            <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/60 p-8 sm:p-10 space-y-6 shadow-sm">
+              <div className="flex items-center justify-between pb-4 border-b border-zinc-200 dark:border-zinc-800/80">
+                <div>
+                  <h2 className="text-lg sm:text-xl font-bold text-zinc-900 dark:text-white tracking-tight">
+                    Pilih & Klaim Pasokan Pakan Terdekat
+                  </h2>
+                  <p className="text-sm text-zinc-500 mt-0.5">
+                    Klik &ldquo;Saya Siap Jemput&rdquo; pada kiriman yang sesuai dengan kapasitas peternakan Anda
+                  </p>
+                </div>
+              </div>
+
+              <BatchList batches={batches} onClaimBatch={handleClaimBatch} />
+            </div>
+
+            {/* Verified Sentra Maggot Hubs */}
+            <ValorizerHubs />
           </div>
         )}
 
